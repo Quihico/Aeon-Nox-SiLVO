@@ -34,6 +34,7 @@
 	<include file="View_602_FanartList.xml" />
 	<include file="View_609_Fullscreen_Wall.xml" />
 	<include file="View_700_RightList.xml" />
+	<include file="View_701_Flix.xml" />
 	<include file="variables.xml" />
 	<include file="script-skinshortcuts-includes.xml" />
 	<constant name="FanartCrossfadeTime">500</constant>
@@ -162,6 +163,7 @@
 			<onclick condition="Control.IsVisible(602)">SetProperty(actualViewtype,FanartList,home)</onclick>
 			<onclick condition="Control.IsVisible(609)">SetProperty(actualViewtype,FullscreenWall,home)</onclick>
 			<onclick condition="Control.IsVisible(700)">SetProperty(actualViewtype,RightList,home)</onclick>
+			<onclick condition="Control.IsVisible(701)">SetProperty(actualViewtype,Flix,home)</onclick>
 			<onclick condition="Container.Content(episodes)">SetProperty(Area,Episodes,home)</onclick>
 			<onclick condition="Container.Content(movies)">SetProperty(Area,Movies,home)</onclick>
 			<onclick condition="Container.Content(sets)">SetProperty(Area,Sets,home)</onclick>

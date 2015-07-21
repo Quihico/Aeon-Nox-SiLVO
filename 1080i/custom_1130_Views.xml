@@ -131,6 +131,12 @@
 					<visible>[Container.Content(albums) | Container.Content(artists)] + !Skin.HasSetting(Disable.BigListView)</visible>
 				</item>
 				<item>
+					<label>Flix</label>
+					<onclick>Container.SetViewMode(701)</onclick>
+					<visible>Window.IsActive(videos)</visible>
+					<visible>Container.Content(movies) + !Skin.HasSetting(Disable.FlixView)</visible>
+				</item>
+				<item>
 					<label>SongList</label>
 					<onclick>Container.SetViewMode(508)</onclick>
 					<visible>Window.IsActive(musiclibrary)</visible>
