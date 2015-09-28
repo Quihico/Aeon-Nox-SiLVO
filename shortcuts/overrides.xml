@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<overrides>
+	<!-- Backgrounds -->
+	<backgroundBrowse>True</backgroundBrowse>
+	<background label="31062" condition="System.HasAddon(script.grab.fanart)">Movie.Fanart</background>
+	<background label="31063" condition="System.HasAddon(script.grab.fanart)">TV.Fanart</background>
+	<background label="31064" condition="System.HasAddon(script.grab.fanart)">Video.Fanart</background>
+	<background label="31065" condition="System.HasAddon(script.grab.fanart)">Music.Fanart</background>
+	<background label="31066" condition="System.HasAddon(script.grab.fanart)">Global.Fanart</background>
+	<background label="Live Background: Recent movies" condition="IsEmpty(Window(Home).Property(No.Cases))">s:live|i:recent movies</background>
+	<background label="Live Background: Recent episodes" condition="IsEmpty(Window(Home).Property(No.Cases))">s:live|i:recent episodes</background>
+	<background label="Live Background: ::PLAYLIST::" condition="IsEmpty(Window(Home).Property(No.Cases))">s:live|i:playlist</background>
+	<background label="Live Background: Random songs" condition="IsEmpty(Window(Home).Property(No.Cases)) + System.HasAddon(service.library.data.provider)">s:live|i:songs</background>
+	<background label="Live Background: Random albums" condition="IsEmpty(Window(Home).Property(No.Cases)) + System.HasAddon(service.library.data.provider)">s:live|i:albums</background>
+	<background label="31084" condition="!IsEmpty(Skin.String(WeatherFanartDir))">Weather.Fanart</background>
+	<background label="::PLAYLIST::" condition="IsEmpty(Window(Home).Property(No.Cases))">s:playlist|i:playlist</background>
+</overrides>
