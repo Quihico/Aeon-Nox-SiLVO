@@ -6,7 +6,7 @@
 			<visible>IsEmpty(Window.Property(additionalDialog))</visible>
 			<left>0</left>
 			<top>128</top>
-			<control type="list" id="211">
+			<control type="panel" id="211">
 				<left>82</left>
 				<top>32</top>
 				<width>356</width>
@@ -45,8 +45,6 @@
 						<width>356</width>
 						<height>90</height>
 						<texture border="4">listselect_fo.png</texture>
-						<include>VisibleFadeEffect</include>
-						<visible>Control.HasFocus(211)</visible>
 					</control>
 					<control type="label">
 						<width>356</width>
@@ -104,7 +102,7 @@
 					<label>$ADDON[script.skinshortcuts 32025]</label>
 					<label2>$INFO[Container(211).ListItem.Label]</label2>
 				</control>
-				<!-- <control type="button" id="307">
+				<control type="button" id="307">
 					<description>Change action</description>
 					<width>1316</width>
 					<height>90</height>
@@ -112,7 +110,7 @@
 					<font>font15</font>
 					<label>$ADDON[script.skinshortcuts 32027]</label>
 					<label2>$INFO[Container(211).ListItem.Property(displaypath)]</label2>
-				</control> -->
+				</control>
 				<control type="button" id="405">
 					<description>Edit submenu</description>
 					<width>1316</width>
