@@ -357,7 +357,7 @@
 						<align>center</align>
 						<textcolor>dialogheader</textcolor>
 						<label>$INFO[Container(9000).ListItem.Property(widgetName)]</label>
-						<!-- <label>$INFO[Container(9000).ListItem.Property(widgetPath)]</label> -->
+						<!-- <label>$INFO[Container(9000).ListItem.Property(widget)]</label> -->
 					</control>
 					<control type="image">
 						<left>32</left>

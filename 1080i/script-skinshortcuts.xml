@@ -119,7 +119,7 @@
 					<height>90</height>
 					<textoffsetx>30</textoffsetx>
 					<font>font15</font>
-					<label>$ADDON[script.skinshortcuts 32072]</label>
+					<label>$LOCALIZE[31080]</label>
 					<visible>StringCompare(Window.Property(groupname),mainmenu)</visible>
 				</control>
 				<control type="button" id="310">

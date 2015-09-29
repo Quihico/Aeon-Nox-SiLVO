@@ -608,11 +608,11 @@
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgetTarget),extendedinfo)">$INFO[ListItem.Rating]$INFO[ListItem.Property(Duration), • , $LOCALIZE[12391]]</value>
 	</variable>
 	<variable name="WidgetLogoVar">
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),21) | StringCompare(Container(9000).ListItem.Property(Widget),23) | StringCompare(Container(9000).ListItem.Property(Widget),24) | StringCompare(Container(9000).ListItem.Property(Widget),25) | StringCompare(Container(9000).ListItem.Property(Widget),26)">logos/rt-logo.png</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),20) | StringCompare(Container(9000).ListItem.Property(Widget),22)">logos/trakt-logo.png</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),30) | StringCompare(Container(9000).ListItem.Property(Widget),31) | StringCompare(Container(9000).ListItem.Property(Widget),32) | StringCompare(Container(9000).ListItem.Property(Widget),33) | StringCompare(Container(9000).ListItem.Property(Widget),34) | StringCompare(Container(9000).ListItem.Property(Widget),35) | StringCompare(Container(9000).ListItem.Property(Widget),36) | StringCompare(Container(9000).ListItem.Property(Widget),37)">logos/tmdb-logo.png</value>
+		<value condition="SubString(Container(9000).ListItem.Property(widget),rottentomatoes)">logos/rt-logo.png</value>
+		<value condition="SubString(Container(9000).ListItem.Property(widget),trakt)">logos/trakt-logo.png</value>
+		<value condition="SubString(Container(9000).ListItem.Property(widget),themoviedb)">logos/tmdb-logo.png</value>
 	</variable>
-	<variable name="InfoLineLabelVar">
+	<!-- <variable name="InfoLineLabelVar">
 		<value condition="StringCompare(Container(90000).ListItem.Property(InfoLine),1)">$LOCALIZE[31052]</value>
 		<value condition="StringCompare(Container(90000).ListItem.Property(InfoLine),2)">$LOCALIZE[31053]</value>
 		<value condition="StringCompare(Container(90000).ListItem.Property(InfoLine),3)">$LOCALIZE[31054]</value>
@@ -641,7 +641,7 @@
 		<value condition="StringCompare(Container(90000).ListItem.Property(BGType),4) | StringCompare(Container(90000).ListItem.Property(BGType),5)">$INFO[Container(90000).ListItem.Thumb,$LOCALIZE[31028]: ]</value>
 		<value condition="StringCompare(Container(90000).ListItem.Property(BGType),7)">$INFO[Container(90000).ListItem.Thumb,$LOCALIZE[20012]: ]</value>
 		<value>$INFO[Container(90000).ListItem.Thumb]</value>
-	</variable>
+	</variable> -->
 	<variable name="WidgetListIconVar">
 		<value condition="!IsEmpty(Container(8000).ListItem.Art(tvshow.landscape))">$INFO[Container(8000).ListItem.Art(tvshow.landscape)]</value>
 		<value condition="!IsEmpty(Container(8000).ListItem.Art(fanart)) + [StringCompare(Container(9000).ListItem.Property(WidgetType),1) | StringCompare(Container(9000).ListItem.Property(WidgetType),14) | StringCompare(Container(9000).ListItem.Property(WidgetType),20)]">$INFO[Container(8000).ListItem.Art(fanart)]</value>
