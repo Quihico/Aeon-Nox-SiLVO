@@ -150,7 +150,19 @@
 					<font>font15</font>
 					<label>$LOCALIZE[31231]</label>
 					<label2>$VAR[WidgetStyleLabelVar]</label2>
-					<visible>!IsEmpty(Container(211).ListItem.Property(widgetName))</visible>
+					<visible>!IsEmpty(Container(211).ListItem.Property(widgetName)) + !StringCompare(Container(211).ListItem.Property(widgetName),weather)</visible>
+				</control>
+				<control type="button" id="510">
+					<description>Choose infoline</description>
+					<width>1316</width>
+					<height>90</height>
+					<textoffsetx>30</textoffsetx>
+					<font>font15</font>
+					<label>$LOCALIZE[31049]</label>
+					<label2>$INFO[Container(211).ListItem.Property(InfoLine)]</label2>
+					<visible>StringCompare(Window.Property(groupname),mainmenu)</visible>
+					<onclick>SetProperty(chooseProperty,InfoLine)</onclick>
+					<onclick>SendClick(404)</onclick>
 				</control>
 				<!-- <control type="button" id="90016">
 					<description>Infoline Button</description>
@@ -194,6 +206,15 @@
 					<label>$ADDON[script.skinshortcuts 32000]</label>
 				</control>
 			</control>
+		</control>
+		<!-- 404, for setting custom property -->
+		<control type="button" id="404">
+			<visible>False</visible>
+			<left>-100000</left>
+			<top>-100000</top>
+			<width>1</width>
+			<height>1</height>
+			<onclick>noop</onclick>
 		</control>
 	</controls>
 </window>

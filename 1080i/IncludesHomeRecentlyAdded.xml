@@ -357,7 +357,7 @@
 						<align>center</align>
 						<textcolor>dialogheader</textcolor>
 						<label>$INFO[Container(9000).ListItem.Property(widgetName)]</label>
-						<!-- <label>$INFO[Container(9000).ListItem.Property(widgetStyle)]</label> -->
+						<!-- <label>$INFO[Container(9000).ListItem.Property(widgetPath)]</label> -->
 					</control>
 					<control type="image">
 						<left>32</left>
@@ -456,7 +456,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<visible>IsEmpty(Container(8000).ListItem.Label) + IsEmpty(Container(9000).ListItem.Property(widgetStyle))</visible>
+				<visible>IsEmpty(Container(8000).ListItem.Label) + IsEmpty(Container(9000).ListItem.Property(widgetStyle)) + !StringCompare(Container(9000).ListItem.Property(widget),weather)</visible>
 				<left>1583</left>
 				<top>183</top>
 				<control type="image">
@@ -742,7 +742,7 @@
 					</control>
 					<!-- Recent Episodes -->
 					<control type="group">
-						<visible>StringCompare(Container(9000).ListItem.Property(widget),special://skin/extras/playlists/recentepisodes.xsp)</visible>
+						<visible>StringCompare(Container(9000).ListItem.Property(widgetPath),videodb://recentlyaddedepisodes/)</visible>
 						<control type="label">
 							<left>40</left>
 							<top>238</top>
@@ -766,9 +766,9 @@
 							<label>$INFO[ListItem.TvShowTitle]</label>
 						</control>
 					</control>
-					<!-- Random + Recommended Episodes -->
+					<!-- Recommended Episodes -->
 					<control type="group">
-						<visible>StringCompare(Container(9000).ListItem.Property(widgetType),pictures) | StringCompare(Container(9000).ListItem.Property(widgetType),episodes)</visible>
+						<visible>StringCompare(Container(9000).ListItem.Property(widgetType),pictures) | StringCompare(Container(9000).ListItem.Property(widgetPath),library://video/inprogressshows.xml)</visible>
 						<control type="label">
 							<left>40</left>
 							<top>203</top>
@@ -808,7 +808,7 @@
 						</control>
 						<!-- Recent Episodes -->
 						<control type="group">
-							<visible>StringCompare(Container(9000).ListItem.Property(Widget),special://skin/extras/playlists/recentepisodes.xsp)</visible>
+							<visible>StringCompare(Container(9000).ListItem.Property(widgetPath),videodb://recentlyaddedepisodes/)</visible>
 							<control type="label">
 								<left>40</left>
 								<top>238</top>
@@ -834,7 +834,7 @@
 						</control>
 						<!-- Random + Recommended Episodes -->
 						<control type="group">
-							<visible>StringCompare(Container(9000).ListItem.Property(widgetType),pictures) | StringCompare(Container(9000).ListItem.Property(widgetType),episodes)</visible>
+							<visible>StringCompare(Container(9000).ListItem.Property(widgetType),pictures) | StringCompare(Container(9000).ListItem.Property(widgetPath),library://video/inprogressshows.xml)</visible>
 							<control type="label">
 								<left>40</left>
 								<top>203</top>
@@ -886,11 +886,11 @@
 						<shadowcolor>black</shadowcolor>
 						<textcolor>white</textcolor>
 						<label>$INFO[ListItem.TvShowTitle]</label>
-						<visible>StringCompare(Container(9000).ListItem.Property(Widget),special://skin/extras/playlists/recentepisodes.xsp)</visible>
+						<visible>StringCompare(Container(9000).ListItem.Property(widgetPath),videodb://recentlyaddedepisodes/)</visible>
 					</control>
 					<!-- Random + Recommended Episodes -->
 					<control type="group">
-						<visible>StringCompare(Container(9000).ListItem.Property(widgetType),pictures) | StringCompare(Container(9000).ListItem.Property(widgetType),episodes)</visible>
+						<visible>StringCompare(Container(9000).ListItem.Property(widgetType),pictures) | StringCompare(Container(9000).ListItem.Property(widgetPath),library://video/inprogressshows.xml)</visible>
 						<control type="label">
 							<left>5</left>
 							<top>185</top>
@@ -944,7 +944,7 @@
 							<shadowcolor>black</shadowcolor>
 							<textcolor>labelheader</textcolor>
 							<label>$INFO[ListItem.Label]</label>
-							<visible>StringCompare(Container(9000).ListItem.Property(Widget),special://skin/extras/playlists/recentepisodes.xsp)</visible>
+							<visible>StringCompare(Container(9000).ListItem.Property(widgetPath),videodb://recentlyaddedepisodes/)</visible>
 						</control>
 						<control type="label">
 							<left>5</left>
@@ -956,11 +956,11 @@
 							<shadowcolor>black</shadowcolor>
 							<textcolor>labelheader</textcolor>
 							<label>$INFO[ListItem.TvShowTitle]</label>
-							<visible>StringCompare(Container(9000).ListItem.Property(Widget),special://skin/extras/playlists/recentepisodes.xsp)</visible>
+							<visible>StringCompare(Container(9000).ListItem.Property(widgetPath),videodb://recentlyaddedepisodes/)</visible>
 						</control>
 						<!-- Random + Recommended Episodes -->
 						<control type="group">
-							<visible>StringCompare(Container(9000).ListItem.Property(widgetType),pictures) | StringCompare(Container(9000).ListItem.Property(widgetType),episodes)</visible>
+							<visible>StringCompare(Container(9000).ListItem.Property(widgetType),pictures) | StringCompare(Container(9000).ListItem.Property(widgetPath),library://video/inprogressshows.xml)</visible>
 							<control type="label">
 								<left>5</left>
 								<top>185</top>
@@ -1562,7 +1562,7 @@
 			<animation effect="slide" tween="cubic" time="720" start="0,-1080" end="0,0">WindowOpen</animation>
 			<animation effect="slide" tween="cubic" time="720" end="0,-1080" start="0,0">WindowClose</animation>
 			<include>VisibleFadeEffect</include>
-			<visible>StringCompare(Container(9000).ListItem.Property(WidgetType),3)</visible>
+			<visible>StringCompare(Container(9000).ListItem.Property(widget),weather)</visible>
 			<control type="image">
 				<left>0</left>
 				<top>0</top>
