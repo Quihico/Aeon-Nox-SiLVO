@@ -212,8 +212,9 @@
 							</control>
 						</control>
 					</focusedlayout>
-					<include condition="!System.HasAddon(script.skinshortcuts)">FallbackSubMenu</include>
-					<include condition="System.HasAddon(script.skinshortcuts)">CustomSubMenu</include>
+					<content>
+						<include>skinshortcuts-submenu</include>
+					</content>
 				</control>
 				<control type="button">
 					<left>130</left>

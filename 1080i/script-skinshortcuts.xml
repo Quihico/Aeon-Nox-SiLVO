@@ -164,18 +164,6 @@
 					<onclick>SetProperty(chooseProperty,InfoLine)</onclick>
 					<onclick>SendClick(404)</onclick>
 				</control>
-				<!-- <control type="button" id="90016">
-					<description>Infoline Button</description>
-					<width>1316</width>
-					<height>90</height>
-					<textoffsetx>30</textoffsetx>
-					<font>font15</font>
-					<label>$LOCALIZE[31053]</label>
-					<label2>$VAR[InfoLineLabelVar]</label2>
-					<onfocus>Skin.Reset(ItemToEdit.InfoLine)</onfocus>
-					<onclick>SetProperty(Mimic.InfoLine,$INFO[Container(90000).ListItem.Property(Item),,HomeItem.InfoLine],home)</onclick>
-					<onclick>ActivateWindow(1125)</onclick>
-				</control> -->
 				<control type="button" id="303">
 					<description>Move up</description>
 					<width>1316</width>

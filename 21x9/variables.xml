@@ -23,10 +23,6 @@
 		<value condition="IsEmpty(Container(9000).ListItem.Thumb)">$INFO[Window(home).Property(fakelabel)]</value>
 		<value>$INFO[Container(9000).ListItem.Thumb]</value>
 	</variable>
-	<variable name="GlobalFanartSetting">
-		<value condition="Skin.HasSetting(Disable.Fanart)">$LOCALIZE[20445]: $LOCALIZE[24023]</value>
-		<value>$LOCALIZE[20445]: $LOCALIZE[305]</value>
-	</variable>
 	<variable name="VizBackgroundClickVar">
 		<value condition="IsEmpty(Skin.String(Viz.Background))">Skin.SetString(Viz.Background,1)</value>
 		<value condition="StringCompare(Skin.String(Viz.Background),1)">Skin.SetString(Viz.Background,2)</value>

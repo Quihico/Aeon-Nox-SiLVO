@@ -176,9 +176,4 @@
 	<include name="FocusPosition2">
 		<focusposition>2</focusposition>
 	</include>
-	<include name="CustomSubMenu">
-		<content>
-			<include>skinshortcuts-submenu</include>
-		</content>
-	</include>
 </includes>
