@@ -46,6 +46,7 @@
 						<height>90</height>
 						<texture border="4">listselect_fo.png</texture>
 						<include>VisibleFadeEffect</include>
+						<visible>Control.HasFocus(211)</visible>
 					</control>
 					<control type="label">
 						<width>356</width>
@@ -131,23 +132,27 @@
 					<label2>$INFO[Container(211).ListItem.Property(backgroundName)]</label2>
 					<visible>StringCompare(Window.Property(groupname),mainmenu)</visible>
 				</control>
-				<!-- <control type="button" id="90014">
-					<description>Widget Button</description>
+				<control type="button" id="312">
+					<description>Change widget</description>
 					<width>1316</width>
 					<height>90</height>
 					<textoffsetx>30</textoffsetx>
 					<font>font15</font>
-					<label>$LOCALIZE[31041]</label>
-					<label2>$INFO[Container(90000).ListItem.Property(WidgetLabel),,]</label2>
-					<onfocus>Skin.Reset(ItemToEdit.Widget)</onfocus>
-					<onfocus>Skin.Reset(ItemToEdit.WidgetLabel)</onfocus>
-					<onfocus>Skin.Reset(ItemToEdit.WidgetType)</onfocus>
-					<onclick>SetProperty(Mimic.Widget,$INFO[Container(90000).ListItem.Property(Item),,HomeItem.Widget],home)</onclick>
-					<onclick>SetProperty(Mimic.WidgetLabel,$INFO[Container(90000).ListItem.Property(Item),,HomeItem.WidgetLabel],home)</onclick>
-					<onclick>SetProperty(Mimic.WidgetType,$INFO[Container(90000).ListItem.Property(Item),,HomeItem.WidgetType],home)</onclick>
-					<onclick>ActivateWindow(1124)</onclick>
+					<label>$ADDON[script.skinshortcuts 32044]</label>
+					<label2>$INFO[Container(211).ListItem.Property(widgetName)]</label2>
+					<visible>StringCompare(Window.Property(groupname),mainmenu)</visible>
 				</control>
-				<control type="button" id="90016">
+				<control type="button" id="509">
+					<description>Change widget style</description>
+					<width>1316</width>
+					<height>90</height>
+					<textoffsetx>30</textoffsetx>
+					<font>font15</font>
+					<label>$LOCALIZE[31231]</label>
+					<label2>$VAR[WidgetStyleLabelVar]</label2>
+					<visible>!IsEmpty(Container(211).ListItem.Property(widgetName))</visible>
+				</control>
+				<!-- <control type="button" id="90016">
 					<description>Infoline Button</description>
 					<width>1316</width>
 					<height>90</height>

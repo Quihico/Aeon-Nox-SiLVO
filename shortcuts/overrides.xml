@@ -14,4 +14,15 @@
 	<background label="Live Background: Random albums" condition="IsEmpty(Window(Home).Property(No.Cases)) + System.HasAddon(service.library.data.provider)">s:live|i:albums</background>
 	<background label="31084" condition="!IsEmpty(Skin.String(WeatherFanartDir))">Weather.Fanart</background>
 	<background label="::PLAYLIST::" condition="IsEmpty(Window(Home).Property(No.Cases))">s:playlist|i:playlist</background>
+	<!-- Widgets -->
+	<widget label="$INFO[System.AddonTitle(plugin.video.the.trailers)]" condition="System.HasAddon(plugin.video.the.trailers)" path="plugin://plugin.video.the.trailers/apple/movies/" type="movies" target="movies">trailers</widget>
+	<widget label="12600" condition="!IsEmpty(Weather.Plugin)">weather</widget>
+	<widget label="31176" condition="System.HasAddon(script.extendedinfo)" path="plugin://script.extendedinfo?info=trendingmovies" target="extendedinfo">trakttrendingmovies</widget>
+	<widget label="31178" condition="System.HasAddon(script.extendedinfo)" path="plugin://script.extendedinfo?info=trendingshows" target="extendedinfo">trakttrendingshows</widget>
+	<widget label="31217" condition="System.HasAddon(script.extendedinfo)" path="plugin://script.extendedinfo?info=dailybabes" target="picture">dailybabes</widget>
+	<widget label="31216" condition="System.HasAddon(script.extendedinfo)" path="plugin://script.extendedinfo?info=dailybabe" target="picture">dailybabe</widget>
+	<!-- Widget Style -->
+	<propertySettings property="widgetStyle" buttonID="509" title="Widget Style" />
+	<property property="widgetStyle">$LOCALIZE[31230]</property>
+	<property property="widgetStyle">$LOCALIZE[31229]</property>
 </overrides>

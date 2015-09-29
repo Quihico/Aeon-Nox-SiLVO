@@ -576,7 +576,7 @@
 		<value condition="Skin.HasSetting(Enable.SlimList)">$LOCALIZE[31095]</value>
 		<value>$LOCALIZE[571]</value>
 	</variable>
-	<variable name="WidgetListContent">
+	<!-- <variable name="WidgetListContent">
 		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),2)">plugin://service.library.data.provider?type=randommovies&amp;reload=$INFO[Window.Property(randommovies)]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),5)">plugin://service.library.data.provider?type=randomepisodes&amp;reload=$INFO[Window.Property(randomepisodes)]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),6)">plugin://service.library.data.provider?type=recommendedepisodes&amp;reload=$INFO[Window.Property(recommendedepisodes)]</value>
@@ -602,10 +602,10 @@
 		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),40)">plugin://script.extendedinfo?info=dailybabe</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),41)">plugin://script.extendedinfo?info=dailybabes</value>
 		<value condition="!IsEmpty(Container(9000).ListItem.Property(Widget))">$INFO[Container(9000).ListItem.Property(Widget)]</value>
-	</variable>
+	</variable> -->
 	<variable name="WidgetSubLabelVar">
-		<value condition="!StringCompare(Container(9000).ListItem.Property(WidgetType),20)">$INFO[ListItem.Rating]$INFO[ListItem.Duration, • , $LOCALIZE[12391]]</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),20)">$INFO[ListItem.Rating]$INFO[ListItem.Property(Duration), • , $LOCALIZE[12391]]</value>
+		<value condition="!StringCompare(Container(9000).ListItem.Property(widgetTarget),extendedinfo)">$INFO[ListItem.Rating]$INFO[ListItem.Duration, • , $LOCALIZE[12391]]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widgetTarget),extendedinfo)">$INFO[ListItem.Rating]$INFO[ListItem.Property(Duration), • , $LOCALIZE[12391]]</value>
 	</variable>
 	<variable name="WidgetLogoVar">
 		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),21) | StringCompare(Container(9000).ListItem.Property(Widget),23) | StringCompare(Container(9000).ListItem.Property(Widget),24) | StringCompare(Container(9000).ListItem.Property(Widget),25) | StringCompare(Container(9000).ListItem.Property(Widget),26)">logos/rt-logo.png</value>
@@ -888,9 +888,8 @@
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),20)">extendedinfo</value>
 	</variable>
 	<variable name="WidgetStyleLabelVar">
-		<value condition="StringCompare(Container(90000).ListItem.Property(WidgetStyle),$LOCALIZE[31230])">[COLOR labelheader]$LOCALIZE[31230][/COLOR]</value>
-		<value condition="StringCompare(Container(90000).ListItem.Property(WidgetStyle),$LOCALIZE[31229])">[COLOR labelheader]$LOCALIZE[31229][/COLOR]</value>
-		<value>[COLOR labelheader]$LOCALIZE[571][/COLOR]</value>
+		<value condition="!IsEmpty(Container(211).ListItem.Property(widgetStyle))">$INFO[Container(211).ListItem.Property(widgetStyle)]</value>
+		<value>$LOCALIZE[571]</value>
 	</variable>
 	<variable name="PlaylistStatsContentVar">
 		<value condition="StringCompare(Container(9000).ListItem.Property(InfoLine),9)">plugin://service.library.data.provider?type=playliststats&amp;id=$INFO[Container(9000).ListItem.Property(Path)]</value>
