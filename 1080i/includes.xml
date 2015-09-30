@@ -560,7 +560,7 @@
 			<height>1</height>
 			<focusedlayout />
 			<itemlayout />
-			<content>plugin://service.library.data.provider?type=playliststats&amp;id=$INFO[Container(9000).ListItem.Property(list)]</content>
+			<content>plugin://service.library.data.provider?type=playliststats&amp;id=$INFO[Container(9000).ListItem.Property(path)]</content>
 		</control>
 	</include>
 	<include name="HomeSearchButton">

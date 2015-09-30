@@ -29,7 +29,7 @@
 		<control type="wraplist" id="9034">
 			<include>HiddenList</include>
 			<content>$VAR[CaseContentVar]</content>
-			<autoscroll time="7000" delay="7000" repeat="7000">StringCompare(Container(9000).ListItem.Property(BGType),7)</autoscroll>
+			<autoscroll time="7000" delay="7000" repeat="7000">SubString(Container(9000).ListItem.Property(background),s:playlist,Left)</autoscroll>
 			<visible>SubString(Container(9000).ListItem.Property(background),s:playlist,Left)</visible>
 		</control>
 		<control type="image">
