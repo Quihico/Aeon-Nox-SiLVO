@@ -25,7 +25,7 @@
 					<control type="label">
 						<width>356</width>
 						<height>90</height>
-						<font>font15</font>
+						<font>font15_title</font>
 						<textoffsetx>20</textoffsetx>
 						<textcolor>grey2</textcolor>
 						<selectedcolor>selected</selectedcolor>
@@ -49,7 +49,7 @@
 					<control type="label">
 						<width>356</width>
 						<height>90</height>
-						<font>font15</font>
+						<font>font15_title</font>
 						<textoffsetx>20</textoffsetx>
 						<textcolor>white</textcolor>
 						<selectedcolor>selected</selectedcolor>
