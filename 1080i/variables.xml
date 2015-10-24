@@ -839,6 +839,10 @@
 		<value condition="!IsEmpty(Container(211).ListItem.Property(widgetStyle))">$INFO[Container(211).ListItem.Property(widgetStyle)]</value>
 		<value>$LOCALIZE[571]</value>
 	</variable>
+	<variable name="WidgetArtLabelVar">
+		<value condition="!IsEmpty(Container(211).ListItem.Property(widgetArt))">$INFO[Container(211).ListItem.Property(widgetArt)]</value>
+		<value>None</value>
+	</variable>
 	<variable name="AudioChannelVar">
 		<value condition="IntegerGreaterThan(VideoPlayer.AudioChannels,7)">7.1</value>
 		<value condition="IntegerGreaterThan(VideoPlayer.AudioChannels,6)">6.1</value>
