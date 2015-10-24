@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="PanelWidgetNavigation1">
+		<onup>8001</onup>
+		<ondown>9000</ondown>
+		<onleft>8001</onleft>
+		<onright>8001</onright>
+		<onback>9000</onback>
+		<oninfo>SetProperty(Widget.Cover,$INFO[Container(8001).ListItem.Art(thumb)],home)</oninfo>
+		<oninfo>SetProperty(Widget.Title,$INFO[Container(8001).ListItem.Title],home)</oninfo>
+		<oninfo>SetProperty(Widget.SubTitle,$INFO[Container(8001).ListItem.Tagline ],home)</oninfo>
+		<oninfo>ActivateWindow(1199)</oninfo>
+	</include>
+	<include name="PanelWidgetNavigation2">
+		<onup>8001</onup>
+		<ondown>9000</ondown>
+		<onleft>8001</onleft>
+		<onright>8001</onright>
+		<onback>9000</onback>
+		<oninfo>SetProperty(Widget.Cover,$INFO[Container(8001).ListItem.Art(thumb)],home)</oninfo>
+		<oninfo>SetProperty(Widget.Title,$INFO[Container(8001).ListItem.Title],home)</oninfo>
+		<oninfo>SetProperty(Widget.SubTitle,$INFO[Container(8001).ListItem.Tagline ],home)</oninfo>
+		<oninfo>ActivateWindow(1199)</oninfo>
+	</include>
+	<include name="PanelWidget1">
+		<centerleft>50%</centerleft>
+		<top>$PARAM[Top]</top>
+		<width>1440</width>
+		<height>310</height>
+		<include>PanelWidgetNavigation1</include>
+		<orientation>horizontal</orientation>
+		<preloaditems>2</preloaditems>
+		<scrolltime tween="quadratic" easing="out">300</scrolltime>
+	</include>
+	<include name="PanelWidget2">
+		<centerleft>50%</centerleft>
+		<top>$PARAM[Top]</top>
+		<width>1440</width>
+		<height>310</height>
+		<include>PanelWidgetNavigation2</include>
+		<orientation>horizontal</orientation>
+		<preloaditems>2</preloaditems>
+		<scrolltime tween="quadratic" easing="out">300</scrolltime>
+	</include>
+	<!-- Panel -->
+	<include name="PortraitArt">
+		<param name="layoutWidth" default="205"/>
+		<param name="layoutHeight" default="310"/>
+		<param name="artLeft" default="5"/>
+		<param name="artTop" default="5"/>
+		<param name="artWidth" default="200"/>
+		<param name="artHeight" default="300"/>
+		<param name="Path" default="$INFO[Container(9000).ListItem.Property(widgetPath)]"/>
+		<param name="Target" default="$INFO[Container(9000).ListItem.Property(widgetTarget)]"/>
+		<definition>
+			<itemlayout height="$PARAM[layoutHeight]" width="$PARAM[layoutWidth]">
+				<control type="image">
+					<left>$PARAM[artLeft]</left>
+					<top>$PARAM[artTop]</top>
+					<width>$PARAM[artWidth]</width>
+					<height>$PARAM[artHeight]</height>
+					<fadetime>400</fadetime>
+					<aspectratio>scale</aspectratio>
+					<animation effect="zoom" end="96,96" center="auto" condition="StringCompare(Skin.String(Poster.Case),Glass)">conditional</animation>
+					<animation effect="zoom" end="95,90" center="100,250" condition="StringCompare(Skin.String(Poster.Case),Case)">conditional</animation>
+					<animation effect="zoom" end="94,97" center="auto" condition="StringCompare(Skin.String(Poster.Case),Clear Case)">conditional</animation>
+					<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
+					<texture background="true" fallback="DefaultMovies.png">$VAR[HomeWidgetPosterVar]</texture>
+				</control>
+				<control type="image">
+					<left>$PARAM[artLeft]</left>
+					<top>$PARAM[artTop]</top>
+					<width>$PARAM[artWidth]</width>
+					<height>$PARAM[artHeight]</height>
+					<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
+					<texture>$VAR[HomeWidgetCaseVar]</texture>
+				</control>
+			</itemlayout>
+			<focusedlayout height="$PARAM[layoutHeight]" width="$PARAM[layoutWidth]">
+				<control type="group">
+					<animation  type="Focus" reversible="false">
+						<effect type="zoom" start="95" end="100" time="300" tween="sine" easing="inout" center="auto" />
+					</animation>
+					<control type="image">
+						<left>$PARAM[artLeft]</left>
+						<top>$PARAM[artTop]</top>
+						<width>$PARAM[artWidth]</width>
+						<height>$PARAM[artHeight]</height>
+						<fadetime>400</fadetime>
+						<aspectratio>scale</aspectratio>
+						<animation effect="zoom" end="96,96" center="auto" condition="StringCompare(Skin.String(Poster.Case),Glass)">conditional</animation>
+						<animation effect="zoom" end="95,90" center="100,250" condition="StringCompare(Skin.String(Poster.Case),Case)">conditional</animation>
+						<animation effect="zoom" end="94,97" center="auto" condition="StringCompare(Skin.String(Poster.Case),Clear Case)">conditional</animation>
+						<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
+						<texture background="true" fallback="DefaultMovies.png">$VAR[HomeWidgetPosterVar]</texture>
+					</control>
+					<control type="image">
+						<left>$PARAM[artLeft]</left>
+						<top>$PARAM[artTop]</top>
+						<width>$PARAM[artWidth]</width>
+						<height>$PARAM[artHeight]</height>
+						<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
+						<texture>$VAR[HomeWidgetCaseVar]</texture>
+					</control>
+				</control>
+			</focusedlayout>
+			<content target="$PARAM[Target]">$PARAM[Path]</content>
+		</definition>
+	</include>
+	<include name="SquareArt">
+		<param name="layoutWidth" default="287"/>
+		<param name="layoutHeight" default="293"/>
+		<param name="artLeft" default="5"/>
+		<param name="artTop" default="5"/>
+		<param name="artWidth" default="282"/>
+		<param name="artHeight" default="283"/>
+		<param name="Texture" default="$VAR[HomeWidgetPosterVar]"/>
+		<param name="Path" default="$INFO[Container(9000).ListItem.Property(widgetPath)]"/>
+		<param name="Target" default="$INFO[Container(9000).ListItem.Property(widgetTarget)]"/>
+		<definition>
+			<itemlayout height="$PARAM[layoutHeight]" width="$PARAM[layoutWidth]">
+				<control type="image">
+					<left>$PARAM[artLeft]</left>
+					<top>$PARAM[artTop]</top>
+					<width>$PARAM[artWidth]</width>
+					<height>$PARAM[artHeight]</height>
+					<fadetime>400</fadetime>
+					<aspectratio>scale</aspectratio>
+					<animation effect="zoom" end="96,96" center="auto" condition="StringCompare(Skin.String(SquarePoster.Case),Glass)">conditional</animation>
+					<animation effect="zoom" end="91,95" center="240,150" condition="StringCompare(Skin.String(SquarePoster.Case),Case)">conditional</animation>
+					<animation effect="zoom" end="94,96" center="auto" condition="StringCompare(Skin.String(SquarePoster.Case),Clear Case)">conditional</animation>
+					<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
+					<texture background="true" fallback="DefaultMusicAlbums.png">$PARAM[Texture]</texture>
+				</control>
+				<control type="image">
+					<left>$PARAM[artLeft]</left>
+					<top>$PARAM[artTop]</top>
+					<width>$PARAM[artWidth]</width>
+					<height>$PARAM[artHeight]</height>
+					<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
+					<texture>$VAR[HomeWidgetSquareCaseVar]</texture>
+				</control>
+			</itemlayout>
+			<focusedlayout height="$PARAM[layoutHeight]" width="$PARAM[layoutWidth]">
+				<control type="group">
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" start="95" end="100" time="300" tween="sine" easing="inout" center="auto" />
+					</animation>
+					<control type="image">
+						<left>$PARAM[artLeft]</left>
+						<top>$PARAM[artTop]</top>
+						<width>$PARAM[artWidth]</width>
+						<height>$PARAM[artHeight]</height>
+						<fadetime>400</fadetime>
+						<aspectratio>scale</aspectratio>
+						<animation effect="zoom" end="96,96" center="auto" condition="StringCompare(Skin.String(SquarePoster.Case),Glass)">conditional</animation>
+						<animation effect="zoom" end="91,95" center="240,150" condition="StringCompare(Skin.String(SquarePoster.Case),Case)">conditional</animation>
+						<animation effect="zoom" end="94,96" center="auto" condition="StringCompare(Skin.String(SquarePoster.Case),Clear Case)">conditional</animation>
+						<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
+						<texture background="true" fallback="DefaultMusicAlbums.png">$PARAM[Texture]</texture>
+					</control>
+					<control type="image">
+						<left>$PARAM[artLeft]</left>
+						<top>$PARAM[artTop]</top>
+						<width>$PARAM[artWidth]</width>
+						<height>$PARAM[artHeight]</height>
+						<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
+						<texture>$VAR[HomeWidgetSquareCaseVar]</texture>
+					</control>
+				</control>
+			</focusedlayout>
+			<content target="$PARAM[Target]">$PARAM[Path]</content>
+		</definition>
+	</include>
+	<include name="LandscapeArt">
+		<param name="layoutWidth" default="479"/>
+		<param name="layoutHeight" default="278"/>
+		<param name="artLeft" default="4"/>
+		<param name="artTop" default="5"/>
+		<param name="artWidth" default="474"/>
+		<param name="artHeight" default="268"/>
+		<param name="aspectRatio" default="stretch"/>
+		<param name="aspectAligny" default=""/>
+		<param name="Texture" default="$VAR[HomeWidgetFanartVar]"/>
+		<param name="Path" default="$INFO[Container(9000).ListItem.Property(widgetPath)]"/>
+		<param name="Target" default="$INFO[Container(9000).ListItem.Property(widgetTarget)]"/>
+		<definition>
+			<itemlayout height="$PARAM[layoutHeight]" width="$PARAM[layoutWidth]">
+				<control type="image">
+					<left>$PARAM[artLeft]</left>
+					<top>$PARAM[artTop]</top>
+					<width>$PARAM[artWidth]</width>
+					<height>$PARAM[artHeight]</height>
+					<fadetime>400</fadetime>
+					<aspectratio aligny="$PARAM[aspectAligny]">$PARAM[aspectRatio]</aspectratio>
+					<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
+					<texture>$PARAM[Texture]</texture>
+				</control>
+				<control type="image">
+					<left>$PARAM[overlayLeft]</left>
+					<top>$PARAM[overlayTop]</top>
+					<width>$PARAM[overlayWidth]</width>
+					<height>$PARAM[overlayHeight]</height>
+					<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
+					<texture>$VAR[HomeWidgetOverlayVar]</texture>
+				</control>
+			</itemlayout>
+			<focusedlayout height="$PARAM[layoutHeight]" width="$PARAM[layoutWidth]">
+				<control type="group">
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" start="95" end="100" time="300" tween="sine" easing="inout" center="auto" />
+					</animation>
+					<control type="image">
+						<left>$PARAM[artLeft]</left>
+						<top>$PARAM[artTop]</top>
+						<width>$PARAM[artWidth]</width>
+						<height>$PARAM[artHeight]</height>
+						<fadetime>400</fadetime>
+						<aspectratio aligny="$PARAM[aspectAligny]">$PARAM[aspectRatio]</aspectratio>
+						<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
+						<texture>$PARAM[Texture]</texture>
+					</control>
+					<control type="image">
+						<left>$PARAM[overlayLeft]</left>
+						<top>$PARAM[overlayTop]</top>
+						<width>$PARAM[overlayWidth]</width>
+						<height>$PARAM[overlayHeight]</height>
+						<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
+						<texture>$VAR[HomeWidgetOverlayVar]</texture>
+					</control>
+				</control>
+			</focusedlayout>
+			<content target="$PARAM[Target]">$PARAM[Path]</content>
+		</definition>
+	</include>
+	<include name="BannerArt">
+		<param name="layoutWidth" default="718"/>
+		<param name="layoutHeight" default="133"/>
+		<param name="artLeft" default="4"/>
+		<param name="artTop" default="5"/>
+		<param name="artWidth" default="714"/>
+		<param name="artHeight" default="128"/>
+		<param name="Path" default="$INFO[Container(9000).ListItem.Property(widgetPath)]"/>
+		<param name="Target" default="$INFO[Container(9000).ListItem.Property(widgetTarget)]"/>
+		<definition>
+			<itemlayout height="$PARAM[layoutHeight]" width="$PARAM[layoutWidth]">
+				<control type="image">
+					<left>$PARAM[artLeft]</left>
+					<top>$PARAM[artTop]</top>
+					<width>$PARAM[artWidth]</width>
+					<height>$PARAM[artHeight]</height>
+					<fadetime>400</fadetime>
+					<aspectratio aligny="top">scale</aspectratio>
+					<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
+					<texture background="true" fallback="DefaultMovies.png">$VAR[HomeWidgetBannerVar]</texture>
+				</control>
+				<control type="image">
+					<left>$PARAM[artLeft]</left>
+					<top>$PARAM[artTop]</top>
+					<width>$PARAM[artWidth]</width>
+					<height>$PARAM[artHeight]</height>
+					<fadetime>400</fadetime>
+					<aspectratio>keep</aspectratio>
+					<visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(tvshow.banner))</visible>
+					<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
+					<texture background="true" fallback="DefaultMovies.png">$VAR[HomeWidgetClearLogoVar]</texture>
+				</control>
+				<control type="image">
+					<left>$PARAM[overlayLeft]</left>
+					<top>$PARAM[overlayTop]</top>
+					<width>$PARAM[overlayWidth]</width>
+					<height>$PARAM[overlayHeight]</height>
+					<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
+					<texture>$VAR[HomeWidgetOverlayVar]</texture>
+				</control>
+			</itemlayout>
+			<focusedlayout height="$PARAM[layoutHeight]" width="$PARAM[layoutWidth]">
+				<control type="group">
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" start="95" end="100" time="300" tween="sine" easing="inout" center="auto" />
+					</animation>
+					<control type="image">
+						<left>$PARAM[artLeft]</left>
+						<top>$PARAM[artTop]</top>
+						<width>$PARAM[artWidth]</width>
+						<height>$PARAM[artHeight]</height>
+						<fadetime>400</fadetime>
+						<aspectratio aligny="top">scale</aspectratio>
+						<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
+						<texture background="true" fallback="DefaultMovies.png">$VAR[HomeWidgetBannerVar]</texture>
+					</control>
+					<control type="image">
+						<left>$PARAM[artLeft]</left>
+						<top>$PARAM[artTop]</top>
+						<width>$PARAM[artWidth]</width>
+						<height>$PARAM[artHeight]</height>
+						<fadetime>400</fadetime>
+						<aspectratio>keep</aspectratio>
+						<visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(tvshow.banner))</visible>
+						<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
+						<texture>$VAR[HomeWidgetClearLogoVar]</texture>
+					</control>
+					<control type="image">
+						<left>$PARAM[overlayLeft]</left>
+						<top>$PARAM[overlayTop]</top>
+						<width>$PARAM[overlayWidth]</width>
+						<height>$PARAM[overlayHeight]</height>
+						<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
+						<texture>$VAR[HomeWidgetOverlayVar]</texture>
+					</control>
+				</control>
+			</focusedlayout>
+			<content target="$PARAM[Target]">$PARAM[Path]</content>
+		</definition>
+	</include>
+</includes>

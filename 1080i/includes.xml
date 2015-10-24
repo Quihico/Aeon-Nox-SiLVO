@@ -8,6 +8,9 @@
 	<include file="Includes_LiveTV.xml" />
 	<include file="Includes_LiveTV_Views.xml" />
 	<include file="IncludesHomeRecentlyAdded.xml" />
+	<include file="Includes_Widgets.xml" />
+	<include file="Includes_Widget1.xml" />
+	<include file="Includes_Widget2.xml" />
 	<include file="IncludesBackgroundBuilding.xml" />
 	<include file="View_50_List.xml" />
 	<include file="View_51_InfoWall.xml" />

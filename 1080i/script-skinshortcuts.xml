@@ -3,6 +3,39 @@
 	<defaultcontrol always="true">90001</defaultcontrol>
 	<controls>
 		<control type="group">
+			<visible>Window.IsActive(home)</visible>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>1920</width>
+				<height>1080</height>
+				<texture colordiffuse="99FFFFFF">back.png</texture>
+			</control>
+			<control type="image">
+				<left>50</left>
+				<top>88</top>
+				<width>420</width>
+				<height>904</height>
+				<texture colordiffuse="E6FFFFFF" border="40">listpanel_back.png</texture>
+			</control>
+			<control type="image">
+				<left>490</left>
+				<top>88</top>
+				<width>1380</width>
+				<height>904</height>
+				<texture colordiffuse="E6FFFFFF" border="40">listpanel_back.png</texture>
+			</control>
+			<control type="image">
+				<description>LOGO</description>
+				<left>82</left>
+				<top>840</top>
+				<width>356</width>
+				<height>120</height>
+				<aspectratio>keep</aspectratio>
+				<texture>aeon-nox-logo.png</texture>
+			</control>
+		</control>
+		<control type="group">
 			<visible>IsEmpty(Window.Property(additionalDialog))</visible>
 			<left>0</left>
 			<top>128</top>
@@ -139,6 +172,18 @@
 					<font>font15</font>
 					<label>$ADDON[script.skinshortcuts 32044]</label>
 					<label2>$INFO[Container(211).ListItem.Property(widgetName)]</label2>
+					<onclick>SetProperty(customProperty,widgetArt)</onclick>
+					<onclick>SendClick(404)</onclick>
+					<visible>StringCompare(Window.Property(groupname),mainmenu)</visible>
+				</control>
+				<control type="button" id="511">
+					<description>Change widget art</description>
+					<width>1316</width>
+					<height>90</height>
+					<textoffsetx>30</textoffsetx>
+					<font>font15</font>
+					<label>Widget Art</label>
+					<label2>$VAR[WidgetArtLabelVar]</label2>
 					<visible>StringCompare(Window.Property(groupname),mainmenu)</visible>
 				</control>
 				<control type="button" id="509">

@@ -1,5 +1,165 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+	<include name="HomeRecentlyAddedInfo">
+		<control type="group" id="9003">
+			<animation effect="slide" tween="cubic" time="720" start="0,-1080" end="0,0">WindowOpen</animation>
+			<animation effect="slide" tween="cubic" time="720" end="0,-1080" start="0,0">WindowClose</animation>
+			<animation effect="fade" start="100" end="0" time="0" reversible="false" condition="Container(9000).OnNext | Container(9000).OnPrevious">Conditional</animation>
+			<animation effect="fade" start="0" end="100" time="200" delay="200" reversible="false" condition="![Container(9000).OnNext | Container(9000).OnPrevious]">Conditional</animation>
+			<visible>!IsEmpty(Container(9000).ListItem.Property(widget))</visible>
+			<include>VisibleFadeEffect</include>
+			<!-- For Testing -->
+			<control type="image">
+				<top>90</top>
+				<left></left>
+				<centerleft>50%</centerleft>
+				<width>1440</width>
+				<height>310</height>
+				<texture>xxxxhomewidgets/test.png</texture>
+				<animation effect="slide" end="0,21" condition="!StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + !Skin.HasSetting(lowermainmenu)">Conditional</animation>
+				<animation effect="slide" end="215,0" condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994])">Conditional</animation>
+			</control>
+			<control type="image">
+				<top>449</top>
+				<left></left>
+				<centerleft>50%</centerleft>
+				<width>1440</width>
+				<height>310</height>
+				<texture>xxxxhomewidgets/test.png</texture>
+				<animation effect="slide" end="0,235" condition="!StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + !Skin.HasSetting(lowermainmenu)">Conditional</animation>
+				<animation effect="slide" end="215,-19" condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994])">Conditional</animation>
+			</control>
+			<!-- Panel Widget -->
+			<control type="group">
+				<top>90</top>
+				<visible>StringCompare(Container(9000).ListItem.Property(widgetStyle),Panel)</visible>
+				<animation effect="slide" end="0,21" condition="!StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + !Skin.HasSetting(lowermainmenu)">Conditional</animation>
+				<animation effect="slide" end="215,0" condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994])">Conditional</animation>
+				<control type="image">
+					<left></left>
+					<centerleft>50%</centerleft>
+					<top>-10</top>
+					<width>1460</width>
+					<height>330</height>
+					<texture>$VAR[HomeWidgetBackgroundVar]</texture>
+				</control>
+				<control type="label">
+					<left></left>
+					<centerleft>50%</centerleft>
+					<top>330</top>
+					<width>1440</width>
+					<height>auto</height>
+					<align>center</align>
+					<font>font13_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<label>$INFO[Container(9000).ListItem.Property(widgetName)]</label>
+				</control>
+				<!-- Poster -->
+				<control type="panel" id="8001">
+					<visible>StringCompare(Container(9000).ListItem.Property(widgetArt),Poster)</visible>
+					<include>PanelWidget1</include>
+					<include>PortraitArt</include>
+				</control>
+				<!-- Square Poster-->
+				<control type="panel" id="8001">
+					<visible>StringCompare(Container(9000).ListItem.Property(widgetArt),Square Poster)</visible>
+					<include name="PanelWidget1">
+						<param name="Top">17</param>
+					</include>
+					<include>SquareArt</include>
+				</control>
+				<!-- DiscArt-->
+				<control type="panel" id="8001">
+					<visible>StringCompare(Container(9000).ListItem.Property(widgetArt),DiscArt)</visible>
+					<include name="PanelWidget1">
+						<param name="Top">17</param>
+					</include>
+					<include name="SquareArt">
+						<param name="Texture">$VAR[HomeWidgetDiscArtVar]</param>
+					</include>
+				</control>
+				<!-- CharacterArt-->
+				<control type="panel" id="8001">
+					<visible>StringCompare(Container(9000).ListItem.Property(widgetArt),CharacterArt)</visible>
+					<include name="PanelWidget1">
+						<param name="Top">17</param>
+					</include>
+					<include name="SquareArt">
+						<param name="Texture">$VAR[HomeWidgetCharacterArtVar]</param>
+					</include>
+				</control>
+				<!-- Fanart -->
+				<control type="panel" id="8001">
+					<visible>StringCompare(Container(9000).ListItem.Property(widgetArt),Fanart)</visible>
+					<include name="PanelWidget1">
+						<param name="Top">32</param>
+					</include>
+					<include>LandscapeArt</include>
+				</control>
+				<!-- Landscape -->
+				<control type="panel" id="8001">
+					<visible>StringCompare(Container(9000).ListItem.Property(widgetArt),Landscape)</visible>
+					<include name="PanelWidget1">
+						<param name="Top">32</param>
+					</include>
+					<include name="LandscapeArt">
+						<param name="Texture">$VAR[HomeWidgetLandscapeVar]</param>
+					</include>
+				</control>
+				<!-- Thumb -->
+				<control type="panel" id="8001">
+					<visible>StringCompare(Container(9000).ListItem.Property(widgetArt),Thumb)</visible>
+					<include name="PanelWidget1">
+						<param name="Top">32</param>
+					</include>
+					<include name="LandscapeArt">
+						<param name="Texture">$VAR[HomeWidgetThumbVar]</param>
+					</include>
+				</control>
+				<!-- ClearLogo -->
+				<control type="panel" id="8001">
+					<visible>StringCompare(Container(9000).ListItem.Property(widgetArt),ClearLogo)</visible>
+					<include name="PanelWidget1">
+						<param name="Top">32</param>
+					</include>
+					<include name="LandscapeArt">
+						<param name="Texture">$VAR[HomeWidgetClearLogoVar]</param>
+						<param name="artLeft">14</param>
+						<param name="artTop">15</param>
+						<param name="artWidth">454</param>
+						<param name="artHeight">257</param>
+						<param name="aspectAligny">center</param>
+						<param name="aspectRatio">keep</param>
+					</include>
+				</control>
+				<!-- ClearArt -->
+				<control type="panel" id="8001">
+					<visible>StringCompare(Container(9000).ListItem.Property(widgetArt),ClearArt)</visible>
+					<include name="PanelWidget1">
+						<param name="Top">32</param>
+					</include>
+					<include name="LandscapeArt">
+						<param name="Texture">$VAR[HomeWidgetClearArtVar]</param>
+						<param name="artLeft">14</param>
+						<param name="artTop">15</param>
+						<param name="artWidth">454</param>
+						<param name="artHeight">257</param>
+						<param name="aspectAligny">center</param>
+						<param name="aspectRatio">keep</param>
+					</include>
+				</control>
+				<!-- Banner -->
+				<control type="panel" id="8001">
+					<visible>StringCompare(Container(9000).ListItem.Property(widgetArt),Banner)</visible>
+					<include name="PanelWidget1">
+						<param name="Top">39</param>
+					</include>
+					<include>BannerArt</include>
+				</control>
+			</control>
+		</control>
+	</include>
 	<include name="NowPlayingVideoWidget">
 		<!-- Video Info -->
 		<control type="group">
@@ -8,13 +168,11 @@
 			<visible>Player.HasVideo</visible>
 			<visible>VideoPlayer.Content(movies) | VideoPlayer.Content(episodes) | VideoPlayer.Content(musicvideos) | VideoPlayer.Content(livetv)</visible>
 			<include>VisibleFadeEffect</include>
-			<animation effect="slide" tween="cubic" time="720" start="0,1080" end="0,0" condition="!Skin.HasSetting(lowermainmenu) + !StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994])">WindowOpen</animation>
-			<animation effect="slide" tween="cubic" time="720" end="0,1080" start="0,0" condition="!Skin.HasSetting(lowermainmenu) + !StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994])">WindowClose</animation>
-			<animation effect="slide" tween="cubic" time="720" start="0,-1080" end="0,0" condition="Skin.HasSetting(lowermainmenu) | StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994])">WindowOpen</animation>
-			<animation effect="slide" tween="cubic" time="720" end="0,-1080" start="0,0" condition="Skin.HasSetting(lowermainmenu) | StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994])">WindowClose</animation>
-			<animation effect="slide" end="0,-650" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(lowermainmenu) | StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994])">Conditional</animation>
-			<animation effect="slide" end="300,40" time="320" tween="cubic" easing="inout" condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994])">Conditional</animation>
-			<animation effect="slide" end="120,0" time="320" tween="cubic" easing="inout" condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + VideoPlayer.Content(livetv)">Conditional</animation>
+			<animation effect="slide" tween="cubic" time="720" start="0,1080" end="0,0" condition="!Skin.HasSetting(lowermainmenu)">WindowOpen</animation>
+			<animation effect="slide" tween="cubic" time="720" end="0,1080" start="0,0" condition="!Skin.HasSetting(lowermainmenu)">WindowClose</animation>
+			<animation effect="slide" tween="cubic" time="720" start="0,-1080" end="0,0" condition="Skin.HasSetting(lowermainmenu)">WindowOpen</animation>
+			<animation effect="slide" tween="cubic" time="720" end="0,-1080" start="0,0" condition="Skin.HasSetting(lowermainmenu)">WindowClose</animation>
+			<animation effect="slide" end="0,-650" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(lowermainmenu)">Conditional</animation>
 			<control type="group">
 				<control type="image">
 					<description>bg image</description>
@@ -23,25 +181,23 @@
 					<width>1920</width>
 					<height>560</height>
 					<texture>gradient_floor.png</texture>
-					<visible>!Skin.HasSetting(lowermainmenu) + !StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994])</visible>
+					<visible>!Skin.HasSetting(lowermainmenu)</visible>
 				</control>
 				<control type="image">
-					<animation effect="slide" end="-300,0" time="0" tween="cubic" easing="inout" condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994])">Conditional</animation>
-					<animation effect="slide" end="-120,0" time="0" tween="cubic" easing="inout" condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + VideoPlayer.Content(livetv)">Conditional</animation>
 					<description>bg image</description>
 					<left>0</left>
 					<top>-30</top>
 					<width>1920</width>
 					<height>800</height>
 					<texture flipy="true">gradient_floor.png</texture>
-					<visible>Skin.HasSetting(lowermainmenu) | StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994])</visible>
+					<visible>Skin.HasSetting(lowermainmenu)</visible>
 				</control>
 				<control type="image">
 					<description>Cover image</description>
 					<left>20</left>
 					<top>45</top>
-					<width>350</width>
-					<height>350</height>
+					<width>360</width>
+					<height>360</height>
 					<aspectratio align="right">keep</aspectratio>
 					<texture fallback="DefaultVideoCover.png">$VAR[HomeNowPlayingThumbVar]</texture>
 					<bordersize>20</bordersize>
@@ -141,16 +297,15 @@
 						<label>$INFO[VideoPlayer.Studio]</label>
 						<visible>VideoPlayer.Content(movies) | VideoPlayer.Content(musicvideos)</visible>
 					</control>
-					<control type="textbox">
+					<control type="label">
 						<left>100</left>
-						<width>800</width>
-						<height>120</height>
+						<width>1300</width>
+						<height>40</height>
 						<font>font15</font>
 						<textcolor>white</textcolor>
 						<shadowcolor>black</shadowcolor>
 						<label>$INFO[VideoPlayer.Plot]</label>
 						<visible>VideoPlayer.Content(livetv)</visible>
-						<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(Enable.AutoScroll)</autoscroll>
 					</control>
 					<control type="label">
 						<description>Time Label</description>
@@ -173,28 +328,26 @@
 			<top>602</top>
 			<visible>Player.HasAudio</visible>
 			<include>VisibleFadeEffect</include>
-			<animation effect="slide" tween="cubic" time="720" start="0,1080" end="0,0" condition="!Skin.HasSetting(lowermainmenu) + !StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994])">WindowOpen</animation>
-			<animation effect="slide" tween="cubic" time="720" end="0,1080" start="0,0" condition="!Skin.HasSetting(lowermainmenu) + !StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994])">WindowClose</animation>
-			<animation effect="slide" tween="cubic" time="720" start="0,-1080" end="0,0" condition="Skin.HasSetting(lowermainmenu) | StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994])">WindowOpen</animation>
-			<animation effect="slide" tween="cubic" time="720" end="0,-1080" start="0,0" condition="Skin.HasSetting(lowermainmenu) | StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994])">WindowClose</animation>
-			<animation effect="slide" end="0,-640" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(lowermainmenu) | StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994])">Conditional</animation>
-			<animation effect="slide" end="400,40" time="320" tween="cubic" easing="inout" condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994])">Conditional</animation>
+			<animation effect="slide" tween="cubic" time="720" start="0,1080" end="0,0" condition="!Skin.HasSetting(lowermainmenu)">WindowOpen</animation>
+			<animation effect="slide" tween="cubic" time="720" end="0,1080" start="0,0" condition="!Skin.HasSetting(lowermainmenu)">WindowClose</animation>
+			<animation effect="slide" tween="cubic" time="720" start="0,-1080" end="0,0" condition="Skin.HasSetting(lowermainmenu)">WindowOpen</animation>
+			<animation effect="slide" tween="cubic" time="720" end="0,-1080" start="0,0" condition="Skin.HasSetting(lowermainmenu)">WindowClose</animation>
+			<animation effect="slide" end="0,-640" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(lowermainmenu)">Conditional</animation>
 			<control type="image">
 				<left>0</left>
 				<top>-152</top>
 				<width>FullScreenWidth</width>
 				<height>630</height>
 				<texture border="1">nowplaying_shadow.png</texture>
-				<visible>!Skin.HasSetting(lowermainmenu) + !StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994])</visible>
+				<visible>!Skin.HasSetting(lowermainmenu)</visible>
 			</control>
 			<control type="image">
-				<animation effect="slide" end="-400,0" time="0" tween="cubic" easing="inout" condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994])">Conditional</animation>
 				<left>0</left>
 				<top>-50</top>
 				<width>FullScreenWidth</width>
 				<height>630</height>
 				<texture flipy="true" border="1">nowplaying_shadow.png</texture>
-				<visible>Skin.HasSetting(lowermainmenu) | StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994])</visible>
+				<visible>Skin.HasSetting(lowermainmenu)</visible>
 			</control>
 			<control type="grouplist">
 				<left>410</left>
@@ -527,10 +680,10 @@
 				</control>
 				<control type="rss">
 					<description>RSS feed</description>
-					<left>592</left>
+					<left>600</left>
 					<top>0</top>
 					<height>30</height>
-					<width>1280</width>
+					<width>1275</width>
 					<font>font13</font>
 					<urlset>1</urlset>
 					<textcolor>themecolor</textcolor>
@@ -931,12 +1084,11 @@
 	<include name="LiveTVWidget">
 		<control type="group">
 			<left>490r</left>
-			<top>40</top>
+			<top>200</top>
 			<visible>StringCompare(Container(9000).ListItem.Property(widget),$LOCALIZE[31502])</visible>
 			<include>VisibleFadeEffect</include>
 			<include>Window_OpenClose_Animation</include>
-			<animation effect="fade" start="100" end="0" time="500" condition="Window.IsActive(Favourites)">conditional</animation>
-			<animation effect="slide" end="0,755" time="0" tween="cubic" easing="inout" condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994])">Conditional</animation>
+			<animation effect="fade" start="100" end="0" time="200" condition="Window.IsActive(Favourites)">conditional</animation>
 			<control type="group">
 				<animation effect="slide" start="0,0" end="0,100" time="0" condition="PVR.IsRecording">conditional</animation>
 				<visible>PVR.HasNonRecordingTimer</visible>

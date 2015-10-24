@@ -32,10 +32,21 @@
 	<widget label="31038" target="music" type="albums" icon="DefaultMusicRecentlyPlayed.png" path="plugin://service.library.data.provider?type=recommendedalbums&amp;reload=$INFO[Window.Property(recommendedalbums)]">recommendedalbums</widget>
 	<widget label="31217" condition="System.HasAddon(script.extendedinfo)" icon="DefaultAddonPicture.png" path="plugin://script.extendedinfo?info=dailybabes" target="picture">dailybabes</widget>
 	<widget label="31216" condition="System.HasAddon(script.extendedinfo)" icon="DefaultAddonPicture.png" path="plugin://script.extendedinfo?info=dailybabe" target="picture">dailybabe</widget>
-	<!-- Widget Style -->
-	<propertySettings property="widgetStyle" buttonID="509" title="Widget Style" />
-	<property property="widgetStyle">$LOCALIZE[31230]</property>
-	<property property="widgetStyle">$LOCALIZE[31229]</property>
+	<!-- Widget Art 1 -->
+	<propertySettings property="widgetArt" buttonID="511" title="Widget Art"/>
+	<property property="widgetArt">Poster</property>	
+	<property property="widgetArt">Square Poster</property>	
+	<property property="widgetArt">FanArt</property>
+	<property property="widgetArt">Landscape</property>
+	<property property="widgetArt">Thumb</property>	
+	<property property="widgetArt">ClearArt</property>	
+	<property property="widgetArt">ClearLogo</property>	
+	<property property="widgetArt">DiscArt</property>	
+	<property property="widgetArt">CharacterArt</property>	
+	<property property="widgetArt">Banner</property>	
+	<!-- Widget Style 1 -->
+	<propertySettings property="widgetStyle" buttonID="509" title="Widget Style 1" />
+	<property property="widgetStyle">Panel</property>
 	<!-- Infoline -->
 	<property property="InfoLine">31052</property>
 	<property property="InfoLine">31053</property>

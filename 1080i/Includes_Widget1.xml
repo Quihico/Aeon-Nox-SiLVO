@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="HomeRecentlyAddedInfo">
+		<control type="group" id="9003">
+			<animation effect="slide" tween="cubic" time="720" start="0,-1080" end="0,0">WindowOpen</animation>
+			<animation effect="slide" tween="cubic" time="720" end="0,-1080" start="0,0">WindowClose</animation>
+			<animation effect="fade" start="100" end="0" time="0" reversible="false" condition="Container(9000).OnNext | Container(9000).OnPrevious">Conditional</animation>
+			<animation effect="fade" start="0" end="100" time="200" delay="200" reversible="false" condition="![Container(9000).OnNext | Container(9000).OnPrevious]">Conditional</animation>
+			<visible>!IsEmpty(Container(9000).ListItem.Property(widget))</visible>
+			<include>VisibleFadeEffect</include>
+			<!-- For Testing -->
+			<control type="image">
+				<top>90</top>
+				<left></left>
+				<centerleft>50%</centerleft>
+				<width>1440</width>
+				<height>310</height>
+				<texture>xxxxhomewidgets/test.png</texture>
+				<animation effect="slide" end="0,21" condition="!StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + !Skin.HasSetting(lowermainmenu)">Conditional</animation>
+				<animation effect="slide" end="215,0" condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994])">Conditional</animation>
+			</control>
+			<control type="image">
+				<top>449</top>
+				<left></left>
+				<centerleft>50%</centerleft>
+				<width>1440</width>
+				<height>310</height>
+				<texture>xxxxhomewidgets/test.png</texture>
+				<animation effect="slide" end="0,235" condition="!StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + !Skin.HasSetting(lowermainmenu)">Conditional</animation>
+				<animation effect="slide" end="215,-19" condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994])">Conditional</animation>
+			</control>
+			<!-- Panel Widget -->
+			<control type="group">
+				<top>90</top>
+				<visible>StringCompare(Container(9000).ListItem.Property(widgetStyle),Panel)</visible>
+				<animation effect="slide" end="0,21" condition="!StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + !Skin.HasSetting(lowermainmenu)">Conditional</animation>
+				<animation effect="slide" end="215,0" condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994])">Conditional</animation>
+				<control type="image">
+					<left></left>
+					<centerleft>50%</centerleft>
+					<top>-10</top>
+					<width>1460</width>
+					<height>330</height>
+					<texture>$VAR[HomeWidgetBackgroundVar]</texture>
+				</control>
+				<control type="label">
+					<left></left>
+					<centerleft>50%</centerleft>
+					<top>330</top>
+					<width>1440</width>
+					<height>auto</height>
+					<align>center</align>
+					<font>font13_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<label>$INFO[Container(9000).ListItem.Property(widgetName)]</label>
+					<visible>!StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994])</visible>
+				</control>
+				<control type="label">
+					<left></left>
+					<centerleft>50%</centerleft>
+					<top>330</top>
+					<width>1440</width>
+					<height>auto</height>
+					<align>right</align>
+					<font>font13_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<label>$INFO[Container(9000).ListItem.Property(widgetName)]</label>
+					<visible>StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994])</visible>
+				</control>
+				<!-- Poster -->
+				<control type="panel" id="8001">
+					<visible>StringCompare(Container(9000).ListItem.Property(widgetArt),Poster)</visible>
+					<include>PanelWidget1</include>
+					<include>PortraitArt</include>
+				</control>
+				<!-- Square Poster-->
+				<control type="panel" id="8001">
+					<visible>StringCompare(Container(9000).ListItem.Property(widgetArt),Square Poster)</visible>
+					<include name="PanelWidget1">
+						<param name="Top">17</param>
+					</include>
+					<include>SquareArt</include>
+				</control>
+				<!-- DiscArt-->
+				<control type="panel" id="8001">
+					<visible>StringCompare(Container(9000).ListItem.Property(widgetArt),DiscArt)</visible>
+					<include name="PanelWidget1">
+						<param name="Top">17</param>
+					</include>
+					<include name="SquareArt">
+						<param name="Texture">$VAR[HomeWidgetDiscArtVar]</param>
+					</include>
+				</control>
+				<!-- CharacterArt-->
+				<control type="panel" id="8001">
+					<visible>StringCompare(Container(9000).ListItem.Property(widgetArt),CharacterArt)</visible>
+					<include name="PanelWidget1">
+						<param name="Top">17</param>
+					</include>
+					<include name="SquareArt">
+						<param name="Texture">$VAR[HomeWidgetCharacterArtVar]</param>
+					</include>
+				</control>
+				<!-- Fanart -->
+				<control type="panel" id="8001">
+					<visible>StringCompare(Container(9000).ListItem.Property(widgetArt),Fanart)</visible>
+					<include name="PanelWidget1">
+						<param name="Top">32</param>
+					</include>
+					<include>LandscapeArt</include>
+				</control>
+				<!-- Landscape -->
+				<control type="panel" id="8001">
+					<visible>StringCompare(Container(9000).ListItem.Property(widgetArt),Landscape)</visible>
+					<include name="PanelWidget1">
+						<param name="Top">32</param>
+					</include>
+					<include name="LandscapeArt">
+						<param name="Texture">$VAR[HomeWidgetLandscapeVar]</param>
+					</include>
+				</control>
+				<!-- Thumb -->
+				<control type="panel" id="8001">
+					<visible>StringCompare(Container(9000).ListItem.Property(widgetArt),Thumb)</visible>
+					<include name="PanelWidget1">
+						<param name="Top">32</param>
+					</include>
+					<include name="LandscapeArt">
+						<param name="Texture">$VAR[HomeWidgetThumbVar]</param>
+					</include>
+				</control>
+				<!-- ClearLogo -->
+				<control type="panel" id="8001">
+					<visible>StringCompare(Container(9000).ListItem.Property(widgetArt),ClearLogo)</visible>
+					<include name="PanelWidget1">
+						<param name="Top">32</param>
+					</include>
+					<include name="LandscapeArt">
+						<param name="Texture">$VAR[HomeWidgetClearLogoVar]</param>
+						<param name="artLeft">14</param>
+						<param name="artTop">15</param>
+						<param name="artWidth">454</param>
+						<param name="artHeight">257</param>
+						<param name="aspectAligny">center</param>
+						<param name="aspectRatio">keep</param>
+					</include>
+				</control>
+				<!-- ClearArt -->
+				<control type="panel" id="8001">
+					<visible>StringCompare(Container(9000).ListItem.Property(widgetArt),ClearArt)</visible>
+					<include name="PanelWidget1">
+						<param name="Top">32</param>
+					</include>
+					<include name="LandscapeArt">
+						<param name="Texture">$VAR[HomeWidgetClearArtVar]</param>
+						<param name="artLeft">14</param>
+						<param name="artTop">15</param>
+						<param name="artWidth">454</param>
+						<param name="artHeight">257</param>
+						<param name="aspectAligny">center</param>
+						<param name="aspectRatio">keep</param>
+					</include>
+				</control>
+				<!-- Banner -->
+				<control type="panel" id="8001">
+					<visible>StringCompare(Container(9000).ListItem.Property(widgetArt),Banner)</visible>
+					<include name="PanelWidget1">
+						<param name="Top">39</param>
+					</include>
+					<include>BannerArt</include>
+				</control>
+			</control>
+		</control>
+	</include>
+</includes>
