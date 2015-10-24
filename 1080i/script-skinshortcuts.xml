@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="1121">
 	<defaultcontrol always="true">90001</defaultcontrol>
+	<onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000)</onunload>
 	<controls>
 		<control type="group">
 			<visible>Window.IsActive(home)</visible>
