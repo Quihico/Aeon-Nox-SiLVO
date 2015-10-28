@@ -158,7 +158,7 @@
 				<onback>50</onback>
 				<itemgap>0</itemgap>
 				<include condition="Skin.HasSetting(KioskMode.Enabled)">KioskModeButton</include>
-				<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(1129)" reversible="true">conditional</animation>
+				<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(1128)" reversible="true">conditional</animation>
 				<control type="label" id="200">
 					<width>400</width>
 					<height>52</height>
@@ -194,6 +194,7 @@
 				<control type="button" id="2001">
 					<include>ButtonCommonValues</include>
 					<label>$LOCALIZE[19190]</label>
+					<include>ButtonCommonValues</include>
 					<onclick>ActivateWindow(1128)</onclick>
 				</control>
 				<control type="button" id="203">
@@ -498,13 +499,13 @@
 	<!-- Extras -->
 	<include name="PlayListStatsList">
 		<control type="list" id="43260">
-			<visible>StringCompare(Container(9000).ListItem.Property(InfoLine),9) | StringCompare(Container(9000).ListItem.Property(InfoLine),10) | StringCompare(Container(9000).ListItem.Property(InfoLine),11)</visible>
+			<visible>StringCompare(Container(9000).ListItem.Property(InfoLine),$LOCALIZE[31097]) | StringCompare(Container(9000).ListItem.Property(InfoLine),$LOCALIZE[31098]) | StringCompare(Container(9000).ListItem.Property(InfoLine),$LOCALIZE[31099])</visible>
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1</width>
 			<height>1</height>
-			<focusedlayout/>
-			<itemlayout/>
+			<focusedlayout />
+			<itemlayout />
 			<content>$VAR[PlaylistStatsContentVar]</content>
 		</control>
 	</include>
