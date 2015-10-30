@@ -33,20 +33,37 @@
 	<widget label="31217" condition="System.HasAddon(script.extendedinfo)" icon="DefaultAddonPicture.png" path="plugin://script.extendedinfo?info=dailybabes" target="picture">dailybabes</widget>
 	<widget label="31216" condition="System.HasAddon(script.extendedinfo)" icon="DefaultAddonPicture.png" path="plugin://script.extendedinfo?info=dailybabe" target="picture">dailybabe</widget>
 	<!-- Widget Art 1 -->
-	<propertySettings property="widgetArt" buttonID="511" title="Widget Art"/>
-	<property property="widgetArt">Poster</property>	
-	<property property="widgetArt">Square Poster</property>	
-	<property property="widgetArt">FanArt</property>
-	<property property="widgetArt">Landscape</property>
-	<property property="widgetArt">Thumb</property>	
-	<property property="widgetArt">ClearArt</property>	
-	<property property="widgetArt">ClearLogo</property>	
-	<property property="widgetArt">DiscArt</property>	
-	<property property="widgetArt">CharacterArt</property>	
-	<property property="widgetArt">Banner</property>	
+	<propertySettings property="widgetArt" buttonID="511" title="Widget Art 1"/>
+	<property property="widgetArt" icon="$VAR[HomeWidget8001PosterVar]" condition="IsEmpty(Container(8001).ListItem.Artist) + IsEmpty(Container(8001).ListItem.AlbumArtist) + IsEmpty(Container(8001).ListItem.Property(Addon.Name))">Poster</property>
+	<property property="widgetArt" icon="$VAR[HomeWidget8001PosterVar]" condition="!IsEmpty(Container(8001).ListItem.Artist) | !IsEmpty(Container(8001).ListItem.AlbumArtist) | !IsEmpty(Container(8001).ListItem.Property(Addon.Name))">Square Poster</property>
+	<property property="widgetArt" icon="$VAR[HomeWidget8001FanArtVar]">FanArt</property>
+	<property property="widgetArt" icon="$VAR[HomeWidget8001LandscapeVar]" condition="!IsEmpty(Container(8001).ListItem.Art(landscape)) | !IsEmpty(Container(8001).ListItem.Art(tvshow.landscape))">Landscape</property>
+	<property property="widgetArt" icon="$VAR[HomeWidget8001ThumbVar]">Thumb</property>
+	<property property="widgetArt" icon="$VAR[HomeWidget8001ClearArtVar]" condition="!IsEmpty(Container(8001).ListItem.Art(clearart)) | !IsEmpty(Container(8001).ListItem.Art(tvshow.clearart))">ClearArt</property>
+	<property property="widgetArt" icon="$VAR[HomeWidget8001ClearLogoVar]" condition="!IsEmpty(Container(8001).ListItem.Art(clearlogo)) | !IsEmpty(Container(8001).ListItem.Art(tvshow.clearllogo))">ClearLogo</property>
+	<property property="widgetArt" icon="$VAR[HomeWidget8001DiscArtVar]" condition="!IsEmpty(Container(8001).ListItem.Art(discart))">DiscArt</property>
+	<property property="widgetArt" icon="$VAR[HomeWidget8001CharacterArtVar]" condition="!IsEmpty(Container(8001).ListItem.Art(tvshow.characterart))">CharacterArt</property>
+	<property property="widgetArt" icon="$VAR[HomeWidget8001BannerVar]" condition="!IsEmpty(Container(8001).ListItem.Art(banner)) | !IsEmpty(Container(8001).ListItem.Art(tvshow.banner))">Banner</property>
+	<!-- Widget Art 2 -->
+	<propertySettings property="widgetArt.2" buttonID="513" title="Widget Art 2"/>
+	<property property="widgetArt.2" icon="$VAR[HomeWidget8002PosterVar]" condition="IsEmpty(Container(8002).ListItem.Artist) + IsEmpty(Container(8002).ListItem.AlbumArtist) + IsEmpty(Container(8002).ListItem.Property(Addon.Name))">Poster</property>
+	<property property="widgetArt.2" icon="$VAR[HomeWidget8002PosterVar]" condition="!IsEmpty(Container(8002).ListItem.Artist) | !IsEmpty(Container(8002).ListItem.AlbumArtist) | !IsEmpty(Container(8002).ListItem.Property(Addon.Name))">Square Poster</property>
+	<property property="widgetArt.2" icon="$VAR[HomeWidget8002FanArtVar]">FanArt</property>
+	<property property="widgetArt.2" icon="$VAR[HomeWidget8002LandscapeVar]" condition="!IsEmpty(Container(8002).ListItem.Art(landscape)) | !IsEmpty(Container(8002).ListItem.Art(tvshow.landscape))">Landscape</property>
+	<property property="widgetArt.2" icon="$VAR[HomeWidget8002ThumbVar]">Thumb</property>
+	<property property="widgetArt.2" icon="$VAR[HomeWidget8002ClearArtVar]" condition="!IsEmpty(Container(8002).ListItem.Art(clearart)) | !IsEmpty(Container(8002).ListItem.Art(tvshow.clearart))">ClearArt</property>
+	<property property="widgetArt.2" icon="$VAR[HomeWidget8002ClearLogoVar]" condition="!IsEmpty(Container(8002).ListItem.Art(clearlogo)) | !IsEmpty(Container(8002).ListItem.Art(tvshow.clearllogo))">ClearLogo</property>
+	<property property="widgetArt.2" icon="$VAR[HomeWidget8002DiscArtVar]" condition="!IsEmpty(Container(8002).ListItem.Art(discart))">DiscArt</property>
+	<property property="widgetArt.2" icon="$VAR[HomeWidget8002CharacterArtVar]" condition="!IsEmpty(Container(8002).ListItem.Art(tvshow.characterart))">CharacterArt</property>
+	<property property="widgetArt.2" icon="$VAR[HomeWidget8002BannerVar]" condition="!IsEmpty(Container(8002).ListItem.Art(banner)) | !IsEmpty(Container(8002).ListItem.Art(tvshow.banner))">Banner</property>
 	<!-- Widget Style 1 -->
 	<propertySettings property="widgetStyle" buttonID="509" title="Widget Style 1" />
+	<property property="widgetStyle">Classic Left</property>
+	<property property="widgetStyle">Classic Right</property>
 	<property property="widgetStyle">Panel</property>
+	<!-- Widget Style 2 -->
+	<propertySettings property="widgetStyle.2" buttonID="514" title="Widget Style 2" />
+	<property property="widgetStyle.2">Panel</property>
 	<!-- Infoline -->
 	<property property="InfoLine">31052</property>
 	<property property="InfoLine">31053</property>
