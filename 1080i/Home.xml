@@ -8,7 +8,8 @@
 		<include>CommonBackground</include>
 		<include condition="!Skin.HasSetting(Disable.Videoinfo)">NowPlayingVideoWidget</include>
 		<include condition="!Skin.HasSetting(Disable.Musicinfo)">NowPlayingMusicWidget</include>
-		<include>HomeRecentlyAddedInfo</include>
+		<include>HomeRecentlyAddedInfo1</include>
+		<include>HomeRecentlyAddedInfo2</include>
 		<include>WeatherWidget</include>
 		<include>LiveTVWidget</include>
 		<control type="group">
