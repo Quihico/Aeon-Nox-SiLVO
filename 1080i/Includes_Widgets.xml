@@ -313,28 +313,28 @@
 		<content target="$PARAM[Target]">$PARAM[Path]</content>
 	</include>
 	<include name="SquareArt">
-		<itemlayout height="286" width="291">
+		<itemlayout height="282" width="287">
 			<control type="image">
 				<left>0</left>
 				<top>0</top>
-				<width>286</width>
-				<height>286</height>
+				<width>282</width>
+				<height>282</height>
 				<animation effect="zoom" end="96,96" center="auto" condition="StringCompare(Skin.String(SquarePoster.Case),Glass)">conditional</animation>
 				<animation effect="zoom" end="91,95" center="240,150" condition="StringCompare(Skin.String(SquarePoster.Case),Case)">conditional</animation>
-				<animation effect="zoom" end="94,96" center="auto" condition="StringCompare(Skin.String(SquarePoster.Case),Clear Case)">conditional</animation>
+				<animation effect="zoom" end="91,95" center="240,150" condition="StringCompare(Skin.String(SquarePoster.Case),Clear Case)">conditional</animation>
 				<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
 				<texture background="true" fallback="DefaultMusicAlbums.png">$PARAM[Texture]</texture>
 			</control>
 			<control type="image">
 				<left>0</left>
 				<top>0</top>
-				<width>286</width>
-				<height>286</height>
+				<width>282</width>
+				<height>282</height>
 				<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
 				<texture>$VAR[HomeWidgetSquareCaseVar]</texture>
 			</control>
 		</itemlayout>
-		<focusedlayout height="286" width="291">
+		<focusedlayout height="282" width="287">
 			<control type="group">
 				<animation type="Focus" reversible="false">
 					<effect type="zoom" start="95" end="100" time="300" tween="sine" easing="inout" center="auto" />
@@ -342,18 +342,18 @@
 				<control type="image">
 					<left>0</left>
 					<top>0</top>
-					<width>286</width>
-					<height>286</height>
+					<width>282</width>
+					<height>282</height>
 					<animation effect="zoom" end="96,96" center="auto" condition="StringCompare(Skin.String(SquarePoster.Case),Glass)">conditional</animation>
 					<animation effect="zoom" end="91,95" center="240,150" condition="StringCompare(Skin.String(SquarePoster.Case),Case)">conditional</animation>
-					<animation effect="zoom" end="94,96" center="auto" condition="StringCompare(Skin.String(SquarePoster.Case),Clear Case)">conditional</animation>
+					<animation effect="zoom" end="91,95" center="240,150" condition="StringCompare(Skin.String(SquarePoster.Case),Clear Case)">conditional</animation>
 					<texture background="true" fallback="DefaultMusicAlbums.png">$PARAM[Texture]</texture>
 				</control>
 				<control type="image">
 					<left>0</left>
 					<top>0</top>
-					<width>286</width>
-					<height>286</height>
+					<width>282</width>
+					<height>282</height>
 					<texture>$VAR[HomeWidgetSquareCaseVar]</texture>
 				</control>
 			</control>
@@ -361,26 +361,26 @@
 		<content target="$PARAM[Target]">$PARAM[Path]</content>
 	</include>
 	<include name="LandscapeArt">
-		<itemlayout height="266" width="477">
+		<itemlayout height="266" width="478">
 			<control type="image">
 				<left>0</left>
 				<top>0</top>
-				<width>472</width>
+				<width>473</width>
 				<height>266</height>
-				<aspectratio aligny=""></aspectratio>
+				<aspectratio aligny="$PARAM[aspectAligny]">$PARAM[aspectRatio]</aspectratio>
 				<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
 				<texture>$PARAM[Texture]</texture>
 			</control>
 			<control type="image">
 				<left>0</left>
 				<top>0</top>
-				<width>472</width>
+				<width>473</width>
 				<height>266</height>
 				<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
 				<texture>$VAR[HomeWidgetLandscapeCaseVar]</texture>
 			</control>
 		</itemlayout>
-		<focusedlayout height="266" width="477">
+		<focusedlayout height="266" width="478">
 			<control type="group">
 				<animation type="Focus" reversible="false">
 					<effect type="zoom" start="95" end="100" time="300" tween="sine" easing="inout" center="auto" />
@@ -388,7 +388,7 @@
 				<control type="image">
 					<left>0</left>
 					<top>0</top>
-					<width>472</width>
+					<width>473</width>
 					<height>266</height>
 					<aspectratio aligny="$PARAM[aspectAligny]">$PARAM[aspectRatio]</aspectratio>
 					<texture>$PARAM[Texture]</texture>
@@ -396,7 +396,7 @@
 				<control type="image">
 					<left>0</left>
 					<top>0</top>
-					<width>472</width>
+					<width>473</width>
 					<height>266</height>
 					<texture>$VAR[HomeWidgetLandscapeCaseVar]</texture>
 				</control>
@@ -405,20 +405,20 @@
 		<content target="$PARAM[Target]">$PARAM[Path]</content>
 	</include>
 	<include name="BannerArt">
-		<itemlayout height="131" width="715">
+		<itemlayout height="137" width="717">
 			<control type="image">
 				<left>0</left>
 				<top>0</top>
-				<width>710</width>
-				<height>131</height>
+				<width>712</width>
+				<height>132</height>
 				<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
 				<texture background="true" fallback="DefaultMovies.png">$PARAM[Texture]</texture>
 			</control>
 			<control type="image">
 				<left>0</left>
 				<top>0</top>
-				<width>710</width>
-				<height>131</height>
+				<width>712</width>
+				<height>132</height>
 				<aspectratio>keep</aspectratio>
 				<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
 				<texture>$VAR[HomeWidgetClearLogoVar]</texture>
@@ -427,13 +427,13 @@
 			<control type="image">
 				<left>0</left>
 				<top>0</top>
-				<width>710</width>
-				<height>131</height>
+				<width>712</width>
+				<height>132</height>
 				<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
 				<texture>$VAR[HomeWidgetBannerCaseVar]</texture>
 			</control>
 		</itemlayout>
-		<focusedlayout height="131" width="715">
+		<focusedlayout height="137" width="717">
 			<control type="group">
 				<animation type="Focus" reversible="false">
 					<effect type="zoom" start="95" end="100" time="300" tween="sine" easing="inout" center="auto" />
@@ -441,15 +441,15 @@
 				<control type="image">
 					<left>0</left>
 					<top>0</top>
-					<width>710</width>
-					<height>131</height>
+					<width>712</width>
+					<height>132</height>
 					<texture background="true" fallback="DefaultMovies.png">$PARAM[Texture]</texture>
 				</control>
 				<control type="image">
 					<left>0</left>
 					<top>0</top>
-					<width>710</width>
-					<height>131</height>
+					<width>712</width>
+					<height>132</height>
 					<aspectratio>keep</aspectratio>
 					<visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(tvshow.banner))</visible>
 					<texture>$VAR[HomeWidgetClearLogoVar]</texture>
@@ -457,8 +457,8 @@
 				<control type="image">
 					<left>0</left>
 					<top>0</top>
-					<width>710</width>
-					<height>131</height>
+					<width>712</width>
+					<height>132</height>
 					<texture>$VAR[HomeWidgetBannerCaseVar]</texture>
 				</control>
 			</control>

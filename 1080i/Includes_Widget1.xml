@@ -259,7 +259,7 @@
 				<control type="panel" id="8001">
 					<visible>StringCompare(Container(9000).ListItem.Property(widgetArt),Square Poster)</visible>
 					<include name="PanelWidget1">
-						<param name="Top">17</param>
+						<param name="Top">23</param>
 					</include>
 					<include name="SquareArt">
 						<param name="Texture">$VAR[HomeWidgetPosterVar]</param>
@@ -271,7 +271,7 @@
 				<control type="panel" id="8001">
 					<visible>StringCompare(Container(9000).ListItem.Property(widgetArt),DiscArt)</visible>
 					<include name="PanelWidget1">
-						<param name="Top">17</param>
+						<param name="Top">23</param>
 					</include>
 					<include name="SquareArt">
 						<param name="Texture">$VAR[HomeWidgetDiscArtVar]</param>
@@ -283,7 +283,7 @@
 				<control type="panel" id="8001">
 					<visible>StringCompare(Container(9000).ListItem.Property(widgetArt),CharacterArt)</visible>
 					<include name="PanelWidget1">
-						<param name="Top">17</param>
+						<param name="Top">23</param>
 					</include>
 					<include name="SquareArt">
 						<param name="Texture">$VAR[HomeWidgetCharacterArtVar]</param>
@@ -295,7 +295,7 @@
 				<control type="panel" id="8001">
 					<visible>StringCompare(Container(9000).ListItem.Property(widgetArt),Fanart)</visible>
 					<include name="PanelWidget1">
-						<param name="Top">37</param>
+						<param name="Top">39</param>
 					</include>
 					<include name="LandscapeArt">
 						<param name="Texture">$VAR[HomeWidgetFanArtVar]</param>
@@ -307,7 +307,7 @@
 				<control type="panel" id="8001">
 					<visible>StringCompare(Container(9000).ListItem.Property(widgetArt),Landscape)</visible>
 					<include name="PanelWidget1">
-						<param name="Top">37</param>
+						<param name="Top">39</param>
 					</include>
 					<include name="LandscapeArt">
 						<param name="Texture">$VAR[HomeWidgetLandscapeVar]</param>
@@ -319,7 +319,7 @@
 				<control type="panel" id="8001">
 					<visible>StringCompare(Container(9000).ListItem.Property(widgetArt),Thumb)</visible>
 					<include name="PanelWidget1">
-						<param name="Top">37</param>
+						<param name="Top">39</param>
 					</include>
 					<include name="LandscapeArt">
 						<param name="Texture">$VAR[HomeWidgetThumbVar]</param>
@@ -331,7 +331,7 @@
 				<control type="panel" id="8001">
 					<visible>StringCompare(Container(9000).ListItem.Property(widgetArt),ClearLogo)</visible>
 					<include name="PanelWidget1">
-						<param name="Top">37</param>
+						<param name="Top">39</param>
 					</include>
 					<include name="LandscapeArt">
 						<param name="Texture">$VAR[HomeWidgetClearLogoVar]</param>
@@ -345,7 +345,7 @@
 				<control type="panel" id="8001">
 					<visible>StringCompare(Container(9000).ListItem.Property(widgetArt),ClearArt)</visible>
 					<include name="PanelWidget1">
-						<param name="Top">37</param>
+						<param name="Top">39</param>
 					</include>
 					<include name="LandscapeArt">
 						<param name="Texture">$VAR[HomeWidgetClearArtVar]</param>
@@ -359,7 +359,7 @@
 				<control type="panel" id="8001">
 					<visible>StringCompare(Container(9000).ListItem.Property(widgetArt),Banner)</visible>
 					<include name="PanelWidget1">
-						<param name="Top">44</param>
+						<param name="Top">36</param>
 					</include>
 					<include name="BannerArt">
 						<param name="Texture">$VAR[HomeWidgetBannerVar]</param>
