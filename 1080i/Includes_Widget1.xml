@@ -54,6 +54,7 @@
 					<animation effect="rotatey" start="0" end="180" center="155" time="400" tween="sine" easing="inout" condition="Control.HasFocus(8001)">Conditional</animation>
 				</control>
 				<control type="list" id="8001">
+					<visible>StringCompare(Container(9000).ListItem.Property(widgetStyle),Classic Left) | StringCompare(Container(9000).ListItem.Property(widgetStyle),Classic Right)</visible>
 					<include>ClassicWidget1</include>
 					<animation effect="slide" end="1130,0" condition="StringCompare(Container(9000).ListItem.Property(widgetStyle),Classic Right)">Conditional</animation>
 					<animation type="Conditional" condition="!Control.HasFocus(8001)">
