@@ -284,19 +284,19 @@
 				<textcolor>grey</textcolor>
 				<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(Enable.AutoScroll)</autoscroll>
 				<label>$INFO[Window(Home).Property(Widget.Plot)]</label>
-				<visible>IsEmpty(Control.GetLabel(8020)) + !StringCompare(Window(Home).Property(Widget.Type),1) + !StringCompare(Window(Home).Property(Widget.Type),2) + !StringCompare(Window(Home).Property(Widget.Type),5) + !StringCompare(Window(Home).Property(Widget.Type),9) + !StringCompare(Window(Home).Property(Widget.Type),20) + !StringCompare(Window(Home).Property(Widget.Type),21)</visible>
+				<visible>IsEmpty(Control.GetLabel(8020))</visible>
 			</control>
 			<control type="textbox">
 				<top>468</top>
 				<left>555</left>
 				<height>290</height>
-				<width>956</width>
+				<width>850</width>
 				<font>font14_textbox</font>
 				<align>justify</align>
 				<textcolor>grey</textcolor>
 				<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(Enable.AutoScroll)</autoscroll>
 				<label>$INFO[Window(Home).Property(Widget.Plot)]</label>
-				<visible>!IsEmpty(Control.GetLabel(8020)) | StringCompare(Window(Home).Property(Widget.Type),1) | StringCompare(Window(Home).Property(Widget.Type),2) | StringCompare(Window(Home).Property(Widget.Type),5) | StringCompare(Window(Home).Property(Widget.Type),9) | StringCompare(Window(Home).Property(Widget.Type),20) | StringCompare(Window(Home).Property(Widget.Type),21)</visible>
+				<visible>!IsEmpty(Control.GetLabel(8020))</visible>
 			</control>
 			<!-- Info Buttons-->`
 			<control type="grouplist" id="8052">
