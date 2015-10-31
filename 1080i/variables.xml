@@ -1621,6 +1621,12 @@
 		<value condition="!IsEmpty(Container(8002).ListItem.Art(tvshow.banner))">$INFO[Container(8002).ListItem.Art(tvshow.banner)]</value>
 		<value>$INFO[Container(8002).ListItem.Art(fanart)]</value>
 	</variable>
+	<variable name="HomeWidget8001Icon1Var">		
+		<value>homewidgets/WidgetInfoMovieIcon.png</value>
+	</variable>
+	<variable name="HomeWidget8001Icon2Var">
+		<value>homewidgets/WidgetInfoGenreIcon.png</value>
+	</variable>
 	<!-- Widget Labels -->
 	<variable name="HomeWidget8001TitleVar">
 		<value condition="!IsEmpty(Container(8001).ListItem.Property(Addon.Name))">$INFO[Container(8001).ListItem.Property(Addon.Name)]	</value>

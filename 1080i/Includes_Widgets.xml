@@ -15,17 +15,19 @@
 		<oninfo>SetProperty(Widget.FlagsAspect,$VAR[HomeWidget8001FlagsAspect],home)</oninfo>
 		<oninfo>SetProperty(Widget.FlagsAudio,$VAR[HomeWidget8001FlagsAudio],home)</oninfo>
 		<oninfo>SetProperty(Widget.FlagsAudioChannels,$VAR[HomeWidget8001FlagsAudioChannels],home)</oninfo>
-		<oninfo>SetProperty(Widget.FlagsCC,$VAR[HomeWidget8001FlagsCC],home)</oninfo>
-		<oninfo>SetProperty(Widget.Icon1,$VAR[HomeWidget8001Icon1Var],home)</oninfo>
-		<oninfo>SetProperty(Widget.Info1,$VAR[HomeWidget8001Info1Var],home)</oninfo>
-		<oninfo>SetProperty(Widget.Icon2,$VAR[HomeWidget8001Icon2Var],home)</oninfo>
+		<oninfo>SetProperty(Widget.FlagsCC,$VAR[HomeWidget8001FlagsCC],home)</oninfo>		
+		<oninfo>SetProperty(Widget.Info1,$VAR[HomeWidget8001Info1Var],home)</oninfo>		
 		<oninfo>SetProperty(Widget.Info2,$VAR[HomeWidget8001Info2Var],home)</oninfo>
+		<oninfo>SetProperty(Widget.Icon1,$VAR[HomeWidget8001Icon1Var],home)</oninfo>
+		<oninfo>SetProperty(Widget.Icon2,$VAR[HomeWidget8001Icon2Var],home)</oninfo>
 		<oninfo>SetProperty(Widget.Plot,$VAR[HomeWidget8001PlotVar],home)</oninfo>
+		<oninfo>SetProperty(Widget.FilePath,$INFO[Container(8001).ListItem.FileNameAndPath],home)</oninfo>
+		<oninfo>SetProperty(Widget.Resume,$INFO[Container(8001).ListItem.PercentPlayed],home)</oninfo>
+		<oninfo>SetProperty(Widget.Trailer,$INFO[Container(8001).ListItem.Trailer],home)</oninfo>
 		<!--<oninfo>SetProperty(Widget.DiscArtFake,$VAR[HomeWidget8001FakeDiscArtVar]</oninfo>
 		<oninfo>SetProperty(Widget.Top250,$INFO[Container(8001).ListItem.Top250]</oninfo>
 		<oninfo>SetProperty(Widget.Resolution,$INFO[Container(8001).ListItem.VideoResolution]</oninfo>
-		<oninfo>SetProperty(Widget.Icon1,$VAR[HomeWidget8001Icon1Var]</oninfo>
-		<oninfo>SetProperty(Widget.Icon2,$VAR[HomeWidget8001Icon2Var]</oninfo>
+		
 		<oninfo>SetProperty(Widget.FolderPath,$INFO[Container(8001).ListItem.FolderPath]</oninfo>
 		<oninfo>SetProperty(Widget.FilePath,$INFO[Container(8001).ListItem.FileNameAndPath]</oninfo>
 		<oninfo>SetProperty(Widget.Resume,$INFO[Container(8001).ListItem.PercentPlayed]</oninfo>
