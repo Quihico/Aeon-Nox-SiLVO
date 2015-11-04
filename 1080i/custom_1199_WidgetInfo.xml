@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="1199" type="dialog">
-	<defaultcontrol always="true">90300</defaultcontrol>
+	<defaultcontrol always="true">8052</defaultcontrol>
 	<animation type="WindowOpen" reversible="false">
 		<effect type="rotatex" start="-180" end="0" center="465,0" time="400" tween="sine" easing="inout" />
 		<effect type="fade" start="0" end="100" time="10" delay="200" />

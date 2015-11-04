@@ -14,24 +14,7 @@
 	<background label="Live Background: Random songs" condition="IsEmpty(Window(Home).Property(No.Cases)) + System.HasAddon(service.library.data.provider)">s:live|i:songs</background>
 	<background label="Live Background: Random albums" condition="IsEmpty(Window(Home).Property(No.Cases)) + System.HasAddon(service.library.data.provider)">s:live|i:albums</background>
 	<background label="::PLAYLIST::" condition="IsEmpty(Window(Home).Property(No.Cases))">s:playlist|i:playlist</background>
-	<!-- Widgets -->
-	<widget label="31031" target="video" type="movies" icon="DefaultMovies.png" path="plugin://service.library.data.provider?type=randommovies&amp;reload=$INFO[Window.Property(randommovies)]">randommovies</widget>
-	<widget label="31176" condition="System.HasAddon(script.extendedinfo)" icon="logos/trakt2-logo.png" path="plugin://script.extendedinfo?info=trendingmovies" target="extendedinfo">trakttrendingmovies</widget>
-	<widget label="31211" condition="System.HasAddon(script.extendedinfo)" icon="logos/tmdb2-logo.png" path="plugin://script.extendedinfo?info=topratedmovies" target="extendedinfo">themoviedbtopratedmovies</widget>
-	<widget label="31178" condition="System.HasAddon(script.extendedinfo)" icon="logos/trakt2-logo.png" path="plugin://script.extendedinfo?info=trendingshows" target="extendedinfo">trakttrendingshows</widget>
-	<widget label="31033" target="video" type="episodes" icon="DefaultTVShows.png" path="plugin://service.library.data.provider?type=randomepisodes&amp;reload=$INFO[Window.Property(randomepisodes)]">randomepisodes</widget>
-	<widget label="31034" target="video" type="episodes" icon="DefaultTVShows.png" path="plugin://service.library.data.provider?type=recommendedepisodes&amp;reload=$INFO[Window.Property(recommendedepisodes)]">recommendedepisodes</widget>
-	<widget label="31502" icon="DefaultTVShowTitle.png">$LOCALIZE[31502]</widget>
-	<widget label="31177" condition="System.HasAddon(script.extendedinfo)" icon="logos/rt2-logo.png" path="plugin://script.extendedinfo?info=toprentals" target="extendedinfo">rottentomatoestoprentals</widget>
-	<widget label="31209" condition="System.HasAddon(script.extendedinfo)" icon="logos/tmdb2-logo.png" path="plugin://script.extendedinfo?info=incinemas" target="extendedinfo">themoviedbincinemas</widget>
-	<widget label="31204" condition="System.HasAddon(script.extendedinfo)" icon="logos/tmdb2-logo.png" path="plugin://script.extendedinfo?info=upcoming" target="extendedinfo">themoviedbupcoming</widget>
-	<widget label="12600" icon="DefaultAddonWeather.png" condition="!IsEmpty(Weather.Plugin)">weather</widget>
-	<widget label="31035" target="music" type="songs" icon="DefaultMusicSongs.png" path="plugin://service.library.data.provider?type=randomsongs&amp;reload=$INFO[Window.Property(randomsongs)]">randomsongs</widget>
-	<widget label="31036" target="music" type="albums" icon="DefaultMusicAlbums.png" path="plugin://service.library.data.provider?type=randomalbums&amp;reload=$INFO[Window.Property(randomalbums)]">randomalbums</widget>
-	<widget label="31037" target="music" type="albums" icon="DefaultMusicRecentlyAdded.png" path="plugin://service.library.data.provider?type=recentalbums&amp;reload=$INFO[Window.Property(recentalbums)]">recentalbums</widget>
-	<widget label="31038" target="music" type="albums" icon="DefaultMusicRecentlyPlayed.png" path="plugin://service.library.data.provider?type=recommendedalbums&amp;reload=$INFO[Window.Property(recommendedalbums)]">recommendedalbums</widget>
-	<widget label="31217" condition="System.HasAddon(script.extendedinfo)" icon="DefaultAddonPicture.png" path="plugin://script.extendedinfo?info=dailybabes" target="picture">dailybabes</widget>
-	<widget label="31216" condition="System.HasAddon(script.extendedinfo)" icon="DefaultAddonPicture.png" path="plugin://script.extendedinfo?info=dailybabe" target="picture">dailybabe</widget>
+	<background label="smartshortcuts">||BROWSE||plugin://script.skin.helper.service/?action=backgrounds</background>
 	<!-- Widget Art 1 -->
 	<propertySettings property="widgetArt" buttonID="511" title="Widget Art 1"/>
 	<property property="widgetArt" icon="$VAR[HomeWidget8001PosterVar]" condition="IsEmpty(Container(8001).ListItem.Artist) + IsEmpty(Container(8001).ListItem.AlbumArtist) + IsEmpty(Container(8001).ListItem.Property(Addon.Name))">Poster</property>
@@ -63,7 +46,15 @@
 	<property property="widgetStyle">Panel</property>
 	<!-- Widget Style 2 -->
 	<propertySettings property="widgetStyle.2" buttonID="514" title="Widget Style 2" />
+	<property property="widgetStyle.2">Classic Left</property>
+	<property property="widgetStyle.2">Classic Right</property>
 	<property property="widgetStyle.2">Panel</property>
+	<!-- Widget Title 1 -->
+	<propertySettings property="widgetTitle" buttonID="515" title="Panel Widget Title 1" />
+	<property property="widgetTitle">Panel</property>
+	<!-- Widget Title 2 -->
+	<propertySettings property="widgetTitle.2" buttonID="516" title="Panel Widget Title 2" />
+	<property property="widgetTitle.2">Panel</property>
 	<!-- Infoline -->
 	<property property="InfoLine">31052</property>
 	<property property="InfoLine">31053</property>
@@ -76,4 +67,57 @@
 	<property property="InfoLine">31097</property>
 	<property property="InfoLine">31098</property>
 	<property property="InfoLine">31099</property>
+	<!-- Widgets -->
+	<widget-groupings>
+		<!-- script.skin.helper.service default widgets -->
+		<shortcut label="Skin Helper Service" type="32010" condition="System.HasAddon(script.skin.helper.service)">||BROWSE||script.skin.helper.service/?action=widgets&amp;path=pvr,skinplaylists,scriptwidgets,smartshortcuts,favourites</shortcut>
+		<shortcut label="Library Data Provider" type="32010" condition="System.HasAddon(script.skin.helper.service)">||BROWSE||script.skin.helper.service/?action=widgets&amp;path=librarydataprovider</shortcut>
+		<shortcut label="Extended Info" type="32010" condition="System.HasAddon(script.skin.helper.service)">||BROWSE||script.skin.helper.service/?action=widgets&amp;path=extendedinfo</shortcut>
+		<content>widgets</content>
+		<node label="32030">
+			<content>video</content>
+			<node label="32040">
+				<content>playlist-video</content>
+			</node>
+			<node label="32010">
+				<content>addon-video</content>
+			</node>
+			<node label="32075">
+				<content>videosources</content>
+			</node>
+		</node>
+		<node label="32031">
+			<content>music</content>
+			<node label="32040">
+				<content>playlist-audio</content>
+			</node>
+			<node label="32011">
+				<content>addon-audio</content>
+			</node>
+			<node label="32075">
+				<content>musicsources</content>
+			</node>
+		</node>
+		<node label="32020">
+			<content>picturesources</content>
+		</node>
+		<node label="32007">
+			<node label="32010">
+				<content>addon-video</content>
+			</node>
+			<node label="32011">
+				<content>addon-audio</content>
+			</node>
+			<node label="32012">
+				<content>addon-image</content>
+			</node>
+			<node label="32009">
+				<content>addon-program-plugin</content>
+			</node>
+			<shortcut label="10001" type="32021" icon="DefaultAddonProgram.png" widget="addon" widgetType="program" widgetTarget="programs">addons://sources/executable</shortcut>
+			<shortcut label="1037" type="32014" icon="DefaultAddonVideo.png" widget="addon" widgetType="video" widgetTarget="video">addons://sources/video</shortcut>
+			<shortcut label="1038" type="32019" icon="DefaultAddonMusic.png" widget="addon" widgetType="music" widgetTarget="music">addons://sources/audio</shortcut>
+			<shortcut label="1039" type="32020" icon="DefaultAddonPicture.png" widget="addon" widgetType="picture" widgetTarget="pictures">addons://sources/image</shortcut>
+		</node>
+	</widget-groupings>
 </overrides>

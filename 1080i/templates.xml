@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+      <other include="classicwidget">
+       
+
+        <!-- Retrieve the widgetPath and widgetTarget properties -->
+        <property name="content" tag="property" attribute="name|widgetPath" />
+        <property name="target" tag="property" attribute="name|widgetTarget" />
+
+        
+		<controls>
+		<control type="list" id="8001">				
+				<top>95</top>
+				<include>ClassicWidget1</include>
+				<include name="ClassicList">
+					<param name="Target">$SKINSHORTCUTS[target]</param>
+					<param name="Path">$SKINSHORTCUTS[content]</param>
+				</include>
+			</control>
+		
+        
+       
+        </controls>
+    </other>
+</template>
