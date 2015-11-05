@@ -1432,8 +1432,19 @@
 		<value>None</value>
 	</variable>
 	<!-- Widgets Global Settings-->
+	<variable name="WidgetBackLabelVar">
+		<value condition="!IsEmpty(Skin.String(Widget.Back))">$INFO[Skin.String(Widget.Back)]</value>
+		<value>Default</value>
+	</variable>
+	<variable name="WidgetBackVar">
+		<value condition="IsEmpty(Skin.String(Widget.Back))">Skin.SetString(Widget.Back,Flat)</value>
+		<value condition="StringCompare(Skin.String(Widget.Back),Flat)">Skin.SetString(Widget.Back,Clear)</value>
+		<value condition="StringCompare(Skin.String(Widget.Back),Clear)">Skin.Reset(Widget.Back)</value>
+	</variable>
 	<variable name="HomeWidgetBackgroundVar">
-		<value>flat.png</value>
+		<value condition="StringCompare(Skin.String(Widget.Back),Flat)">homewidgets/bg_flat.png</value>
+		<value condition="StringCompare(Skin.String(Widget.Back),Clear)">homewidgets/bg_clear.png</value>
+		<value>homewidgets/bg_default.png</value>
 	</variable>
 	<variable name="WidgetClassicInfoLabelVar">
 		<value condition="!IsEmpty(Skin.String(Widget.ClassicInfo))">$INFO[Skin.String(Widget.ClassicInfo)]</value>

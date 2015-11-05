@@ -183,13 +183,13 @@
 		</controls>
 	</other>
 	<!-- Panel Widget -->
-	<other include="widgetPanel1">
+		<other include="widgetPanel1">
 		<!-- Check Widget Style -->
 		<condition tag="property" attribute="name|widgetStyle">Panel</condition>
 		<!-- Retrieve the widget properties -->
 		<property name="content" tag="property" attribute="name|widgetPath" />
 		<property name="target" tag="property" attribute="name|widgetTarget" />
-		<property name="name" tag="property" attribute="name|widgetName" />
+		<property name="label" tag="property" attribute="name|widgetName" />
 		<!-- Set Artwork -->
 		<property name="artwork" tag="property" attribute="name|widgetArt" value="Poster">$VAR[HomeWidgetPosterVar]</property>
 		<property name="artwork" tag="property" attribute="name|widgetArt" value="Square Poster">$VAR[HomeWidgetPosterVar]</property>
@@ -201,6 +201,10 @@
 		<property name="artwork" tag="property" attribute="name|widgetArt" value="Thumb">$VAR[HomeWidgetThumbVar]</property>
 		<property name="artwork" tag="property" attribute="name|widgetArt" value="DiscArt">$VAR[HomeWidgetDiscArtVar]</property>
 		<property name="artwork" tag="property" attribute="name|widgetArt" value="CharacterArt">$VAR[HomeWidgetCharacterArtVar]</property>
+		<!-- Set Artwork Fallback -->
+		<property name="artworkfb" tag="property" attribute="name|widgetArt" value="ClearArt">$VAR[HomeWidgetClearLogoVar]</property>
+		<property name="artworkfb" tag="property" attribute="name|widgetArt" value="Banner">$VAR[HomeWidgetClearLogoVar]</property>
+		<property name="artworkfb" tag="property" attribute="name|widgetArt" value="DiscArt">$VAR[HomeWidgetFakeDiscArtVar]</property>
 		<!-- Set Art Content -->
 		<property name="artcontent" tag="property" attribute="name|widgetArt" value="Poster">PortraitArt</property>
 		<property name="artcontent" tag="property" attribute="name|widgetArt" value="Square Poster">SquareArt</property>
@@ -212,77 +216,61 @@
 		<property name="artcontent" tag="property" attribute="name|widgetArt" value="Thumb">LandscapeArt</property>
 		<property name="artcontent" tag="property" attribute="name|widgetArt" value="DiscArt">SquareArt</property>
 		<property name="artcontent" tag="property" attribute="name|widgetArt" value="CharacterArt">SquareArt</property>
+		<!-- Set Label -->
+		<property name="title" tag="property" attribute="name|widgetTitle" value="Panel">true</property>
+		<property name="title">false</property>
 		<!-- Set Top Position -->
-		<property name="top" tag="property" attribute="name|widgetArt" value="Poster">5</property>
-		<property name="top" tag="property" attribute="name|widgetArt" value="Square Poster">23</property>
-		<property name="top" tag="property" attribute="name|widgetArt" value="FanArt">39</property>
-		<property name="top" tag="property" attribute="name|widgetArt" value="Landscape">39</property>
-		<property name="top" tag="property" attribute="name|widgetArt" value="ClearArt">39</property>
-		<property name="top" tag="property" attribute="name|widgetArt" value="ClearLogo">39</property>
-		<property name="top" tag="property" attribute="name|widgetArt" value="Banner">36</property>
-		<property name="top" tag="property" attribute="name|widgetArt" value="Thumb">39</property>
-		<property name="top" tag="property" attribute="name|widgetArt" value="DiscArt">23</property>
-		<property name="top" tag="property" attribute="name|widgetArt" value="CharacterArt">23</property>
-		<!-- Set Background -->
-		<property name="background" tag="property" attribute="name|widgetArt" value="Poster">homewidgets/poster_bg_</property>
-		<property name="background" tag="property" attribute="name|widgetArt" value="Square Poster">homewidgets/square_bg_</property>
-		<property name="background" tag="property" attribute="name|widgetArt" value="FanArt">homewidgets/landscape_bg_</property>
-		<property name="background" tag="property" attribute="name|widgetArt" value="Landscape">homewidgets/landscape_bg_</property>
-		<property name="background" tag="property" attribute="name|widgetArt" value="ClearArt">homewidgets/landscape_bg_</property>
-		<property name="background" tag="property" attribute="name|widgetArt" value="ClearLogo">homewidgets/landscape_bg_</property>
-		<property name="background" tag="property" attribute="name|widgetArt" value="Banner">homewidgets/landscape_bg_</property>
-		<property name="background" tag="property" attribute="name|widgetArt" value="Thumb">homewidgets/landscape_bg_</property>
-		<property name="background" tag="property" attribute="name|widgetArt" value="DiscArt">homewidgets/square_bg_</property>
-		<property name="background" tag="property" attribute="name|widgetArt" value="CharacterArt">homewidgets/square_bg_</property>
+		<property name="top" tag="property" attribute="name|widgetArt" value="Poster">95</property>
+		<property name="top" tag="property" attribute="name|widgetArt" value="Square Poster">104</property>
+		<property name="top" tag="property" attribute="name|widgetArt" value="FanArt">112</property>
+		<property name="top" tag="property" attribute="name|widgetArt" value="Landscape">112</property>
+		<property name="top" tag="property" attribute="name|widgetArt" value="ClearArt">112</property>
+		<property name="top" tag="property" attribute="name|widgetArt" value="ClearLogo">112</property>
+		<property name="top" tag="property" attribute="name|widgetArt" value="Banner">111</property>
+		<property name="top" tag="property" attribute="name|widgetArt" value="Thumb">471</property>
+		<property name="top" tag="property" attribute="name|widgetArt" value="DiscArt">104</property>
+		<property name="top" tag="property" attribute="name|widgetArt" value="CharacterArt">104</property>
+		<!-- Set Label Bottom Position -->
+		<property name="labelBottom" tag="property" attribute="name|widgetArt" value="Poster">309</property>
+		<property name="labelBottom" tag="property" attribute="name|widgetArt" value="Square Poster">291</property>
+		<property name="labelBottom" tag="property" attribute="name|widgetArt" value="FanArt">275</property>
+		<property name="labelBottom" tag="property" attribute="name|widgetArt" value="Landscape">275</property>
+		<property name="labelBottom" tag="property" attribute="name|widgetArt" value="ClearArt">275</property>
+		<property name="labelBottom" tag="property" attribute="name|widgetArt" value="ClearLogo">275</property>
+		<property name="labelBottom" tag="property" attribute="name|widgetArt" value="Banner">278</property>
+		<property name="labelBottom" tag="property" attribute="name|widgetArt" value="Thumb">275</property>
+		<property name="labelBottom" tag="property" attribute="name|widgetArt" value="DiscArt">291</property>
+		<property name="labelBottom" tag="property" attribute="name|widgetArt" value="CharacterArt">291</property>
+		<!-- Set Background Height -->
+		<property name="height" tag="property" attribute="name|widgetArt" value="Poster">342</property>
+		<property name="height" tag="property" attribute="name|widgetArt" value="Square Poster">324</property>
+		<property name="height" tag="property" attribute="name|widgetArt" value="FanArt">308</property>
+		<property name="height" tag="property" attribute="name|widgetArt" value="Landscape">308</property>
+		<property name="height" tag="property" attribute="name|widgetArt" value="ClearArt">308</property>
+		<property name="height" tag="property" attribute="name|widgetArt" value="ClearLogo">308</property>
+		<property name="height" tag="property" attribute="name|widgetArt" value="Banner">311</property>
+		<property name="height" tag="property" attribute="name|widgetArt" value="Thumb">308</property>
+		<property name="height" tag="property" attribute="name|widgetArt" value="DiscArt">324</property>
+		<property name="height" tag="property" attribute="name|widgetArt" value="CharacterArt">324</property>
 		<!-- Panel Widget -->
 		<controls>
 			<control type="group">
-				<top>90</top>
+				<top>$SKINSHORTCUTS[top]</top>				
 				<skinshortcuts>visibility</skinshortcuts>
-				<control type="image">
-					<left></left>
-					<centerleft>50%</centerleft>
-					<top>-10</top>
-					<width>1460</width>
-					<height>330</height>
-					<texture>$SKINSHORTCUTS[background]$VAR[HomeWidgetBackgroundVar]</texture>
-				</control>
-				<control type="label">
-					<left></left>
-					<centerleft>50%</centerleft>
-					<top>330</top>
-					<width>1440</width>
-					<height>auto</height>
-					<align>center</align>
-					<font>font13_title</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
-					<label>$SKINSHORTCUTS[name]</label>
-					<visible>!StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994])</visible>
-				</control>
-				<control type="label">
-					<left></left>
-					<centerleft>50%</centerleft>
-					<top>330</top>
-					<width>1440</width>
-					<height>auto</height>
-					<align>right</align>
-					<font>font13_title</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
-					<label>$SKINSHORTCUTS[name]</label>
-					<visible>StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994])</visible>
-				</control>
+				<include name="PanelBack">
+					<param name="backHeight">$SKINSHORTCUTS[height]</param>
+					<param name="label">$SKINSHORTCUTS[label]</param>
+					<param name="labelBottom">$SKINSHORTCUTS[labelBottom]</param>						
+				</include>
 			</control>
 			<control type="group">
-				<top>90</top>
-				<control type="panel" id="8001">
+				<top>$SKINSHORTCUTS[top]</top>
+				<control type="panel" id="8002">
 					<skinshortcuts>visibility</skinshortcuts>
-					<include name="PanelWidget1">
-						<param name="Top">$SKINSHORTCUTS[top]</param>
-					</include>
+					<include>PanelWidget2</include>
 					<include name="$SKINSHORTCUTS[artcontent]">
 						<param name="Texture">$SKINSHORTCUTS[artwork]</param>
+						<param name="labelVisible">$SKINSHORTCUTS[title]</param>
 						<param name="Target">$SKINSHORTCUTS[target]</param>
 						<param name="Path">$SKINSHORTCUTS[content]</param>
 					</include>
@@ -479,7 +467,7 @@
 		<!-- Retrieve the widget properties -->
 		<property name="content" tag="property" attribute="name|widgetPath.2" />
 		<property name="target" tag="property" attribute="name|widgetTarget.2" />
-		<property name="name" tag="property" attribute="name|widgetName.2" />
+		<property name="label" tag="property" attribute="name|widgetName.2" />
 		<!-- Set Artwork -->
 		<property name="artwork" tag="property" attribute="name|widgetArt.2" value="Poster">$VAR[HomeWidgetPosterVar]</property>
 		<property name="artwork" tag="property" attribute="name|widgetArt.2" value="Square Poster">$VAR[HomeWidgetPosterVar]</property>
@@ -506,77 +494,61 @@
 		<property name="artcontent" tag="property" attribute="name|widgetArt.2" value="Thumb">LandscapeArt</property>
 		<property name="artcontent" tag="property" attribute="name|widgetArt.2" value="DiscArt">SquareArt</property>
 		<property name="artcontent" tag="property" attribute="name|widgetArt.2" value="CharacterArt">SquareArt</property>
+		<!-- Set Label -->
+		<property name="title" tag="property" attribute="name|widgetTitle.2" value="Panel">true</property>
+		<property name="title">false</property>
 		<!-- Set Top Position -->
-		<property name="top" tag="property" attribute="name|widgetArt.2" value="Poster">5</property>
-		<property name="top" tag="property" attribute="name|widgetArt.2" value="Square Poster">23</property>
-		<property name="top" tag="property" attribute="name|widgetArt.2" value="FanArt">39</property>
-		<property name="top" tag="property" attribute="name|widgetArt.2" value="Landscape">39</property>
-		<property name="top" tag="property" attribute="name|widgetArt.2" value="ClearArt">39</property>
-		<property name="top" tag="property" attribute="name|widgetArt.2" value="ClearLogo">39</property>
-		<property name="top" tag="property" attribute="name|widgetArt.2" value="Banner">36</property>
-		<property name="top" tag="property" attribute="name|widgetArt.2" value="Thumb">39</property>
-		<property name="top" tag="property" attribute="name|widgetArt.2" value="DiscArt">23</property>
-		<property name="top" tag="property" attribute="name|widgetArt.2" value="CharacterArt">23</property>
-		<!-- Set Background -->
-		<property name="background" tag="property" attribute="name|widgetArt.2" value="Poster">homewidgets/poster_bg_</property>
-		<property name="background" tag="property" attribute="name|widgetArt.2" value="Square Poster">homewidgets/square_bg_</property>
-		<property name="background" tag="property" attribute="name|widgetArt.2" value="FanArt">homewidgets/landscape_bg_</property>
-		<property name="background" tag="property" attribute="name|widgetArt.2" value="Landscape">homewidgets/landscape_bg_</property>
-		<property name="background" tag="property" attribute="name|widgetArt.2" value="ClearArt">homewidgets/landscape_bg_</property>
-		<property name="background" tag="property" attribute="name|widgetArt.2" value="ClearLogo">homewidgets/landscape_bg_</property>
-		<property name="background" tag="property" attribute="name|widgetArt.2" value="Banner">homewidgets/landscape_bg_</property>
-		<property name="background" tag="property" attribute="name|widgetArt.2" value="Thumb">homewidgets/landscape_bg_</property>
-		<property name="background" tag="property" attribute="name|widgetArt.2" value="DiscArt">homewidgets/square_bg_</property>
-		<property name="background" tag="property" attribute="name|widgetArt.2" value="CharacterArt">homewidgets/square_bg_</property>
+		<property name="top" tag="property" attribute="name|widgetArt.2" value="Poster">454</property>
+		<property name="top" tag="property" attribute="name|widgetArt.2" value="Square Poster">463</property>
+		<property name="top" tag="property" attribute="name|widgetArt.2" value="FanArt">471</property>
+		<property name="top" tag="property" attribute="name|widgetArt.2" value="Landscape">471</property>
+		<property name="top" tag="property" attribute="name|widgetArt.2" value="ClearArt">471</property>
+		<property name="top" tag="property" attribute="name|widgetArt.2" value="ClearLogo">471</property>
+		<property name="top" tag="property" attribute="name|widgetArt.2" value="Banner">470	</property>
+		<property name="top" tag="property" attribute="name|widgetArt.2" value="Thumb">471</property>
+		<property name="top" tag="property" attribute="name|widgetArt.2" value="DiscArt">463</property>
+		<property name="top" tag="property" attribute="name|widgetArt.2" value="CharacterArt">463</property>
+		<!-- Set Label Bottom Position -->
+		<property name="labelBottom" tag="property" attribute="name|widgetArt.2" value="Poster">309</property>
+		<property name="labelBottom" tag="property" attribute="name|widgetArt.2" value="Square Poster">291</property>
+		<property name="labelBottom" tag="property" attribute="name|widgetArt.2" value="FanArt">275</property>
+		<property name="labelBottom" tag="property" attribute="name|widgetArt.2" value="Landscape">275</property>
+		<property name="labelBottom" tag="property" attribute="name|widgetArt.2" value="ClearArt">275</property>
+		<property name="labelBottom" tag="property" attribute="name|widgetArt.2" value="ClearLogo">275</property>
+		<property name="labelBottom" tag="property" attribute="name|widgetArt.2" value="Banner">278</property>
+		<property name="labelBottom" tag="property" attribute="name|widgetArt.2" value="Thumb">275</property>
+		<property name="labelBottom" tag="property" attribute="name|widgetArt.2" value="DiscArt">291</property>
+		<property name="labelBottom" tag="property" attribute="name|widgetArt.2" value="CharacterArt">291</property>
+		<!-- Set Background Height -->
+		<property name="height" tag="property" attribute="name|widgetArt.2" value="Poster">342</property>
+		<property name="height" tag="property" attribute="name|widgetArt.2" value="Square Poster">324</property>
+		<property name="height" tag="property" attribute="name|widgetArt.2" value="FanArt">308</property>
+		<property name="height" tag="property" attribute="name|widgetArt.2" value="Landscape">308</property>
+		<property name="height" tag="property" attribute="name|widgetArt.2" value="ClearArt">308</property>
+		<property name="height" tag="property" attribute="name|widgetArt.2" value="ClearLogo">308</property>
+		<property name="height" tag="property" attribute="name|widgetArt.2" value="Banner">311</property>
+		<property name="height" tag="property" attribute="name|widgetArt.2" value="Thumb">308</property>
+		<property name="height" tag="property" attribute="name|widgetArt.2" value="DiscArt">324</property>
+		<property name="height" tag="property" attribute="name|widgetArt.2" value="CharacterArt">324</property>
 		<!-- Panel Widget -->
 		<controls>
 			<control type="group">
-				<top>449</top>
+				<top>$SKINSHORTCUTS[top]</top>				
 				<skinshortcuts>visibility</skinshortcuts>
-				<control type="image">
-					<left></left>
-					<centerleft>50%</centerleft>
-					<top>-10</top>
-					<width>1460</width>
-					<height>330</height>
-					<texture>$SKINSHORTCUTS[background]$VAR[HomeWidgetBackgroundVar]</texture>
-				</control>
-				<control type="label">
-					<left></left>
-					<centerleft>50%</centerleft>
-					<top>330</top>
-					<width>1440</width>
-					<height>auto</height>
-					<align>center</align>
-					<font>font13_title</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
-					<label>$SKINSHORTCUTS[name]</label>
-					<visible>!StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994])</visible>
-				</control>
-				<control type="label">
-					<left></left>
-					<centerleft>50%</centerleft>
-					<top>330</top>
-					<width>1440</width>
-					<height>auto</height>
-					<align>right</align>
-					<font>font13_title</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
-					<label>$SKINSHORTCUTS[name]</label>
-					<visible>StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994])</visible>
-				</control>
+				<include name="PanelBack">
+					<param name="backHeight">$SKINSHORTCUTS[height]</param>
+					<param name="label">$SKINSHORTCUTS[label]</param>
+					<param name="labelBottom">$SKINSHORTCUTS[labelBottom]</param>						
+				</include>
 			</control>
 			<control type="group">
-				<top>449</top>
+				<top>$SKINSHORTCUTS[top]</top>
 				<control type="panel" id="8002">
 					<skinshortcuts>visibility</skinshortcuts>
-					<include name="PanelWidget2">
-						<param name="Top">$SKINSHORTCUTS[top]</param>
-					</include>
+					<include>PanelWidget2</include>
 					<include name="$SKINSHORTCUTS[artcontent]">
 						<param name="Texture">$SKINSHORTCUTS[artwork]</param>
+						<param name="labelVisible">$SKINSHORTCUTS[title]</param>
 						<param name="Target">$SKINSHORTCUTS[target]</param>
 						<param name="Path">$SKINSHORTCUTS[content]</param>
 					</include>

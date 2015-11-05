@@ -31,15 +31,7 @@
 				<width>1440</width>
 				<height>310</height>
 				<texture>xxxhomewidgets/test.png</texture>
-			</control>
-			<control type="image">
-				<top>449</top>
-				<left></left>
-				<centerleft>50%</centerleft>
-				<width>1440</width>
-				<height>310</height>
-				<texture>xxxhomewidgets/test.png</texture>
-			</control>
+			</control>			
 			<!-- Widgets -->
 			<include>skinshortcuts-template-widgetClassic1</include>
 			<include>skinshortcuts-template-widgetPanel1</include>
@@ -54,7 +46,15 @@
 			<animation effect="slide" end="0,235" condition="!StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + !Skin.HasSetting(lowermainmenu)">Conditional</animation>
 			<animation effect="slide" end="215,236 " condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994])">Conditional</animation>
 			<visible>!IsEmpty(Container(9000).ListItem.Property(widget.2))</visible>
-			<include>VisibleFadeEffect</include>
+			<include>VisibleFadeEffect</include>			
+			<control type="image">
+				<top>449</top>
+				<left></left>
+				<centerleft>50%</centerleft>
+				<width>1440</width>
+				<height>310</height>
+				<texture>xxxhomewidgets/test.png</texture>
+			</control>
 			<!-- Widgets -->
 			<include>skinshortcuts-template-widgetClassic2</include>
 			<include>skinshortcuts-template-widgetPanel2</include>
@@ -154,8 +154,8 @@
 		<onright>8002</onright>
 		<onback>9000</onback>
 	</include>
-	<!-- ******* WIDGETS ******** -->
-	<!-- Classic -->
+	<!-- ******* CLASSIC WIDGETS ******** -->
+	<!-- Classic Containers -->
 	<include name="ClassicWidget1">
 		<width>300</width>
 		<height>300</height>
@@ -176,6 +176,7 @@
 		<scrolltime tween="quadratic" easing="out">300</scrolltime>
 		<autoscroll time="10000" delay="10000" repeat="10000">Control.IsVisible(9004) + !Control.HasFocus(8002)</autoscroll>
 	</include>
+	<!-- Classic Info -->
 	<include name="ClassicInfo">
 		<top>0</top>
 		<height>312</height>
@@ -232,6 +233,7 @@
 			<label>$PARAM[Plot]</label>
 		</control>
 	</include>
+	<!-- Classic Artwork/Labels -->
 	<include name="ClassicPortraitArt">
 		<control type="image">
 			<top>40</top>
@@ -338,10 +340,11 @@
 		</focusedlayout>
 		<content target="$PARAM[Target]">$PARAM[Path]</content>
 	</include>
-	<!-- Panel -->
+	<!-- ******* PANEL WIDGETS ******** -->
+	<!-- Panel Containers -->
 	<include name="PanelWidget1">
 		<centerleft>50%</centerleft>
-		<top>$PARAM[Top]</top>
+		<top>0</top>
 		<width>1430</width>
 		<height>300</height>
 		<include>HorizontalNavigation1</include>
@@ -352,7 +355,7 @@
 	</include>
 	<include name="PanelWidget2">
 		<centerleft>50%</centerleft>
-		<top>$PARAM[Top]</top>
+		<top>0</top>
 		<width>1430</width>
 		<height>300</height>
 		<include>HorizontalNavigation2</include>
@@ -361,6 +364,44 @@
 		<preloaditems>2</preloaditems>
 		<scrolltime tween="quadratic" easing="out">300</scrolltime>
 	</include>
+	<!-- Panel Background/Labels -->
+	<include name="PanelBack">
+		<control type="image">
+			<left></left>
+			<centerleft>50%</centerleft>				
+			<top>-21</top>
+			<width>1472</width>
+			<height>$PARAM[backHeight]</height>
+			<texture border="40">$VAR[HomeWidgetBackgroundVar]</texture>
+		</control>				
+		<control type="label">														
+			<top>-32</top>					
+			<left></left>
+			<centerleft>50%</centerleft>					
+			<width>1440</width>
+			<height>20</height>
+			<align>right</align>
+			<font>font13_title</font>
+			<textcolor>white</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<label>$PARAM[label]</label>				
+			<visible>StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994])</visible>
+		</control>
+		<control type="label">														
+			<top>$PARAM[labelBottom]</top>					
+			<left></left>
+			<centerleft>50%</centerleft>					
+			<width>1440</width>
+			<height>20</height>
+			<align>center</align>
+			<font>font13_title</font>
+			<textcolor>white</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<label>$PARAM[label]</label>				
+			<visible>!StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994])</visible>
+		</control>	
+	</include>
+	<!-- Panel Container Content -->
 	<include name="PortraitArt">
 		<itemlayout height="300" width="205">
 			<control type="image">
@@ -381,7 +422,7 @@
 				<height>100</height>
 				<texture>homewidgets/label.png</texture>
 				<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
-				<visible>StringCompare(Container(9000).ListItem.Property(WidgetTitle),Panel)</visible>
+				<visible>$PARAM[labelVisible]</visible>
 			</control>
 			<control type="textbox">
 				<left>5</left>
@@ -393,7 +434,7 @@
 				<font>font12_title</font>				
 				<shadowcolor>shadow</shadowcolor>				
 				<label>$VAR[HomeWidgetTitleVar]</label>
-				<visible>StringCompare(Container(9000).ListItem.Property(WidgetTitle),Panel)</visible>
+				<visible>$PARAM[labelVisible]</visible>
 			</control>
 			<control type="image">
 				<left>0</left>
@@ -425,7 +466,7 @@
 					<width>200</width>
 					<height>100</height>
 					<texture>homewidgets/label.png</texture>
-					<visible>StringCompare(Container(9000).ListItem.Property(WidgetTitle),Panel)</visible>
+					<visible>$PARAM[labelVisible]</visible>
 				</control>
 				<control type="textbox">
 					<left>5</left>
@@ -437,7 +478,7 @@
 					<font>font12_title</font>				
 					<shadowcolor>shadow</shadowcolor>				
 					<label>$VAR[HomeWidgetTitleVar]</label>
-					<visible>StringCompare(Container(9000).ListItem.Property(WidgetTitle),Panel)</visible>
+					<visible>$PARAM[labelVisible]</visible>
 				</control>
 				<control type="image">
 					<left>0</left>
@@ -465,24 +506,24 @@
 			</control>
 			<control type="image">
 				<left>0</left>
-				<top>172</top>
+				<top>182</top>
 				<width>282</width>
 				<height>100</height>
 				<texture>homewidgets/label.png</texture>
 				<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
-				<visible>StringCompare(Container(9000).ListItem.Property(WidgetTitle),Panel)</visible>
+				<visible>$PARAM[labelVisible]</visible>
 			</control>
 			<control type="textbox">
 				<left>10</left>
-				<top>192</top>
+				<top>212</top>
 				<width>262</width>
-				<height>92</height>
+				<height>70</height>
 				<align>center</align>
 				<aligny>center</aligny>
 				<font>font12_title</font>				
 				<shadowcolor>shadow</shadowcolor>				
 				<label>$VAR[HomeWidgetTitleVar]</label>
-				<visible>StringCompare(Container(9000).ListItem.Property(WidgetTitle),Panel)</visible>
+				<visible>$PARAM[labelVisible]</visible>
 			</control>
 			<control type="image">
 				<left>0</left>
@@ -510,23 +551,23 @@
 				</control>
 				<control type="image">
 					<left>0</left>
-					<top>172</top>
+					<top>182</top>
 					<width>282</width>
 					<height>100</height>
 					<texture>homewidgets/label.png</texture>
-					<visible>StringCompare(Container(9000).ListItem.Property(WidgetTitle),Panel)</visible>
+					<visible>$PARAM[labelVisible]</visible>
 				</control>
 				<control type="textbox">
 					<left>10</left>
-					<top>192</top>
+					<top>212</top>
 					<width>262</width>
-					<height>92</height>
+					<height>70</height>
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>font12_title</font>				
 					<shadowcolor>shadow</shadowcolor>				
 					<label>$VAR[HomeWidgetTitleVar]</label>
-					<visible>StringCompare(Container(9000).ListItem.Property(WidgetTitle),Panel)</visible>
+					<visible>$PARAM[labelVisible]</visible>
 				</control>
 				<control type="image">
 					<left>0</left>
@@ -557,19 +598,19 @@
 				<height>100</height>
 				<texture>homewidgets/label.png</texture>
 				<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
-				<visible>StringCompare(Container(9000).ListItem.Property(WidgetTitle),Panel)</visible>
+				<visible>$PARAM[labelVisible]</visible>
 			</control>
 			<control type="textbox">
 				<left>5</left>
-				<top>192</top>
-				<width>463</width>
-				<height>92</height>
+				<top>196</top>
+				<width>463</width>	
+				<height>70</height>
 				<align>center</align>
 				<aligny>center</aligny>
 				<font>font12_title</font>				
 				<shadowcolor>shadow</shadowcolor>				
 				<label>$VAR[HomeWidgetTitleVar]</label>
-				<visible>StringCompare(Container(9000).ListItem.Property(WidgetTitle),Panel)</visible>
+				<visible>$PARAM[labelVisible]</visible>
 			</control>
 			<control type="image">
 				<left>0</left>
@@ -598,21 +639,20 @@
 					<top>166</top>
 					<width>473</width>
 					<height>100</height>
-					<texture>homewidgets/label.png</texture>
-					<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
-					<visible>StringCompare(Container(9000).ListItem.Property(WidgetTitle),Panel)</visible>
+					<texture>homewidgets/label.png</texture>					
+					<visible>$PARAM[labelVisible]</visible>
 				</control>
 				<control type="textbox">
 					<left>5</left>
-					<top>192</top>
+					<top>196</top>
 					<width>463</width>
-					<height>92</height>
+					<height>70</height>
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>font12_title</font>				
 					<shadowcolor>shadow</shadowcolor>				
 					<label>$VAR[HomeWidgetTitleVar]</label>
-					<visible>StringCompare(Container(9000).ListItem.Property(WidgetTitle),Panel)</visible>
+					<visible>$PARAM[labelVisible]</visible>
 				</control>
 				<control type="image">
 					<left>0</left>
@@ -647,6 +687,27 @@
 			</control>
 			<control type="image">
 				<left>0</left>
+				<top>82</top>
+				<width>712</width>
+				<height>50</height>
+				<texture>homewidgets/label.png</texture>
+				<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
+				<visible>$PARAM[labelVisible]</visible>
+			</control>
+			<control type="textbox">
+				<left>5</left>
+				<top>97</top>
+				<width>712</width>	
+				<height>35</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>font12_title</font>				
+				<shadowcolor>shadow</shadowcolor>				
+				<label>$VAR[HomeWidgetTitleVar]</label>
+				<visible>$PARAM[labelVisible]</visible>
+			</control>
+			<control type="image">
+				<left>0</left>
 				<top>0</top>
 				<width>712</width>
 				<height>132</height>
@@ -674,6 +735,26 @@
 					<aspectratio>keep</aspectratio>
 					<visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(tvshow.banner))</visible>
 					<texture>$VAR[HomeWidgetClearLogoVar]</texture>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>82</top>
+					<width>712</width>
+					<height>50</height>
+					<texture>homewidgets/label.png</texture>					
+					<visible>$PARAM[labelVisible]</visible>
+				</control>
+				<control type="textbox">
+					<left>5</left>
+					<top>97</top>
+					<width>712</width>	
+					<height>35</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>				
+					<shadowcolor>shadow</shadowcolor>				
+					<label>$VAR[HomeWidgetTitleVar]</label>
+					<visible>$PARAM[labelVisible]</visible>
 				</control>
 				<control type="image">
 					<left>0</left>
