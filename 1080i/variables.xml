@@ -1495,18 +1495,29 @@
 	</variable>
 	<variable name="HomeWidgetPortraitCaseVar">
 		<value condition="StringCompare(Skin.String(poster.case),Glass)">homewidgets/glass/portrait.png</value>
-		<value condition="SubString(Container(9000).ListItem.Property(widgetStyle),Classic) + StringCompare(Skin.String(poster.case),Case)">homewidgets/case/$VAR[HomeWidget8001CaseVar]</value>
-		<value condition="SubString(Container(9000).ListItem.Property(widgetStyle.2),Classic) + StringCompare(Skin.String(poster.case),Case)">homewidgets/case/$VAR[HomeWidget8002CaseVar]</value>
-		<value condition="StringCompare(Skin.String(poster.case),Case)">homewidgets/case/$VAR[HomeWidgetCaseVar]</value>
-		<value condition="SubString(Container(9000).ListItem.Property(widgetStyle),Classic) + StringCompare(Skin.String(poster.case),Clear Case)">homewidgets/clearcase/$VAR[HomeWidget8001CaseVar]</value>
-		<value condition="SubString(Container(9000).ListItem.Property(widgetStyle.2),Classic) + StringCompare(Skin.String(poster.case),Clear Case)">homewidgets/clearcase/$VAR[HomeWidget8002CaseVar]</value>
-		<value condition="StringCompare(Skin.String(poster.case),Clear Case)">homewidgets/clearcase/$VAR[HomeWidgetCaseVar]</value>
-		<value>noop</value>
+		<value condition="StringCompare(Skin.String(poster.case),Case) + ListItem.IsStereoscopic">homewidgets/case/3d.png</value>
+		<value condition="StringCompare(Skin.String(poster.case),Case)">homewidgets/case/$INFO[ListItem.VideoResolution]p.png</value>
+		<value condition="StringCompare(Skin.String(poster.clearcase),Case) + ListItem.IsStereoscopic">homewidgets/clearcase/3d.png</value>
+		<value condition="StringCompare(Skin.String(poster.case),Clear Case)">homewidgets/clearcase/$INFO[ListItem.VideoResolution]p.png</value>
 	</variable>
+	<variable name="HomeWidget8001PortraitCaseVar">
+		<value condition="StringCompare(Skin.String(poster.case),Glass)">homewidgets/glass/portrait.png</value>
+		<value condition="StringCompare(Skin.String(poster.case),Case) + Container(8001).ListItem.IsStereoscopic">homewidgets/case/3d.png</value>
+		<value condition="StringCompare(Skin.String(poster.case),Case)">homewidgets/case/$INFO[Container(8001).ListItem.VideoResolution]p.png</value>
+		<value condition="StringCompare(Skin.String(poster.clearcase),Case) + Container(8001).ListItem.IsStereoscopic">homewidgets/clearcase/3d.png</value>
+		<value condition="StringCompare(Skin.String(poster.case),Clear Case)">homewidgets/clearcase/$INFO[Container(8001).ListItem.VideoResolution]p.png</value>
+	</variable>
+	<variable name="HomeWidget8002PortraitCaseVar">
+		<value condition="StringCompare(Skin.String(poster.case),Glass)">homewidgets/glass/portrait.png</value>
+		<value condition="StringCompare(Skin.String(poster.case),Case) + Container(8002).ListItem.IsStereoscopic">homewidgets/case/3d.png</value>
+		<value condition="StringCompare(Skin.String(poster.case),Case)">homewidgets/case/$INFO[Container(8002).ListItem.VideoResolution]p.png</value>
+		<value condition="StringCompare(Skin.String(poster.clearcase),Case) + Container(8002).ListItem.IsStereoscopic">homewidgets/clearcase/3d.png</value>
+		<value condition="StringCompare(Skin.String(poster.case),Clear Case)">homewidgets/clearcase/$INFO[Container(8002).ListItem.VideoResolution]p.png</value>
+	</variable>	
 	<variable name="SquareCaseLabelVar">
 		<value condition="!IsEmpty(Skin.String(SquarePoster.Case))">$INFO[Skin.String(SquarePoster.Case)]</value>
 		<value>None</value>
-	</variable>
+	</variable>	
 	<variable name="SquareCaseVar">
 		<value condition="IsEmpty(Skin.String(SquarePoster.Case))">Skin.SetString(SquarePoster.Case,Glass)</value>
 		<value condition="StringCompare(Skin.String(SquarePoster.Case),Glass)">Skin.SetString(SquarePoster.Case,Case)</value>
@@ -1517,28 +1528,6 @@
 		<value condition="StringCompare(Skin.String(squareposter.case),Glass)">homewidgets/glass/square.png</value>
 		<value condition="StringCompare(Skin.String(squareposter.case),Case)">homewidgets/case/cd.png</value>
 		<value condition="StringCompare(Skin.String(squareposter.case),Clear Case)">homewidgets/clearcase/cd.png</value>
-		<value>noop</value>
-	</variable>
-	<variable name="HomeWidgetCaseVar">
-		<value condition="SubString(ListItem.Filename,3d) | SubString(ListItem.Filename,3dbd)">3d.png</value>
-		<value condition="SubString(ListItem.Filename,hddvd)">hddvd.png</value>
-		<value condition="SubString(ListItem.Filename,hdtv) | SubString(ListItem.Filename,hd tv)">hdtv.png</value>
-		<value condition="SubString(ListItem.Filename,webdl) | SubString(ListItem.Filename,web-dl)">webdl.png</value>
-		<value>$INFO[ListItem.VideoResolution]p.png</value>
-	</variable>
-	<variable name="HomeWidget8001CaseVar">
-		<value condition="SubString(Container(8001).ListItem.Filename,3d) | SubString(Container(8001).ListItem.Filename,3dbd)">3d.png</value>
-		<value condition="SubString(Container(8001).ListItem.Filename,hddvd)">hddvd.png</value>
-		<value condition="SubString(Container(8001).ListItem.Filename,hdtv) | SubString(Container(8001).ListItem.Filename,hd tv)">hdtv.png</value>
-		<value condition="SubString(Container(8001).ListItem.Filename,webdl) | SubString(Container(8001).ListItem.Filename,web-dl)">webdl.png</value>
-		<value>$INFO[Container(8001).ListItem.VideoResolution]p.png</value>
-	</variable>
-	<variable name="HomeWidget8002CaseVar">
-		<value condition="SubString(Container(8002).ListItem.Filename,3d) | SubString(Container(8002).ListItem.Filename,3dbd)">3d.png</value>
-		<value condition="SubString(Container(8002).ListItem.Filename,hddvd)">hddvd.png</value>
-		<value condition="SubString(Container(8002).ListItem.Filename,hdtv) | SubString(Container(8002).ListItem.Filename,hd tv)">hdtv.png</value>
-		<value condition="SubString(Container(8002).ListItem.Filename,webdl) | SubString(Container(8002).ListItem.Filename,web-dl)">webdl.png</value>
-		<value>$INFO[Container(8002).ListItem.VideoResolution]p.png</value>
 	</variable>
 	<!-- Widget Artwork -->
 	<variable name="HomeWidgetPosterVar">

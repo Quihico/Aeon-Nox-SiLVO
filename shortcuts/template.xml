@@ -162,6 +162,7 @@
 					<control type="group">
 						<include name="$SKINSHORTCUTS[artcontent]">
 							<param name="Texture">$SKINSHORTCUTS[artwork]</param>
+							<param name="Case">$VAR[HomeWidget8001PortraitCaseVar]</param>
 						</include>
 					</control>
 				</control>
@@ -265,9 +266,9 @@
 			</control>
 			<control type="group">
 				<top>$SKINSHORTCUTS[top]</top>
-				<control type="panel" id="8002">
+				<control type="panel" id="8001">
 					<skinshortcuts>visibility</skinshortcuts>
-					<include>PanelWidget2</include>
+					<include>PanelWidget1</include>
 					<include name="$SKINSHORTCUTS[artcontent]">
 						<param name="Texture">$SKINSHORTCUTS[artwork]</param>
 						<param name="labelVisible">$SKINSHORTCUTS[title]</param>
@@ -440,6 +441,7 @@
 					<control type="group">
 						<include name="$SKINSHORTCUTS[artcontent]">
 							<param name="Texture">$SKINSHORTCUTS[artwork]</param>
+							<param name="Case">$VAR[HomeWidget8002PortraitCaseVar]</param>
 						</include>
 					</control>
 				</control>

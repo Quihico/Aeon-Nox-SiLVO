@@ -252,7 +252,7 @@
 			<width>134</width>
 			<height>200</height>
 			<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
-			<texture>$VAR[HomeWidgetPortraitCaseVar]</texture>
+			<texture>$PARAM[Case]</texture>
 		</control>
 		<control type="label">
 			<height>auto</height>
@@ -382,8 +382,8 @@
 			<height>20</height>
 			<align>right</align>
 			<font>font13_title</font>
-			<textcolor>white</textcolor>
-			<shadowcolor>black</shadowcolor>
+			<textcolor>grey</textcolor>
+			<shadowcolor>shadow</shadowcolor>
 			<label>$PARAM[label]</label>				
 			<visible>StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994])</visible>
 		</control>
@@ -395,8 +395,8 @@
 			<height>20</height>
 			<align>center</align>
 			<font>font13_title</font>
-			<textcolor>white</textcolor>
-			<shadowcolor>black</shadowcolor>
+			<textcolor>grey</textcolor>
+			<shadowcolor>shadow</shadowcolor>
 			<label>$PARAM[label]</label>				
 			<visible>!StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994])</visible>
 		</control>	
@@ -432,7 +432,7 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<font>font12_title</font>				
-				<shadowcolor>shadow</shadowcolor>				
+				<textcolor>lightgrey</textcolor>				
 				<label>$VAR[HomeWidgetTitleVar]</label>
 				<visible>$PARAM[labelVisible]</visible>
 			</control>
@@ -476,7 +476,7 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>font12_title</font>				
-					<shadowcolor>shadow</shadowcolor>				
+					<textcolor>themecolor</textcolor>	
 					<label>$VAR[HomeWidgetTitleVar]</label>
 					<visible>$PARAM[labelVisible]</visible>
 				</control>
@@ -499,8 +499,8 @@
 				<width>282</width>
 				<height>282</height>
 				<animation effect="zoom" end="96,96" center="auto" condition="StringCompare(Skin.String(SquarePoster.Case),Glass)">conditional</animation>
-				<animation effect="zoom" end="91,95" center="240,150" condition="StringCompare(Skin.String(SquarePoster.Case),Case)">conditional</animation>
-				<animation effect="zoom" end="91,95" center="240,150" condition="StringCompare(Skin.String(SquarePoster.Case),Clear Case)">conditional</animation>
+				<animation effect="zoom" end="90,98" center="250,150" condition="StringCompare(Skin.String(SquarePoster.Case),Case)">conditional</animation>
+				<animation effect="zoom" end="90,98" center="250,150" condition="StringCompare(Skin.String(SquarePoster.Case),Clear Case)">conditional</animation>
 				<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
 				<texture background="true" fallback="DefaultMusicAlbums.png">$PARAM[Texture]</texture>
 			</control>
@@ -514,15 +514,17 @@
 				<visible>$PARAM[labelVisible]</visible>
 			</control>
 			<control type="textbox">
-				<left>10</left>
+				<left>17</left>
 				<top>212</top>
-				<width>262</width>
+				<width>248</width>
 				<height>70</height>
 				<align>center</align>
 				<aligny>center</aligny>
 				<font>font12_title</font>				
-				<shadowcolor>shadow</shadowcolor>				
+				<textcolor>lightgrey</textcolor>				
 				<label>$VAR[HomeWidgetTitleVar]</label>
+				<animation effect="slide" end="10,0" condition="StringCompare(Skin.String(SquarePoster.Case),Clear Case)">conditional</animation>
+				<animation effect="slide" end="10,0" condition="StringCompare(Skin.String(SquarePoster.Case),Case)">conditional</animation>				
 				<visible>$PARAM[labelVisible]</visible>
 			</control>
 			<control type="image">
@@ -545,8 +547,8 @@
 					<width>282</width>
 					<height>282</height>
 					<animation effect="zoom" end="96,96" center="auto" condition="StringCompare(Skin.String(SquarePoster.Case),Glass)">conditional</animation>
-					<animation effect="zoom" end="91,95" center="240,150" condition="StringCompare(Skin.String(SquarePoster.Case),Case)">conditional</animation>
-					<animation effect="zoom" end="91,95" center="240,150" condition="StringCompare(Skin.String(SquarePoster.Case),Clear Case)">conditional</animation>
+					<animation effect="zoom" end="90,98" center="250,150" condition="StringCompare(Skin.String(SquarePoster.Case),Case)">conditional</animation>
+					<animation effect="zoom" end="90,98" center="250,150" condition="StringCompare(Skin.String(SquarePoster.Case),Clear Case)">conditional</animation>
 					<texture background="true" fallback="DefaultMusicAlbums.png">$PARAM[Texture]</texture>
 				</control>
 				<control type="image">
@@ -558,15 +560,17 @@
 					<visible>$PARAM[labelVisible]</visible>
 				</control>
 				<control type="textbox">
-					<left>10</left>
+					<left>17</left>
 					<top>212</top>
-					<width>262</width>
+					<width>248</width>
 					<height>70</height>
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>font12_title</font>				
-					<shadowcolor>shadow</shadowcolor>				
+					<textcolor>themecolor</textcolor>				
 					<label>$VAR[HomeWidgetTitleVar]</label>
+					<animation effect="slide" end="10,0" condition="StringCompare(Skin.String(SquarePoster.Case),Clear Case)">conditional</animation>
+					<animation effect="slide" end="10,0" condition="StringCompare(Skin.String(SquarePoster.Case),Case)">conditional</animation>				
 					<visible>$PARAM[labelVisible]</visible>
 				</control>
 				<control type="image">
@@ -608,7 +612,7 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<font>font12_title</font>				
-				<shadowcolor>shadow</shadowcolor>				
+				<textcolor>lightgrey</textcolor>				
 				<label>$VAR[HomeWidgetTitleVar]</label>
 				<visible>$PARAM[labelVisible]</visible>
 			</control>
@@ -650,7 +654,7 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>font12_title</font>				
-					<shadowcolor>shadow</shadowcolor>				
+					<textcolor>themecolor</textcolor>				
 					<label>$VAR[HomeWidgetTitleVar]</label>
 					<visible>$PARAM[labelVisible]</visible>
 				</control>
@@ -702,7 +706,7 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<font>font12_title</font>				
-				<shadowcolor>shadow</shadowcolor>				
+				<textcolor>lightgrey</textcolor>				
 				<label>$VAR[HomeWidgetTitleVar]</label>
 				<visible>$PARAM[labelVisible]</visible>
 			</control>
@@ -752,7 +756,7 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>font12_title</font>				
-					<shadowcolor>shadow</shadowcolor>				
+					<textcolor>themecolor</textcolor>					
 					<label>$VAR[HomeWidgetTitleVar]</label>
 					<visible>$PARAM[labelVisible]</visible>
 				</control>
