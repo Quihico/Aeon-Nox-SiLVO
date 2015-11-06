@@ -270,8 +270,8 @@
 			<width>200</width>
 			<height>200</height>
 			<animation effect="zoom" end="96,96" center="auto" condition="StringCompare(Skin.String(SquarePoster.Case),Glass)">conditional</animation>
-			<animation effect="zoom" end="91,95" center="240,150" condition="StringCompare(Skin.String(SquarePoster.Case),Case)">conditional</animation>
-			<animation effect="zoom" end="91,95" center="240,150" condition="StringCompare(Skin.String(SquarePoster.Case),Clear Case)">conditional</animation>
+			<animation effect="zoom" end="90,98" center="250,150" condition="StringCompare(Skin.String(SquarePoster.Case),Case)">conditional</animation>
+			<animation effect="zoom" end="90,98" center="250,150" condition="StringCompare(Skin.String(SquarePoster.Case),Clear Case)">conditional</animation>
 			<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
 			<texture background="true" fallback="DefaultMusicAlbums.png">$PARAM[Texture]</texture>
 		</control>
@@ -291,20 +291,9 @@
 			<width>300</width>
 			<height>200</height>
 			<aspectratio align="center" aligny="center">keep</aspectratio>
-			<animation effect="zoom" end="96,96" center="auto" condition="StringCompare(Skin.String(SquarePoster.Case),Glass)">conditional</animation>
-			<animation effect="zoom" end="91,95" center="240,150" condition="StringCompare(Skin.String(SquarePoster.Case),Case)">conditional</animation>
-			<animation effect="zoom" end="94,96" center="auto" condition="StringCompare(Skin.String(SquarePoster.Case),Clear Case)">conditional</animation>
 			<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
 			<texture background="true" fallback="DefaultMusicAlbums.png">$PARAM[Texture]</texture>
-		</control>
-		<control type="image">
-			<top>40</top>
-			<left>0</left>
-			<width>300</width>
-			<height>200</height>
-			<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
-			<texture>$VAR[HomeWidgetLandscapeCaseVar]</texture>
-		</control>
+		</control>		
 	</include>
 	<include name="ClassicList">
 		<itemlayout height="50" width="300">
@@ -615,15 +604,7 @@
 				<textcolor>lightgrey</textcolor>				
 				<label>$VAR[HomeWidgetTitleVar]</label>
 				<visible>$PARAM[labelVisible]</visible>
-			</control>
-			<control type="image">
-				<left>0</left>
-				<top>0</top>
-				<width>473</width>
-				<height>266</height>
-				<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
-				<texture>$VAR[HomeWidgetLandscapeCaseVar]</texture>
-			</control>
+			</control>			
 		</itemlayout>
 		<focusedlayout height="266" width="478">
 			<control type="group">
@@ -657,14 +638,7 @@
 					<textcolor>themecolor</textcolor>				
 					<label>$VAR[HomeWidgetTitleVar]</label>
 					<visible>$PARAM[labelVisible]</visible>
-				</control>
-				<control type="image">
-					<left>0</left>
-					<top>0</top>
-					<width>473</width>
-					<height>266</height>
-					<texture>$VAR[HomeWidgetLandscapeCaseVar]</texture>
-				</control>
+				</control>				
 			</control>
 		</focusedlayout>
 		<content target="$PARAM[Target]">$PARAM[Path]</content>
@@ -709,15 +683,7 @@
 				<textcolor>lightgrey</textcolor>				
 				<label>$VAR[HomeWidgetTitleVar]</label>
 				<visible>$PARAM[labelVisible]</visible>
-			</control>
-			<control type="image">
-				<left>0</left>
-				<top>0</top>
-				<width>712</width>
-				<height>132</height>
-				<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
-				<texture>$VAR[HomeWidgetBannerCaseVar]</texture>
-			</control>
+			</control>			
 		</itemlayout>
 		<focusedlayout height="137" width="717">
 			<control type="group">
@@ -759,14 +725,7 @@
 					<textcolor>themecolor</textcolor>					
 					<label>$VAR[HomeWidgetTitleVar]</label>
 					<visible>$PARAM[labelVisible]</visible>
-				</control>
-				<control type="image">
-					<left>0</left>
-					<top>0</top>
-					<width>712</width>
-					<height>132</height>
-					<texture>$VAR[HomeWidgetBannerCaseVar]</texture>
-				</control>
+				</control>				
 			</control>
 		</focusedlayout>
 		<content target="$PARAM[Target]">$PARAM[Path]</content>
