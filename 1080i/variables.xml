@@ -1400,11 +1400,11 @@
 	</variable>
 	<!-- Widgets Settings -->
 	<variable name="WidgetInfo8001TypeVar">
-		<value condition="!IsEmpty(Container(8001).ListItem.Artist) | !IsEmpty(Container(8001).ListItem.AlbumArtist) | !IsEmpty(Container(8001).ListItem.Property(Addon.Name))">Square</value>
+		<value condition="!IsEmpty(Container(8001).ListItem.Album) | !IsEmpty(Container(8001).ListItem.Artist) | !IsEmpty(Container(8001).ListItem.AlbumArtist) | !IsEmpty(Container(8001).ListItem.Property(Addon.Name))">Square</value>
 		<value>Portrait</value>
 	</variable>
 	<variable name="WidgetInfo8002TypeVar">
-		<value condition="!IsEmpty(Container(8002).ListItem.Artist) | !IsEmpty(Container(8002).ListItem.AlbumArtist) | !IsEmpty(Container(8002).ListItem.Property(Addon.Name))">Square</value>
+		<value condition="!IsEmpty(Container(8002).ListItem.Album) | !IsEmpty(Container(8002).ListItem.Artist) | !IsEmpty(Container(8002).ListItem.AlbumArtist) | !IsEmpty(Container(8002).ListItem.Property(Addon.Name))">Square</value>
 		<value>Portrait</value>
 	</variable>
 	<variable name="WidgetStyleLabelVar">
@@ -1513,11 +1513,11 @@
 		<value condition="StringCompare(Skin.String(poster.case),Case)">homewidgets/case/$INFO[Container(8002).ListItem.VideoResolution]p.png</value>
 		<value condition="StringCompare(Skin.String(poster.clearcase),Case) + Container(8002).ListItem.IsStereoscopic">homewidgets/clearcase/3d.png</value>
 		<value condition="StringCompare(Skin.String(poster.case),Clear Case)">homewidgets/clearcase/$INFO[Container(8002).ListItem.VideoResolution]p.png</value>
-	</variable>	
+	</variable>
 	<variable name="SquareCaseLabelVar">
 		<value condition="!IsEmpty(Skin.String(SquarePoster.Case))">$INFO[Skin.String(SquarePoster.Case)]</value>
 		<value>None</value>
-	</variable>	
+	</variable>
 	<variable name="SquareCaseVar">
 		<value condition="IsEmpty(Skin.String(SquarePoster.Case))">Skin.SetString(SquarePoster.Case,Glass)</value>
 		<value condition="StringCompare(Skin.String(SquarePoster.Case),Glass)">Skin.SetString(SquarePoster.Case,Case)</value>
@@ -1616,15 +1616,12 @@
 	</variable>
 	<variable name="HomeWidgetDiscArtVar">
 		<value condition="!IsEmpty(ListItem.Art(discart))">$INFO[ListItem.Art(discart)]</value>
-		<value>$INFO[ListItem.Art(thumb)]</value>
 	</variable>
 	<variable name="HomeWidget8001DiscArtVar">
 		<value condition="!IsEmpty(Container(8001).ListItem.Art(discart))">$INFO[Container(8001).ListItem.Art(discart)]</value>
-		<value>$INFO[Container(8001).ListItem.Art(thumb)]</value>
 	</variable>
 	<variable name="HomeWidget8002DiscArtVar">
 		<value condition="!IsEmpty(Container(8002).ListItem.Art(discart))">$INFO[Container(8002).ListItem.Art(discart)]</value>
-		<value>$INFO[Container(8002).ListItem.Art(thumb)]</value>
 	</variable>
 	<variable name="HomeWidgetCharacterArtVar">
 		<value condition="!IsEmpty(ListItem.Art(tvshow.characterart))">$INFO[ListItem.Art(tvshow.characterart)]</value>

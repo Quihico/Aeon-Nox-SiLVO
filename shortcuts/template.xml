@@ -256,12 +256,12 @@
 		<!-- Panel Widget -->
 		<controls>
 			<control type="group">
-				<top>$SKINSHORTCUTS[top]</top>				
+				<top>$SKINSHORTCUTS[top]</top>
 				<skinshortcuts>visibility</skinshortcuts>
 				<include name="PanelBack">
 					<param name="backHeight">$SKINSHORTCUTS[height]</param>
 					<param name="label">$SKINSHORTCUTS[label]</param>
-					<param name="labelBottom">$SKINSHORTCUTS[labelBottom]</param>						
+					<param name="labelBottom">$SKINSHORTCUTS[labelBottom]</param>
 				</include>
 			</control>
 			<control type="group">
@@ -535,12 +535,12 @@
 		<!-- Panel Widget -->
 		<controls>
 			<control type="group">
-				<top>$SKINSHORTCUTS[top]</top>				
+				<top>$SKINSHORTCUTS[top]</top>
 				<skinshortcuts>visibility</skinshortcuts>
 				<include name="PanelBack">
 					<param name="backHeight">$SKINSHORTCUTS[height]</param>
 					<param name="label">$SKINSHORTCUTS[label]</param>
-					<param name="labelBottom">$SKINSHORTCUTS[labelBottom]</param>						
+					<param name="labelBottom">$SKINSHORTCUTS[labelBottom]</param>
 				</include>
 			</control>
 			<control type="group">

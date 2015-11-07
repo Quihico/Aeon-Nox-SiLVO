@@ -6,13 +6,13 @@
 		<control type="label">
 				<top>0</top>
 				<font>font13_title</font>
-				<textcolor>yellow</textcolor>				
+				<textcolor>yellow</textcolor>
 				<label>type: $INFO[Container(211).ListItem.Property(widgetType)]</label>
 			</control>
 			<control type="label">
 				<top>50</top>
 				<font>font13_title</font>
-				<textcolor>yellow</textcolor>				
+				<textcolor>yellow</textcolor>
 				<label>widget: $INFO[Container(211).ListItem.Property(widget)]</label>
 			</control>
 		<!-- Home Settings Backgrounds -->

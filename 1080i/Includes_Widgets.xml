@@ -31,7 +31,7 @@
 				<width>1440</width>
 				<height>310</height>
 				<texture>xxxhomewidgets/test.png</texture>
-			</control>			
+			</control>
 			<!-- Widgets -->
 			<include>skinshortcuts-template-widgetClassic1</include>
 			<include>skinshortcuts-template-widgetPanel1</include>
@@ -46,7 +46,7 @@
 			<animation effect="slide" end="0,235" condition="!StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + !Skin.HasSetting(lowermainmenu)">Conditional</animation>
 			<animation effect="slide" end="215,236 " condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994])">Conditional</animation>
 			<visible>!IsEmpty(Container(9000).ListItem.Property(widget.2))</visible>
-			<include>VisibleFadeEffect</include>			
+			<include>VisibleFadeEffect</include>
 			<control type="image">
 				<top>449</top>
 				<left></left>
@@ -64,7 +64,7 @@
 	<include name="OnInfo1">
 		<oninfo>SetProperty(Widget.Type,$VAR[WidgetInfo8001TypeVar],home)</oninfo>
 		<oninfo>SetProperty(Widget.Cover,$VAR[HomeWidget8001PosterVar],home)</oninfo>
-		<oninfo>SetProperty(Widget.DiscArt,$VAR[HomeWidget8001DiscArtVar].home)</oninfo>
+		<oninfo>SetProperty(Widget.DiscArt,$VAR[HomeWidget8001DiscArtVar],home)</oninfo>
 		<oninfo>SetProperty(Widget.Title,$VAR[HomeWidget8001TitleVar],home)</oninfo>
 		<oninfo>SetProperty(Widget.SubTitle,$VAR[HomeWidget8001SubTitleVar],home)</oninfo>
 		<oninfo>SetProperty(Widget.Year,$VAR[HomeWidget8001FlagsYear],home)</oninfo>
@@ -96,7 +96,7 @@
 	<include name="OnInfo2">
 		<oninfo>SetProperty(Widget.Type,$VAR[WidgetInfo8002TypeVar],home)</oninfo>
 		<oninfo>SetProperty(Widget.Cover,$VAR[HomeWidget8002PosterVar],home)</oninfo>
-		<oninfo>SetProperty(Widget.DiscArt,$VAR[HomeWidget8002DiscArtVar].home)</oninfo>
+		<oninfo>SetProperty(Widget.DiscArt,$VAR[HomeWidget8002DiscArtVar],home)</oninfo>
 		<oninfo>SetProperty(Widget.Title,$VAR[HomeWidget8002TitleVar],home)</oninfo>
 		<oninfo>SetProperty(Widget.SubTitle,$VAR[HomeWidget8002SubTitleVar],home)</oninfo>
 		<oninfo>SetProperty(Widget.Year,$VAR[HomeWidget8002FlagsYear],home)</oninfo>
@@ -293,7 +293,7 @@
 			<aspectratio align="center" aligny="center">keep</aspectratio>
 			<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
 			<texture background="true" fallback="DefaultMusicAlbums.png">$PARAM[Texture]</texture>
-		</control>		
+		</control>
 	</include>
 	<include name="ClassicList">
 		<itemlayout height="50" width="300">
@@ -357,38 +357,38 @@
 	<include name="PanelBack">
 		<control type="image">
 			<left></left>
-			<centerleft>50%</centerleft>				
+			<centerleft>50%</centerleft>
 			<top>-21</top>
 			<width>1472</width>
 			<height>$PARAM[backHeight]</height>
 			<texture border="40">$VAR[HomeWidgetBackgroundVar]</texture>
-		</control>				
-		<control type="label">														
-			<top>-32</top>					
+		</control>
+		<control type="label">
+			<top>-32</top>
 			<left></left>
-			<centerleft>50%</centerleft>					
+			<centerleft>50%</centerleft>
 			<width>1440</width>
 			<height>20</height>
 			<align>right</align>
 			<font>font13_title</font>
 			<textcolor>grey</textcolor>
 			<shadowcolor>shadow</shadowcolor>
-			<label>$PARAM[label]</label>				
+			<label>$PARAM[label]</label>
 			<visible>StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994])</visible>
 		</control>
-		<control type="label">														
-			<top>$PARAM[labelBottom]</top>					
+		<control type="label">
+			<top>$PARAM[labelBottom]</top>
 			<left></left>
-			<centerleft>50%</centerleft>					
+			<centerleft>50%</centerleft>
 			<width>1440</width>
 			<height>20</height>
 			<align>center</align>
 			<font>font13_title</font>
 			<textcolor>grey</textcolor>
 			<shadowcolor>shadow</shadowcolor>
-			<label>$PARAM[label]</label>				
+			<label>$PARAM[label]</label>
 			<visible>!StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994])</visible>
-		</control>	
+		</control>
 	</include>
 	<!-- Panel Container Content -->
 	<include name="PortraitArt">
@@ -420,8 +420,8 @@
 				<height>70</height>
 				<align>center</align>
 				<aligny>center</aligny>
-				<font>font12_title</font>				
-				<textcolor>lightgrey</textcolor>				
+				<font>font12_title</font>
+				<textcolor>lightgrey</textcolor>
 				<label>$VAR[HomeWidgetTitleVar]</label>
 				<visible>$PARAM[labelVisible]</visible>
 			</control>
@@ -464,8 +464,8 @@
 					<height>70</height>
 					<align>center</align>
 					<aligny>center</aligny>
-					<font>font12_title</font>				
-					<textcolor>themecolor</textcolor>	
+					<font>font12_title</font>
+					<textcolor>themecolor</textcolor>
 					<label>$VAR[HomeWidgetTitleVar]</label>
 					<visible>$PARAM[labelVisible]</visible>
 				</control>
@@ -509,11 +509,11 @@
 				<height>70</height>
 				<align>center</align>
 				<aligny>center</aligny>
-				<font>font12_title</font>				
-				<textcolor>lightgrey</textcolor>				
+				<font>font12_title</font>
+				<textcolor>lightgrey</textcolor>
 				<label>$VAR[HomeWidgetTitleVar]</label>
 				<animation effect="slide" end="10,0" condition="StringCompare(Skin.String(SquarePoster.Case),Clear Case)">conditional</animation>
-				<animation effect="slide" end="10,0" condition="StringCompare(Skin.String(SquarePoster.Case),Case)">conditional</animation>				
+				<animation effect="slide" end="10,0" condition="StringCompare(Skin.String(SquarePoster.Case),Case)">conditional</animation>
 				<visible>$PARAM[labelVisible]</visible>
 			</control>
 			<control type="image">
@@ -555,11 +555,11 @@
 					<height>70</height>
 					<align>center</align>
 					<aligny>center</aligny>
-					<font>font12_title</font>				
-					<textcolor>themecolor</textcolor>				
+					<font>font12_title</font>
+					<textcolor>themecolor</textcolor>
 					<label>$VAR[HomeWidgetTitleVar]</label>
 					<animation effect="slide" end="10,0" condition="StringCompare(Skin.String(SquarePoster.Case),Clear Case)">conditional</animation>
-					<animation effect="slide" end="10,0" condition="StringCompare(Skin.String(SquarePoster.Case),Case)">conditional</animation>				
+					<animation effect="slide" end="10,0" condition="StringCompare(Skin.String(SquarePoster.Case),Case)">conditional</animation>
 					<visible>$PARAM[labelVisible]</visible>
 				</control>
 				<control type="image">
@@ -596,15 +596,15 @@
 			<control type="textbox">
 				<left>5</left>
 				<top>196</top>
-				<width>463</width>	
+				<width>463</width>
 				<height>70</height>
 				<align>center</align>
 				<aligny>center</aligny>
-				<font>font12_title</font>				
-				<textcolor>lightgrey</textcolor>				
+				<font>font12_title</font>
+				<textcolor>lightgrey</textcolor>
 				<label>$VAR[HomeWidgetTitleVar]</label>
 				<visible>$PARAM[labelVisible]</visible>
-			</control>			
+			</control>
 		</itemlayout>
 		<focusedlayout height="266" width="478">
 			<control type="group">
@@ -624,7 +624,7 @@
 					<top>166</top>
 					<width>473</width>
 					<height>100</height>
-					<texture>homewidgets/label.png</texture>					
+					<texture>homewidgets/label.png</texture>
 					<visible>$PARAM[labelVisible]</visible>
 				</control>
 				<control type="textbox">
@@ -634,11 +634,11 @@
 					<height>70</height>
 					<align>center</align>
 					<aligny>center</aligny>
-					<font>font12_title</font>				
-					<textcolor>themecolor</textcolor>				
+					<font>font12_title</font>
+					<textcolor>themecolor</textcolor>
 					<label>$VAR[HomeWidgetTitleVar]</label>
 					<visible>$PARAM[labelVisible]</visible>
-				</control>				
+				</control>
 			</control>
 		</focusedlayout>
 		<content target="$PARAM[Target]">$PARAM[Path]</content>
@@ -675,15 +675,15 @@
 			<control type="textbox">
 				<left>5</left>
 				<top>97</top>
-				<width>712</width>	
+				<width>712</width>
 				<height>35</height>
 				<align>center</align>
 				<aligny>center</aligny>
-				<font>font12_title</font>				
-				<textcolor>lightgrey</textcolor>				
+				<font>font12_title</font>
+				<textcolor>lightgrey</textcolor>
 				<label>$VAR[HomeWidgetTitleVar]</label>
 				<visible>$PARAM[labelVisible]</visible>
-			</control>			
+			</control>
 		</itemlayout>
 		<focusedlayout height="137" width="717">
 			<control type="group">
@@ -711,21 +711,21 @@
 					<top>82</top>
 					<width>712</width>
 					<height>50</height>
-					<texture>homewidgets/label.png</texture>					
+					<texture>homewidgets/label.png</texture>
 					<visible>$PARAM[labelVisible]</visible>
 				</control>
 				<control type="textbox">
 					<left>5</left>
 					<top>97</top>
-					<width>712</width>	
+					<width>712</width>
 					<height>35</height>
 					<align>center</align>
 					<aligny>center</aligny>
-					<font>font12_title</font>				
-					<textcolor>themecolor</textcolor>					
+					<font>font12_title</font>
+					<textcolor>themecolor</textcolor>
 					<label>$VAR[HomeWidgetTitleVar]</label>
 					<visible>$PARAM[labelVisible]</visible>
-				</control>				
+				</control>
 			</control>
 		</focusedlayout>
 		<content target="$PARAM[Target]">$PARAM[Path]</content>
