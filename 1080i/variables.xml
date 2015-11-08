@@ -1407,6 +1407,14 @@
 		<value condition="!IsEmpty(Container(8002).ListItem.Album) | !IsEmpty(Container(8002).ListItem.Artist) | !IsEmpty(Container(8002).ListItem.AlbumArtist) | !IsEmpty(Container(8002).ListItem.Property(Addon.Name))">Square</value>
 		<value>Portrait</value>
 	</variable>
+	<variable name="WidgetCaseLabelVar">
+		<value condition="!IsEmpty(Container(211).ListItem.Property(widgetCase))">$INFO[Container(211).ListItem.Property(widgetCase)]</value>
+		<value>None</value>
+	</variable>
+	<variable name="WidgetCase2LabelVar">
+		<value condition="!IsEmpty(Container(211).ListItem.Property(widgetCase.2))">$INFO[Container(211).ListItem.Property(widgetCase.2)]</value>
+		<value>None</value>
+	</variable>
 	<variable name="WidgetStyleLabelVar">
 		<value condition="!IsEmpty(Container(211).ListItem.Property(widgetStyle))">$INFO[Container(211).ListItem.Property(widgetStyle)]</value>
 		<value>None</value>
@@ -1494,40 +1502,16 @@
 		<value condition="StringCompare(Skin.String(Poster.Case),Clear Case)">Skin.Reset(Poster.Case)</value>
 	</variable>
 	<variable name="HomeWidgetPortraitCaseVar">
-		<value condition="StringCompare(Skin.String(poster.case),Glass)">homewidgets/glass/portrait.png</value>
-		<value condition="StringCompare(Skin.String(poster.case),Case) + ListItem.IsStereoscopic">homewidgets/case/3d.png</value>
-		<value condition="StringCompare(Skin.String(poster.case),Case)">homewidgets/case/$INFO[ListItem.VideoResolution]p.png</value>
-		<value condition="StringCompare(Skin.String(poster.clearcase),Case) + ListItem.IsStereoscopic">homewidgets/clearcase/3d.png</value>
-		<value condition="StringCompare(Skin.String(poster.case),Clear Case)">homewidgets/clearcase/$INFO[ListItem.VideoResolution]p.png</value>
+		<value condition="ListItem.IsStereoscopic">3d.png</value>
+		<value>$INFO[ListItem.VideoResolution]p.png</value>
 	</variable>
 	<variable name="HomeWidget8001PortraitCaseVar">
-		<value condition="StringCompare(Skin.String(poster.case),Glass)">homewidgets/glass/portrait.png</value>
-		<value condition="StringCompare(Skin.String(poster.case),Case) + Container(8001).ListItem.IsStereoscopic">homewidgets/case/3d.png</value>
-		<value condition="StringCompare(Skin.String(poster.case),Case)">homewidgets/case/$INFO[Container(8001).ListItem.VideoResolution]p.png</value>
-		<value condition="StringCompare(Skin.String(poster.clearcase),Case) + Container(8001).ListItem.IsStereoscopic">homewidgets/clearcase/3d.png</value>
-		<value condition="StringCompare(Skin.String(poster.case),Clear Case)">homewidgets/clearcase/$INFO[Container(8001).ListItem.VideoResolution]p.png</value>
+		<value condition="Container(8001).ListItem.IsStereoscopic">homewidgets/case/3d.png</value>
+		<value >homewidgets/case/$INFO[Container(8001).ListItem.VideoResolution]p.png</value>
 	</variable>
 	<variable name="HomeWidget8002PortraitCaseVar">
-		<value condition="StringCompare(Skin.String(poster.case),Glass)">homewidgets/glass/portrait.png</value>
-		<value condition="StringCompare(Skin.String(poster.case),Case) + Container(8002).ListItem.IsStereoscopic">homewidgets/case/3d.png</value>
-		<value condition="StringCompare(Skin.String(poster.case),Case)">homewidgets/case/$INFO[Container(8002).ListItem.VideoResolution]p.png</value>
-		<value condition="StringCompare(Skin.String(poster.clearcase),Case) + Container(8002).ListItem.IsStereoscopic">homewidgets/clearcase/3d.png</value>
-		<value condition="StringCompare(Skin.String(poster.case),Clear Case)">homewidgets/clearcase/$INFO[Container(8002).ListItem.VideoResolution]p.png</value>
-	</variable>
-	<variable name="SquareCaseLabelVar">
-		<value condition="!IsEmpty(Skin.String(SquarePoster.Case))">$INFO[Skin.String(SquarePoster.Case)]</value>
-		<value>None</value>
-	</variable>
-	<variable name="SquareCaseVar">
-		<value condition="IsEmpty(Skin.String(SquarePoster.Case))">Skin.SetString(SquarePoster.Case,Glass)</value>
-		<value condition="StringCompare(Skin.String(SquarePoster.Case),Glass)">Skin.SetString(SquarePoster.Case,Case)</value>
-		<value condition="StringCompare(Skin.String(SquarePoster.Case),Case)">Skin.SetString(SquarePoster.Case,Clear Case)</value>
-		<value condition="StringCompare(Skin.String(SquarePoster.Case),Clear Case)">Skin.Reset(SquarePoster.Case)</value>
-	</variable>
-	<variable name="HomeWidgetSquareCaseVar">
-		<value condition="StringCompare(Skin.String(squareposter.case),Glass)">homewidgets/glass/square.png</value>
-		<value condition="StringCompare(Skin.String(squareposter.case),Case)">homewidgets/case/cd.png</value>
-		<value condition="StringCompare(Skin.String(squareposter.case),Clear Case)">homewidgets/clearcase/cd.png</value>
+		<value condition="Container(8002).ListItem.IsStereoscopic">homewidgets/case/3d.png</value>
+		<value >homewidgets/case/$INFO[Container(8002).ListItem.VideoResolution]p.png</value>
 	</variable>
 	<!-- Widget Artwork -->
 	<variable name="HomeWidgetPosterVar">
@@ -1731,13 +1715,13 @@
 		<value>$INFO[Container(8002).ListItem.Year]</value>
 	</variable>
 	<variable name="HomeWidget8001FlagsStudios">
-		<value condition="!IsEmpty(Container(8001).ListItem.Studio) + Skin.HasSetting(coloredflags)">resource://resource.images.studios.white/$INFO[Container(8001).ListItem.Studio,,.png]</value>
-		<value condition="!IsEmpty(Container(8001).ListItem.Studio) + !Skin.HasSetting(coloredflags)">resource://resource.images.studios.coloured/$INFO[Container(8001).ListItem.Studio,,.png]</value>
+		<value condition="!IsEmpty(Container(8001).ListItem.Studio) + Skin.HasSetting(coloredflags)">resource://resource.images.studios.coloured/$INFO[Container(8001).ListItem.Studio,,.png]</value>
+		<value condition="!IsEmpty(Container(8001).ListItem.Studio) + !Skin.HasSetting(coloredflags)">resource://resource.images.studios.white/$INFO[Container(8001).ListItem.Studio,,.png]</value>
 		<value condition="!IsEmpty(Container(8001).ListItem.Property(Album_Label))">resource://resource.images.recordlabels.white/$INFO[Container(8001).ListItem.Property(Album_Label),,.png]</value>
 	</variable>
 	<variable name="HomeWidget8002FlagsStudios">
-		<value condition="!IsEmpty(Container(8002).ListItem.Studio) + Skin.HasSetting(coloredflags)">resource://resource.images.studios.white/$INFO[Container(8002).ListItem.Studio,,.png]</value>
-		<value condition="!IsEmpty(Container(8002).ListItem.Studio) + !Skin.HasSetting(coloredflags)">resource://resource.images.studios.coloured/$INFO[Container(8002).ListItem.Studio,,.png]</value>
+		<value condition="!IsEmpty(Container(8002).ListItem.Studio) + Skin.HasSetting(coloredflags)">resource://resource.images.studios.coloured/$INFO[Container(8002).ListItem.Studio,,.png]</value>
+		<value condition="!IsEmpty(Container(8002).ListItem.Studio) + !Skin.HasSetting(coloredflags)">resource://resource.images.studios.white/$INFO[Container(8002).ListItem.Studio,,.png]</value>
 		<value condition="!IsEmpty(Container(8002).ListItem.Property(Album_Label))">resource://resource.images.recordlabels.white/$INFO[Container(8002).ListItem.Property(Album_Label),,.png]</value>
 	</variable>
 	<variable name="HomeWidget8001FlagsResolution">

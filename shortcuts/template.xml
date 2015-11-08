@@ -184,7 +184,7 @@
 		</controls>
 	</other>
 	<!-- Panel Widget -->
-		<other include="widgetPanel1">
+	<other include="widgetPanel1">
 		<!-- Check Widget Style -->
 		<condition tag="property" attribute="name|widgetStyle">Panel</condition>
 		<!-- Retrieve the widget properties -->
@@ -217,6 +217,33 @@
 		<property name="artcontent" tag="property" attribute="name|widgetArt" value="Thumb">LandscapeArt</property>
 		<property name="artcontent" tag="property" attribute="name|widgetArt" value="DiscArt">SquareArt</property>
 		<property name="artcontent" tag="property" attribute="name|widgetArt" value="CharacterArt">SquareArt</property>
+		<!-- Set Glass Case -->
+		<property name="glasscase" tag="property" attribute="name|widgetArt" value="Poster">portrait.png</property>
+		<property name="glasscase" tag="property" attribute="name|widgetArt" value="Square Poster">square.png</property>
+		<property name="glasscase" tag="property" attribute="name|widgetArt" value="FanArt">landscape.png</property>
+		<property name="glasscase" tag="property" attribute="name|widgetArt" value="Landscape">landscape.png</property>
+		<property name="glasscase" tag="property" attribute="name|widgetArt" value="ClearArt">landscape.png</property>
+		<property name="glasscase" tag="property" attribute="name|widgetArt" value="ClearLogo">landscape.png</property>
+		<property name="glasscase" tag="property" attribute="name|widgetArt" value="Banner">banner.png</property>
+		<property name="glasscase" tag="property" attribute="name|widgetArt" value="Thumb">landscape.png</property>
+		<property name="glasscase" tag="property" attribute="name|widgetArt" value="DiscArt">square.png</property>
+		<property name="glasscase" tag="property" attribute="name|widgetArt" value="CharacterArt">square.png</property>
+		<!-- Set Case -->
+		<property name="case" tag="property" attribute="name|widgetArt" value="Poster">$VAR[HomeWidgetPortraitCaseVar]</property>
+		<property name="case" tag="property" attribute="name|widgetArt" value="Square Poster">cd.png</property>
+		<property name="case" tag="property" attribute="name|widgetArt" value="DiscArt">cd.png</property>
+		<property name="case" tag="property" attribute="name|widgetArt" value="CharacterArt">cd.png</property>
+		<!-- Set Case Path -->
+		<property name="casepath" tag="property" attribute="name|widgetCase" value="Glass">homewidgets/glass/$SKINSHORTCUTS[glasscase]</property>
+		<property name="casepath" tag="property" attribute="name|widgetCase" value="Case">homewidgets/case/$SKINSHORTCUTS[case]</property>
+		<property name="casepath" tag="property" attribute="name|widgetCase" value="Clear Case">homewidgets/clearcase/$SKINSHORTCUTS[case]</property>
+		<!-- Set Case Visible -->
+		<property name="glassVisble" tag="property" attribute="name|widgetCase" value="Glass">true</property>
+		<property name="glassVisble">false</property>
+		<property name="caseVisible" tag="property" attribute="name|widgetCase" value="Case">true</property>
+		<property name="caseVisible">false</property>
+		<property name="clearVisible" tag="property" attribute="name|widgetCase" value="Clear Case">true</property>
+		<property name="clearVisible">false</property>
 		<!-- Set Label -->
 		<property name="title" tag="property" attribute="name|widgetTitle" value="Panel">true</property>
 		<property name="title">false</property>
@@ -271,6 +298,10 @@
 					<include>PanelWidget1</include>
 					<include name="$SKINSHORTCUTS[artcontent]">
 						<param name="Texture">$SKINSHORTCUTS[artwork]</param>
+						<param name="Case">$SKINSHORTCUTS[casepath]</param>
+						<param name="glassVisble">$SKINSHORTCUTS[glassVisble]</param>
+						<param name="caseVisible">$SKINSHORTCUTS[caseVisible]</param>
+						<param name="clearVisible">$SKINSHORTCUTS[clearVisible]</param>
 						<param name="labelVisible">$SKINSHORTCUTS[title]</param>
 						<param name="Target">$SKINSHORTCUTS[target]</param>
 						<param name="Path">$SKINSHORTCUTS[content]</param>
@@ -496,6 +527,33 @@
 		<property name="artcontent" tag="property" attribute="name|widgetArt.2" value="Thumb">LandscapeArt</property>
 		<property name="artcontent" tag="property" attribute="name|widgetArt.2" value="DiscArt">SquareArt</property>
 		<property name="artcontent" tag="property" attribute="name|widgetArt.2" value="CharacterArt">SquareArt</property>
+		<!-- Set Glass Case -->
+		<property name="glasscase" tag="property" attribute="name|widgetArt.2" value="Poster">portrait.png</property>
+		<property name="glasscase" tag="property" attribute="name|widgetArt.2" value="Square Poster">square.png</property>
+		<property name="glasscase" tag="property" attribute="name|widgetArt.2" value="FanArt">landscape.png</property>
+		<property name="glasscase" tag="property" attribute="name|widgetArt.2" value="Landscape">landscape.png</property>
+		<property name="glasscase" tag="property" attribute="name|widgetArt.2" value="ClearArt">landscape.png</property>
+		<property name="glasscase" tag="property" attribute="name|widgetArt.2" value="ClearLogo">landscape.png</property>
+		<property name="glasscase" tag="property" attribute="name|widgetArt.2" value="Banner">banner.png</property>
+		<property name="glasscase" tag="property" attribute="name|widgetArt.2" value="Thumb">landscape.png</property>
+		<property name="glasscase" tag="property" attribute="name|widgetArt.2" value="DiscArt">square.png</property>
+		<property name="glasscase" tag="property" attribute="name|widgetArt.2" value="CharacterArt">square.png</property>
+		<!-- Set Case -->
+		<property name="case" tag="property" attribute="name|widgetArt.2" value="Poster">$VAR[HomeWidgetPortraitCaseVar]</property>
+		<property name="case" tag="property" attribute="name|widgetArt.2" value="Square Poster">cd.png</property>
+		<property name="case" tag="property" attribute="name|widgetArt.2" value="DiscArt">cd.png</property>
+		<property name="case" tag="property" attribute="name|widgetArt.2" value="CharacterArt">cd.png</property>
+		<!-- Set Case Path -->
+		<property name="casepath" tag="property" attribute="name|widgetCase.2" value="Glass">homewidgets/glass/$SKINSHORTCUTS[glasscase]</property>
+		<property name="casepath" tag="property" attribute="name|widgetCase.2" value="Case">homewidgets/case/$SKINSHORTCUTS[case]</property>
+		<property name="casepath" tag="property" attribute="name|widgetCase.2" value="Clear Case">homewidgets/clearcase/$SKINSHORTCUTS[case]</property>
+		<!-- Set Case Visible -->
+		<property name="glassVisble" tag="property" attribute="name|widgetCase.2" value="Glass">true</property>
+		<property name="glassVisble">false</property>
+		<property name="caseVisible" tag="property" attribute="name|widgetCase.2" value="Case">true</property>
+		<property name="caseVisible">false</property>
+		<property name="clearVisible" tag="property" attribute="name|widgetCase.2" value="Clear Case">true</property>
+		<property name="clearVisible">false</property>
 		<!-- Set Label -->
 		<property name="title" tag="property" attribute="name|widgetTitle.2" value="Panel">true</property>
 		<property name="title">false</property>
@@ -550,6 +608,10 @@
 					<include>PanelWidget2</include>
 					<include name="$SKINSHORTCUTS[artcontent]">
 						<param name="Texture">$SKINSHORTCUTS[artwork]</param>
+						<param name="Case">$SKINSHORTCUTS[casepath]</param>
+						<param name="glassVisble">$SKINSHORTCUTS[glassVisble]</param>
+						<param name="caseVisible">$SKINSHORTCUTS[caseVisible]</param>
+						<param name="clearVisible">$SKINSHORTCUTS[clearVisible]</param>
 						<param name="labelVisible">$SKINSHORTCUTS[title]</param>
 						<param name="Target">$SKINSHORTCUTS[target]</param>
 						<param name="Path">$SKINSHORTCUTS[content]</param>

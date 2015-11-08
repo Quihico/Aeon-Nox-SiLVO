@@ -39,6 +39,36 @@
 	<property property="widgetArt.2" icon="$VAR[HomeWidget8002DiscArtVar]" condition="!IsEmpty(Container(8002).ListItem.Art(discart))">DiscArt</property>
 	<property property="widgetArt.2" icon="$VAR[HomeWidget8002CharacterArtVar]" condition="!IsEmpty(Container(8002).ListItem.Art(tvshow.characterart))">CharacterArt</property>
 	<property property="widgetArt.2" icon="$VAR[HomeWidget8002BannerVar]" condition="!IsEmpty(Container(8002).ListItem.Art(banner)) | !IsEmpty(Container(8002).ListItem.Art(tvshow.banner))">Banner</property>
+	<!-- Widget Case 1 -->
+	<propertySettings property="widgetCase" buttonID="517" title="Widget Case 1" />
+	<property property="widgetCase" icon="homewidgets/glass/portrait.png" condition="StringCompare(Container(211).ListItem.Property(widgetArt),Poster)">Glass</property>
+	<property property="widgetCase" icon="homewidgets/glass/square.png" condition="StringCompare(Container(211).ListItem.Property(widgetArt),Square Poster)">Glass</property>
+	<property property="widgetCase" icon="homewidgets/glass/landscape.png" condition="StringCompare(Container(211).ListItem.Property(widgetArt),FanArt)">Glass</property>
+	<property property="widgetCase" icon="homewidgets/glass/landscape.png" condition="StringCompare(Container(211).ListItem.Property(widgetArt),Landscape)">Glass</property>
+	<property property="widgetCase" icon="homewidgets/glass/landscape.png" condition="StringCompare(Container(211).ListItem.Property(widgetArt),Thumb)">Glass</property>
+	<property property="widgetCase" icon="homewidgets/glass/landscape.png" condition="StringCompare(Container(211).ListItem.Property(widgetArt),ClearArt)">Glass</property>
+	<property property="widgetCase" icon="homewidgets/glass/square.png" condition="StringCompare(Container(211).ListItem.Property(widgetArt),ClearLogo)">Glass</property>
+	<property property="widgetCase" icon="homewidgets/glass/square.png" condition="StringCompare(Container(211).ListItem.Property(widgetArt),DiscArt)">Glass</property>
+	<property property="widgetCase" icon="homewidgets/glass/banner.png" condition="StringCompare(Container(211).ListItem.Property(widgetArt),Banner)">Glass</property>
+	<property property="widgetCase" icon="$VAR[HomeWidget8002PortraitCaseVar]" condition="StringCompare(Container(211).ListItem.Property(widgetArt),Poster)">Case</property>
+	<property property="widgetCase" icon="homewidgets/case/cd.png" condition="StringCompare(Container(211).ListItem.Property(widgetArt),Square Poster)">Case</property>
+	<property property="widgetCase" icon="$VAR[HomeWidget8002PortraitCaseVar]" condition="StringCompare(Container(211).ListItem.Property(widgetArt),Poster)">Clear Case</property>
+	<property property="widgetCase" icon="homewidgets/clearcase/cd.png" condition="StringCompare(Container(211).ListItem.Property(widgetArt),Square Poster)">Clear Case</property>
+	<!-- Widget Case 2 -->
+	<propertySettings property="widgetCase.2" buttonID="518" title="Widget Case 2" />
+	<property property="widgetCase.2" icon="homewidgets/glass/portrait.png" condition="StringCompare(Container(211).ListItem.Property(widgetArt.2),Poster)">Glass</property>
+	<property property="widgetCase.2" icon="homewidgets/glass/square.png" condition="StringCompare(Container(211).ListItem.Property(widgetArt.2),Square Poster)">Glass</property>
+	<property property="widgetCase.2" icon="homewidgets/glass/landscape.png" condition="StringCompare(Container(211).ListItem.Property(widgetArt.2),FanArt)">Glass</property>
+	<property property="widgetCase.2" icon="homewidgets/glass/landscape.png" condition="StringCompare(Container(211).ListItem.Property(widgetArt.2),Landscape)">Glass</property>
+	<property property="widgetCase.2" icon="homewidgets/glass/landscape.png" condition="StringCompare(Container(211).ListItem.Property(widgetArt.2),Thumb)">Glass</property>
+	<property property="widgetCase.2" icon="homewidgets/glass/landscape.png" condition="StringCompare(Container(211).ListItem.Property(widgetArt.2),ClearArt)">Glass</property>
+	<property property="widgetCase.2" icon="homewidgets/glass/square.png" condition="StringCompare(Container(211).ListItem.Property(widgetArt.2),ClearLogo)">Glass</property>
+	<property property="widgetCase.2" icon="homewidgets/glass/square.png" condition="StringCompare(Container(211).ListItem.Property(widgetArt.2),DiscArt)">Glass</property>
+	<property property="widgetCase.2" icon="homewidgets/glass/banner.png" condition="StringCompare(Container(211).ListItem.Property(widgetArt.2),Banner)">Glass</property>
+	<property property="widgetCase.2" icon="$VAR[HomeWidget8002PortraitCaseVar]" condition="StringCompare(Container(211).ListItem.Property(widgetArt.2),Poster)">Case</property>
+	<property property="widgetCase.2" icon="homewidgets/case/cd.png" condition="StringCompare(Container(211).ListItem.Property(widgetArt.2),Square Poster)">Case</property>
+	<property property="widgetCase.2" icon="$VAR[HomeWidget8002PortraitCaseVar]" condition="StringCompare(Container(211).ListItem.Property(widgetArt.2),Poster)">Clear Case</property>
+	<property property="widgetCase.2" icon="homewidgets/clearcase/cd.png" condition="StringCompare(Container(211).ListItem.Property(widgetArt.2),Square Poster)">Clear Case</property>
 	<!-- Widget Style 1 -->
 	<propertySettings property="widgetStyle" buttonID="509" title="Widget Style 1" />
 	<property property="widgetStyle">Classic Left</property>

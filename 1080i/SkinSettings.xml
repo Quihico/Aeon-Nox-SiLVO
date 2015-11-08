@@ -797,26 +797,6 @@
 						<font>font15</font>
 						<texturenofocus border="1">separator5.png</texturenofocus>
 					</control>
-					<control type="button" id="705">
-						<label>Poster Case</label>
-						<label2>[COLOR labelheader]$VAR[PortraitCaseLabelVar][/COLOR]</label2>
-						<onclick>$VAR[PortraitCaseVar]</onclick>
-						<width>1316</width>
-						<height>90</height>
-						<textoffsetx>30</textoffsetx>
-						<font>font15</font>
-						<texturenofocus border="1">separator5.png</texturenofocus>
-					</control>
-					<control type="button" id="706">
-						<label>Square Poster Case</label>
-						<label2>[COLOR labelheader]$VAR[SquareCaseLabelVar][/COLOR]</label2>
-						<onclick>$VAR[SquareCaseVar]</onclick>
-						<width>1316</width>
-						<height>90</height>
-						<textoffsetx>30</textoffsetx>
-						<font>font15</font>
-						<texturenofocus border="1">separator5.png</texturenofocus>
-					</control>
 				</control>
 			</control>
 		</control>
