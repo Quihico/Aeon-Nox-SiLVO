@@ -396,13 +396,13 @@
 				<height>649</height>
 				<texture>$INFO[Window(Home).Property(Widget.Cover)]</texture>
 			</control>
-			<control type="image" id="8020">
+			<control type="image" id="8021">
 				<left>1427</left>
 				<top>357</top>
 				<width>392</width>
 				<height>392</height>
 				<texture>$INFO[Window(Home).Property(Widget.DiscArt)]</texture>
-				<visible>!IsEmpty(Control.GetLabel(8020))</visible>
+				<visible>!IsEmpty(Control.GetLabel(8021))</visible>
 			</control>
 			<!--<control type="image">
 				<left>1480</left>
@@ -446,7 +446,7 @@
 			<!-- Flags-->
 			<control type="grouplist">
 				<top>192</top>
-				<left>554</left>
+				<left>757</left>
 				<height>90</height>
 				<orientation>horizontal</orientation>
 				<control type="label">
@@ -532,7 +532,7 @@
 					<font>font14</font>
 					<textcolor>grey</textcolor>
 					<label>$INFO[Window(Home).Property(Widget.Info1)]</label>
-					<visible>IsEmpty(Control.GetLabel(8020))</visible>
+					<visible>IsEmpty(Control.GetLabel(8021))</visible>
 				</control>
 				<control type="label">
 					<width>625</width>
@@ -540,7 +540,7 @@
 					<font>font14</font>
 					<textcolor>grey</textcolor>
 					<label>$INFO[Window(Home).Property(Widget.Info1)]</label>
-					<visible>!IsEmpty(Control.GetLabel(8020))</visible>
+					<visible>!IsEmpty(Control.GetLabel(8021))</visible>
 				</control>
 			</control>
 			<control type="grouplist">
@@ -562,7 +562,7 @@
 					<font>font14</font>
 					<textcolor>grey</textcolor>
 					<label>$INFO[Window(Home).Property(Widget.Info2)]</label>
-					<visible>IsEmpty(Control.GetLabel(8020))</visible>
+					<visible>IsEmpty(Control.GetLabel(8021))</visible>
 				</control>
 				<control type="label">
 					<width>625</width>
@@ -570,7 +570,7 @@
 					<font>font14</font>
 					<textcolor>grey</textcolor>
 					<label>$INFO[Window(Home).Property(Widget.Info2)]</label>
-					<visible>!IsEmpty(Control.GetLabel(8020))</visible>
+					<visible>!IsEmpty(Control.GetLabel(8021))</visible>
 				</control>
 			</control>
 			<!-- Info Plot-->
@@ -584,7 +584,7 @@
 				<textcolor>grey</textcolor>
 				<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(Enable.AutoScroll)</autoscroll>
 				<label>$INFO[Window(Home).Property(Widget.Plot)]</label>
-				<visible>IsEmpty(Control.GetLabel(8020))</visible>
+				<visible>IsEmpty(Control.GetLabel(8021))</visible>
 			</control>
 			<control type="textbox">
 				<top>459</top>
@@ -596,7 +596,7 @@
 				<textcolor>grey</textcolor>
 				<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(Enable.AutoScroll)</autoscroll>
 				<label>$INFO[Window(Home).Property(Widget.Plot)]</label>
-				<visible>!IsEmpty(Control.GetLabel(8020))</visible>
+				<visible>!IsEmpty(Control.GetLabel(8021))</visible>
 			</control>
 			<!-- Info Buttons-->
 			<control type="grouplist" id="8052">
