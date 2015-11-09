@@ -203,9 +203,16 @@
 		<property name="artwork" tag="property" attribute="name|widgetArt" value="DiscArt">$VAR[HomeWidgetDiscArtVar]</property>
 		<property name="artwork" tag="property" attribute="name|widgetArt" value="CharacterArt">$VAR[HomeWidgetCharacterArtVar]</property>
 		<!-- Set Artwork Fallback -->
-		<property name="artworkfb" tag="property" attribute="name|widgetArt" value="ClearArt">$VAR[HomeWidgetClearLogoVar]</property>
-		<property name="artworkfb" tag="property" attribute="name|widgetArt" value="Banner">$VAR[HomeWidgetClearLogoVar]</property>
-		<property name="artworkfb" tag="property" attribute="name|widgetArt" value="DiscArt">$VAR[HomeWidgetFakeDiscArtVar]</property>
+		<property name="artworkfb" tag="property" attribute="name|widgetArt" value="DiscArt">true</property>
+		<property name="artworkfb">false</property>
+		<!-- Set Artwork Aspect -->
+		<property name="aspect" tag="property" attribute="name|widgetArt" value="ClearArt">keep</property>
+		<property name="aspect" tag="property" attribute="name|widgetArt" value="ClearLogo">keep</property>
+		<property name="aspect" tag="property" attribute="name|widgetArt" value="CharacterArt">keep</property>
+		<property name="aspect">stretch</property>
+		<!-- Set Artwork Diffuse -->
+		<property name="diffuse" tag="property" attribute="name|widgetArt" value="DiscArt">thumbs/sets/cdart_mask.png</property>
+		<property name="diffuse"></property>
 		<!-- Set Art Content -->
 		<property name="artcontent" tag="property" attribute="name|widgetArt" value="Poster">PortraitArt</property>
 		<property name="artcontent" tag="property" attribute="name|widgetArt" value="Square Poster">SquareArt</property>
@@ -298,6 +305,9 @@
 					<include>PanelWidget1</include>
 					<include name="$SKINSHORTCUTS[artcontent]">
 						<param name="Texture">$SKINSHORTCUTS[artwork]</param>
+						<param name="fallbackTexture">$SKINSHORTCUTS[artworkfb]</param>
+						<param name="Aspect">$SKINSHORTCUTS[aspect]</param>
+						<param name="Diffuse">$SKINSHORTCUTS[diffuse]</param>
 						<param name="Case">$SKINSHORTCUTS[casepath]</param>
 						<param name="glassVisble">$SKINSHORTCUTS[glassVisble]</param>
 						<param name="caseVisible">$SKINSHORTCUTS[caseVisible]</param>
@@ -513,9 +523,16 @@
 		<property name="artwork" tag="property" attribute="name|widgetArt.2" value="DiscArt">$VAR[HomeWidgetDiscArtVar]</property>
 		<property name="artwork" tag="property" attribute="name|widgetArt.2" value="CharacterArt">$VAR[HomeWidgetCharacterArtVar]</property>
 		<!-- Set Artwork Fallback -->
-		<property name="artworkfb" tag="property" attribute="name|widgetArt.2" value="ClearArt">$VAR[HomeWidgetClearLogoVar]</property>
-		<property name="artworkfb" tag="property" attribute="name|widgetArt.2" value="Banner">$VAR[HomeWidgetClearLogoVar]</property>
-		<property name="artworkfb" tag="property" attribute="name|widgetArt.2" value="DiscArt">$VAR[HomeWidgetFakeDiscArtVar]</property>
+		<property name="artworkfb" tag="property" attribute="name|widgetArt.2" value="DiscArt">true</property>
+		<property name="artworkfb">false</property>
+		<!-- Set Artwork Aspect -->
+		<property name="aspect" tag="property" attribute="name|widgetArt.2" value="ClearArt">keep</property>
+		<property name="aspect" tag="property" attribute="name|widgetArt.2" value="ClearLogo">keep</property>
+		<property name="aspect" tag="property" attribute="name|widgetArt.2" value="CharacterArt">keep</property>
+		<property name="aspect">stretch</property>
+		<!-- Set Artwork Diffuse -->
+		<property name="diffuse" tag="property" attribute="name|widgetArt.2" value="DiscArt">thumbs/sets/cdart_mask.png</property>
+		<property name="diffuse"></property>
 		<!-- Set Art Content -->
 		<property name="artcontent" tag="property" attribute="name|widgetArt.2" value="Poster">PortraitArt</property>
 		<property name="artcontent" tag="property" attribute="name|widgetArt.2" value="Square Poster">SquareArt</property>
@@ -608,6 +625,9 @@
 					<include>PanelWidget2</include>
 					<include name="$SKINSHORTCUTS[artcontent]">
 						<param name="Texture">$SKINSHORTCUTS[artwork]</param>
+						<param name="fallbackTexture">$SKINSHORTCUTS[artworkfb]</param>
+						<param name="Aspect">$SKINSHORTCUTS[aspect]</param>
+						<param name="Diffuse">$SKINSHORTCUTS[diffuse]</param>
 						<param name="Case">$SKINSHORTCUTS[casepath]</param>
 						<param name="glassVisble">$SKINSHORTCUTS[glassVisble]</param>
 						<param name="caseVisible">$SKINSHORTCUTS[caseVisible]</param>

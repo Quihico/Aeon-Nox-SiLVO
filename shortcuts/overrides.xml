@@ -21,7 +21,7 @@
 	<property property="widgetArt" icon="$VAR[HomeWidget8001PosterVar]" condition="!IsEmpty(Container(8001).ListItem.Artist) | !IsEmpty(Container(8001).ListItem.AlbumArtist) | !IsEmpty(Container(8001).ListItem.Property(Addon.Name))">Square Poster</property>
 	<property property="widgetArt" icon="$VAR[HomeWidget8001FanArtVar]">FanArt</property>
 	<property property="widgetArt" icon="$VAR[HomeWidget8001LandscapeVar]" condition="!IsEmpty(Container(8001).ListItem.Art(landscape)) | !IsEmpty(Container(8001).ListItem.Art(tvshow.landscape))">Landscape</property>
-	<property property="widgetArt" icon="$VAR[HomeWidget8001ThumbVar]">Thumb</property>
+	<property property="widgetArt" icon="$VAR[HomeWidget8001ThumbVar]" condition="!IsEmpty(Container(8001).ListItem.TvShowTitle)">Thumb</property>
 	<property property="widgetArt" icon="$VAR[HomeWidget8001ClearArtVar]" condition="!IsEmpty(Container(8001).ListItem.Art(clearart)) | !IsEmpty(Container(8001).ListItem.Art(tvshow.clearart))">ClearArt</property>
 	<property property="widgetArt" icon="$VAR[HomeWidget8001ClearLogoVar]" condition="!IsEmpty(Container(8001).ListItem.Art(clearlogo)) | !IsEmpty(Container(8001).ListItem.Art(tvshow.clearllogo))">ClearLogo</property>
 	<property property="widgetArt" icon="$VAR[HomeWidget8001DiscArtVar]" condition="!IsEmpty(Container(8001).ListItem.Art(discart))">DiscArt</property>
@@ -33,7 +33,7 @@
 	<property property="widgetArt.2" icon="$VAR[HomeWidget8002PosterVar]" condition="!IsEmpty(Container(8002).ListItem.Artist) | !IsEmpty(Container(8002).ListItem.AlbumArtist) | !IsEmpty(Container(8002).ListItem.Property(Addon.Name))">Square Poster</property>
 	<property property="widgetArt.2" icon="$VAR[HomeWidget8002FanArtVar]">FanArt</property>
 	<property property="widgetArt.2" icon="$VAR[HomeWidget8002LandscapeVar]" condition="!IsEmpty(Container(8002).ListItem.Art(landscape)) | !IsEmpty(Container(8002).ListItem.Art(tvshow.landscape))">Landscape</property>
-	<property property="widgetArt.2" icon="$VAR[HomeWidget8002ThumbVar]">Thumb</property>
+	<property property="widgetArt.2" icon="$VAR[HomeWidget8002ThumbVar]" condition="!IsEmpty(Container(8001).ListItem.TvShowTitle)">Thumb</property>
 	<property property="widgetArt.2" icon="$VAR[HomeWidget8002ClearArtVar]" condition="!IsEmpty(Container(8002).ListItem.Art(clearart)) | !IsEmpty(Container(8002).ListItem.Art(tvshow.clearart))">ClearArt</property>
 	<property property="widgetArt.2" icon="$VAR[HomeWidget8002ClearLogoVar]" condition="!IsEmpty(Container(8002).ListItem.Art(clearlogo)) | !IsEmpty(Container(8002).ListItem.Art(tvshow.clearllogo))">ClearLogo</property>
 	<property property="widgetArt.2" icon="$VAR[HomeWidget8002DiscArtVar]" condition="!IsEmpty(Container(8002).ListItem.Art(discart))">DiscArt</property>
@@ -50,9 +50,9 @@
 	<property property="widgetCase" icon="homewidgets/glass/square.png" condition="StringCompare(Container(211).ListItem.Property(widgetArt),ClearLogo)">Glass</property>
 	<property property="widgetCase" icon="homewidgets/glass/square.png" condition="StringCompare(Container(211).ListItem.Property(widgetArt),DiscArt)">Glass</property>
 	<property property="widgetCase" icon="homewidgets/glass/banner.png" condition="StringCompare(Container(211).ListItem.Property(widgetArt),Banner)">Glass</property>
-	<property property="widgetCase" icon="$VAR[HomeWidget8002PortraitCaseVar]" condition="StringCompare(Container(211).ListItem.Property(widgetArt),Poster)">Case</property>
+	<property property="widgetCase" icon="$VAR[HomeWidget8001PortraitCaseVar]" condition="StringCompare(Container(211).ListItem.Property(widgetArt),Poster)">Case</property>
 	<property property="widgetCase" icon="homewidgets/case/cd.png" condition="StringCompare(Container(211).ListItem.Property(widgetArt),Square Poster)">Case</property>
-	<property property="widgetCase" icon="$VAR[HomeWidget8002PortraitCaseVar]" condition="StringCompare(Container(211).ListItem.Property(widgetArt),Poster)">Clear Case</property>
+	<property property="widgetCase" icon="$VAR[HomeWidget8001PortraitClearCaseVar]" condition="StringCompare(Container(211).ListItem.Property(widgetArt),Poster)">Clear Case</property>
 	<property property="widgetCase" icon="homewidgets/clearcase/cd.png" condition="StringCompare(Container(211).ListItem.Property(widgetArt),Square Poster)">Clear Case</property>
 	<!-- Widget Case 2 -->
 	<propertySettings property="widgetCase.2" buttonID="518" title="Widget Case 2" />
@@ -67,7 +67,7 @@
 	<property property="widgetCase.2" icon="homewidgets/glass/banner.png" condition="StringCompare(Container(211).ListItem.Property(widgetArt.2),Banner)">Glass</property>
 	<property property="widgetCase.2" icon="$VAR[HomeWidget8002PortraitCaseVar]" condition="StringCompare(Container(211).ListItem.Property(widgetArt.2),Poster)">Case</property>
 	<property property="widgetCase.2" icon="homewidgets/case/cd.png" condition="StringCompare(Container(211).ListItem.Property(widgetArt.2),Square Poster)">Case</property>
-	<property property="widgetCase.2" icon="$VAR[HomeWidget8002PortraitCaseVar]" condition="StringCompare(Container(211).ListItem.Property(widgetArt.2),Poster)">Clear Case</property>
+	<property property="widgetCase.2" icon="$VAR[HomeWidget8002PortraitClearCaseVar]" condition="StringCompare(Container(211).ListItem.Property(widgetArt.2),Poster)">Clear Case</property>
 	<property property="widgetCase.2" icon="homewidgets/clearcase/cd.png" condition="StringCompare(Container(211).ListItem.Property(widgetArt.2),Square Poster)">Clear Case</property>
 	<!-- Widget Style 1 -->
 	<propertySettings property="widgetStyle" buttonID="509" title="Widget Style 1" />

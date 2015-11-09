@@ -409,6 +409,8 @@
 				<height>100</height>
 				<texture>homewidgets/label.png</texture>
 				<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
+				<animation effect="zoom" end="95,90" center="auto" condition="$PARAM[glassVisble]">conditional</animation>
+				<animation effect="zoom" end="94,90" center="auto" condition="$PARAM[clearVisible]">conditional</animation>
 				<visible>$PARAM[labelVisible]</visible>
 			</control>
 			<control type="textbox">
@@ -453,6 +455,8 @@
 					<width>200</width>
 					<height>100</height>
 					<texture>homewidgets/label.png</texture>
+					<animation effect="zoom" end="95,90" center="auto" condition="$PARAM[glassVisble]">conditional</animation>
+					<animation effect="zoom" end="94,90" center="auto" condition="$PARAM[clearVisible]">conditional</animation>
 					<visible>$PARAM[labelVisible]</visible>
 				</control>
 				<control type="textbox">
@@ -485,11 +489,37 @@
 				<top>0</top>
 				<width>282</width>
 				<height>282</height>
+				<aspectratio>$PARAM[Aspect]</aspectratio>
 				<animation effect="zoom" end="96,96" center="auto" condition="$PARAM[glassVisble]">conditional</animation>
 				<animation effect="zoom" end="90,98" center="250,150" condition="$PARAM[caseVisble]">conditional</animation>
 				<animation effect="zoom" end="90,98" center="250,150" condition="$PARAM[clearVisble]">conditional</animation>
 				<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
-				<texture background="true" fallback="DefaultMusicAlbums.png">$PARAM[Texture]</texture>
+				<texture>$PARAM[Texture]</texture>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>282</width>
+				<height>282</height>
+				<animation effect="zoom" end="96,96" center="auto" condition="$PARAM[glassVisble]">conditional</animation>
+				<animation effect="zoom" end="90,98" center="250,150" condition="$PARAM[caseVisble]">conditional</animation>
+				<animation effect="zoom" end="90,98" center="250,150" condition="$PARAM[clearVisble]">conditional</animation>
+				<aspectratio scalediffuse="false">scale</aspectratio>
+				<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
+				<texture diffuse="thumbs/sets/cdart-mask.png">$VAR[HomeWidgetPosterVar]</texture>
+				<visible>$PARAM[fallbackTexture] + IsEmpty(ListItem.Art(discart))</visible>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>282</width>
+				<height>282</height>
+				<animation effect="zoom" end="96,96" center="auto" condition="$PARAM[glassVisble]">conditional</animation>
+				<animation effect="zoom" end="90,98" center="250,150" condition="$PARAM[caseVisble]">conditional</animation>
+				<animation effect="zoom" end="90,98" center="250,150" condition="$PARAM[clearVisble]">conditional</animation>
+				<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
+				<texture>$VAR[HomeWidgetFakeDiscArtVar]</texture>
+				<visible>$PARAM[fallbackTexture] + IsEmpty(ListItem.Art(discart))</visible>
 			</control>
 			<control type="image">
 				<left>0</left>
@@ -498,6 +528,7 @@
 				<height>100</height>
 				<texture>homewidgets/label.png</texture>
 				<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
+				<animation effect="zoom" end="95,88" center="auto" condition="$PARAM[glassVisble]">conditional</animation>
 				<visible>$PARAM[labelVisible]</visible>
 			</control>
 			<control type="textbox">
@@ -533,10 +564,36 @@
 					<top>0</top>
 					<width>282</width>
 					<height>282</height>
+					<aspectratio>$PARAM[Aspect]</aspectratio>
 					<animation effect="zoom" end="96,96" center="auto" condition="$PARAM[glassVisble]">conditional</animation>
 					<animation effect="zoom" end="90,98" center="250,150" condition="$PARAM[caseVisble]">conditional</animation>
 					<animation effect="zoom" end="90,98" center="250,150" condition="$PARAM[clearVisble]">conditional</animation>
-					<texture background="true" fallback="DefaultMusicAlbums.png">$PARAM[Texture]</texture>
+					<texture diffuse="$PARAM[Diffuse]">$PARAM[Texture]</texture>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>282</width>
+					<height>282</height>
+					<animation effect="zoom" end="96,96" center="auto" condition="$PARAM[glassVisble]">conditional</animation>
+					<animation effect="zoom" end="90,98" center="250,150" condition="$PARAM[caseVisble]">conditional</animation>
+					<animation effect="zoom" end="90,98" center="250,150" condition="$PARAM[clearVisble]">conditional</animation>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
+					<texture diffuse="thumbs/sets/cdart-mask.png">$VAR[HomeWidgetPosterVar]</texture>
+					<visible>$PARAM[fallbackTexture] + IsEmpty(ListItem.Art(discart))</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>282</width>
+					<height>282</height>
+					<animation effect="zoom" end="96,96" center="auto" condition="$PARAM[glassVisble]">conditional</animation>
+					<animation effect="zoom" end="90,98" center="250,150" condition="$PARAM[caseVisble]">conditional</animation>
+					<animation effect="zoom" end="90,98" center="250,150" condition="$PARAM[clearVisble]">conditional</animation>
+					<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
+					<texture>$VAR[HomeWidgetFakeDiscArtVar]</texture>
+					<visible>$PARAM[fallbackTexture] + IsEmpty(ListItem.Art(discart))</visible>
 				</control>
 				<control type="image">
 					<left>0</left>
@@ -544,6 +601,7 @@
 					<width>282</width>
 					<height>100</height>
 					<texture>homewidgets/label.png</texture>
+					<animation effect="zoom" end="95,88" center="auto" condition="$PARAM[glassVisble]">conditional</animation>
 					<visible>$PARAM[labelVisible]</visible>
 				</control>
 				<control type="textbox">
@@ -578,7 +636,7 @@
 				<top>0</top>
 				<width>473</width>
 				<height>266</height>
-				<aspectratio aligny="$PARAM[aspectAligny]">$PARAM[aspectRatio]</aspectratio>
+				<aspectratio>$PARAM[Aspect]</aspectratio>
 				<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
 				<animation effect="zoom" end="98,96" center="auto" condition="$PARAM[glassVisble]">conditional</animation>
 				<texture>$PARAM[Texture]</texture>
@@ -590,6 +648,7 @@
 				<height>100</height>
 				<texture>homewidgets/label.png</texture>
 				<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
+				<animation effect="zoom" end="98,89" center="auto" condition="$PARAM[glassVisble]">conditional</animation>
 				<visible>$PARAM[labelVisible]</visible>
 			</control>
 			<control type="textbox">
@@ -622,7 +681,7 @@
 					<top>0</top>
 					<width>473</width>
 					<height>266</height>
-					<aspectratio aligny="$PARAM[aspectAligny]">$PARAM[aspectRatio]</aspectratio>
+					<aspectratio>$PARAM[Aspect]</aspectratio>
 					<animation effect="zoom" end="98,96" center="auto" condition="$PARAM[glassVisble]">conditional</animation>
 					<texture>$PARAM[Texture]</texture>
 				</control>
@@ -632,6 +691,7 @@
 					<width>473</width>
 					<height>100</height>
 					<texture>homewidgets/label.png</texture>
+					<animation effect="zoom" end="98,89" center="auto" condition="$PARAM[glassVisble]">conditional</animation>
 					<visible>$PARAM[labelVisible]</visible>
 				</control>
 				<control type="textbox">
@@ -666,7 +726,18 @@
 				<height>132</height>
 				<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
 				<animation effect="zoom" end="99,96" center="auto" condition="$PARAM[glassVisble]">conditional</animation>
-				<texture background="true" fallback="DefaultMovies.png">$PARAM[Texture]</texture>
+				<texture>$PARAM[Texture]</texture>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>712</width>
+				<height>132</height>
+				<aspectratio aligny="top">scale</aspectratio>
+				<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
+				<texture>$VAR[HomeWidgetFanArtVar]</texture>
+				<animation effect="zoom" end="99,96" center="auto" condition="$PARAM[glassVisble]">conditional</animation>
+				<visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(tvshow.banner))</visible>
 			</control>
 			<control type="image">
 				<left>0</left>
@@ -685,6 +756,7 @@
 				<height>50</height>
 				<texture>homewidgets/label.png</texture>
 				<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
+				<animation effect="zoom" end="98,89" center="auto" condition="$PARAM[glassVisble]">conditional</animation>
 				<visible>$PARAM[labelVisible]</visible>
 			</control>
 			<control type="textbox">
@@ -706,7 +778,6 @@
 				<height>132</height>
 				<texture>$PARAM[Case]</texture>
 			</control>
-
 		</itemlayout>
 		<focusedlayout height="137" width="717">
 			<control type="group">
@@ -726,6 +797,16 @@
 					<top>0</top>
 					<width>712</width>
 					<height>132</height>
+					<aspectratio aligny="top">scale</aspectratio>
+					<texture>$VAR[HomeWidgetFanArtVar]</texture>
+					<animation effect="zoom" end="99,96" center="auto" condition="$PARAM[glassVisble]">conditional</animation>
+					<visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(tvshow.banner))</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>712</width>
+					<height>132</height>
 					<aspectratio>keep</aspectratio>
 					<visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(tvshow.banner))</visible>
 					<texture>$VAR[HomeWidgetClearLogoVar]</texture>
@@ -736,6 +817,7 @@
 					<width>712</width>
 					<height>50</height>
 					<texture>homewidgets/label.png</texture>
+					<animation effect="zoom" end="98,89" center="auto" condition="$PARAM[glassVisble]">conditional</animation>
 					<visible>$PARAM[labelVisible]</visible>
 				</control>
 				<control type="textbox">
