@@ -1493,6 +1493,16 @@
 		<value condition="StringCompare(Skin.String(Widget.Trans),10)">66FFFFFF</value>
 		<value>FFFFFFFF</value>
 	</variable>
+	<variable name="WidgetVerticalMenuLabelVar">
+		<value condition="!IsEmpty(Skin.String(Widget.VerticalMenu))">$INFO[Skin.String(Widget.VerticalMenu)]</value>
+		<value>Center</value>
+	</variable>
+	<variable name="WidgetVerticalMenuVar">
+		<value condition="IsEmpty(Skin.String(Widget.VerticalMenu))">Skin.SetString(Widget.VerticalMenu,High)</value>
+		<value condition="StringCompare(Skin.String(Widget.VerticalMenu),High)">Skin.SetString(Widget.VerticalMenu,Low)</value>
+		<value condition="StringCompare(Skin.String(Widget.VerticalMenu),Low)">Skin.SetString(Widget.VerticalMenu,High/Low)</value>
+		<value condition="StringCompare(Skin.String(Widget.VerticalMenu),High/Low)">Skin.Reset(Widget.VerticalMenu)</value>
+	</variable>
 	<variable name="PortraitCaseLabelVar">
 		<value condition="!IsEmpty(Skin.String(Poster.Case))">$INFO[Skin.String(Poster.Case)]</value>
 		<value>None</value>

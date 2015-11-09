@@ -7,8 +7,13 @@
 			<animation effect="slide" tween="cubic" time="720" end="0,-1080" start="0,0">WindowClose</animation>
 			<animation effect="fade" start="100" end="0" time="200" reversible="false" condition="Container(9000).OnNext | Container(9000).OnPrevious">Conditional</animation>
 			<animation effect="fade" start="0" end="100" time="200" delay="200" reversible="false" condition="![Container(9000).OnNext | Container(9000).OnPrevious]">Conditional</animation>
-			<animation effect="slide" end="0,21" condition="!StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + !Skin.HasSetting(lowermainmenu)">Conditional</animation>
-			<animation effect="slide" end="215,-25" condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994])">Conditional</animation>
+			<animation effect="slide" end="0,9" condition="!StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + !Skin.HasSetting(lowermainmenu)">Conditional</animation>
+			<animation effect="slide" end="215,295" condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + IsEmpty(Container(9000).ListItem.Property(widget.2)) + IsEmpty(Skin.String(Widget.VerticalMenu))">Conditional</animation>
+			<animation effect="slide" end="215,124" condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + !IsEmpty(Container(9000).ListItem.Property(widget.2)) + IsEmpty(Skin.String(Widget.VerticalMenu))">Conditional</animation>
+			<animation effect="slide" end="215,-24" condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + StringCompare(Skin.String(Widget.VerticalMenu),High)">Conditional</animation>
+			<animation effect="slide" end="215,618" condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + IsEmpty(Container(9000).ListItem.Property(widget.2)) + StringCompare(Skin.String(Widget.VerticalMenu),Low)">Conditional</animation>
+			<animation effect="slide" end="215,259" condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + !IsEmpty(Container(9000).ListItem.Property(widget.2)) + StringCompare(Skin.String(Widget.VerticalMenu),Low)">Conditional</animation>
+			<animation effect="slide" end="215,-24" condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + StringCompare(Skin.String(Widget.VerticalMenu),High/Low)">Conditional</animation>
 			<visible>!IsEmpty(Container(9000).ListItem.Property(widget))</visible>
 			<include>VisibleFadeEffect</include>
 			<!-- For Testing -->
@@ -41,8 +46,13 @@
 			<animation effect="slide" tween="cubic" time="720" end="0,-1080" start="0,0">WindowClose</animation>
 			<animation effect="fade" start="100" end="0" time="200" reversible="false" condition="Container(9000).OnNext | Container(9000).OnPrevious">Conditional</animation>
 			<animation effect="fade" start="0" end="100" time="200" delay="200" reversible="false" condition="![Container(9000).OnNext | Container(9000).OnPrevious]">Conditional</animation>
-			<animation effect="slide" end="0,235" condition="!StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + !Skin.HasSetting(lowermainmenu)">Conditional</animation>
-			<animation effect="slide" end="215,236 " condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994])">Conditional</animation>
+			<animation effect="slide" end="0,244" condition="!StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + !Skin.HasSetting(lowermainmenu)">Conditional</animation>
+			<animation effect="slide" end="215,-64" condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + IsEmpty(Container(9000).ListItem.Property(widget)) + IsEmpty(Skin.String(Widget.VerticalMenu))">Conditional</animation>
+			<animation effect="slide" end="215,107" condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + !IsEmpty(Container(9000).ListItem.Property(widget)) + IsEmpty(Skin.String(Widget.VerticalMenu))">Conditional</animation>
+			<animation effect="slide" end="215,-383" condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + IsEmpty(Container(9000).ListItem.Property(widget)) + StringCompare(Skin.String(Widget.VerticalMenu),High)">Conditional</animation>
+			<animation effect="slide" end="215,-24" condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + !IsEmpty(Container(9000).ListItem.Property(widget)) + StringCompare(Skin.String(Widget.VerticalMenu),High)">Conditional</animation>
+			<animation effect="slide" end="215,259" condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + StringCompare(Skin.String(Widget.VerticalMenu),Low)">Conditional</animation>
+			<animation effect="slide" end="215,259" condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + StringCompare(Skin.String(Widget.VerticalMenu),High/Low)">Conditional</animation>
 			<visible>!IsEmpty(Container(9000).ListItem.Property(widget.2))</visible>
 			<include>VisibleFadeEffect</include>
 			<control type="image">
@@ -352,7 +362,7 @@
 		<scrolltime tween="quadratic" easing="out">300</scrolltime>
 	</include>
 	<!-- Panel Background/Labels -->
-	<include name="PanelBack">
+	<include name="PanelBack1">
 		<control type="image">
 			<left></left>
 			<centerleft>50%</centerleft>
@@ -362,7 +372,7 @@
 			<texture border="40">$VAR[HomeWidgetBackgroundVar]</texture>
 		</control>
 		<control type="label">
-			<top>-32</top>
+			<top>-33</top>
 			<left></left>
 			<centerleft>50%</centerleft>
 			<width>1440</width>
@@ -372,7 +382,69 @@
 			<textcolor>grey</textcolor>
 			<shadowcolor>shadow</shadowcolor>
 			<label>$PARAM[label]</label>
-			<visible>StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994])</visible>
+			<visible>[StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + !IsEmpty(Container(9000).ListItem.Property(widget.2)) + IsEmpty(Skin.String(Widget.VerticalMenu))] | [StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + StringCompare(Skin.String(Widget.VerticalMenu),Low)]</visible>
+		</control>
+		<control type="label">
+			<top>$PARAM[labelBottom]</top>
+			<left></left>
+			<centerleft>50%</centerleft>
+			<width>1440</width>
+			<height>20</height>
+			<align>right</align>
+			<font>font13_title</font>
+			<textcolor>grey</textcolor>
+			<shadowcolor>shadow</shadowcolor>
+			<label>$PARAM[label]</label>
+			<visible>[StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + IsEmpty(Container(9000).ListItem.Property(widget.2)) + IsEmpty(Skin.String(Widget.VerticalMenu))] | [StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + !IsEmpty(Skin.String(Widget.VerticalMenu) + !StringCompare(Skin.String(Widget.VerticalMenu),Low)]</visible>
+		</control>
+		<control type="label">
+			<top>$PARAM[labelBottom]</top>
+			<left></left>
+			<centerleft>50%</centerleft>
+			<width>1440</width>
+			<height>20</height>
+			<align>center</align>
+			<font>font13_title</font>
+			<textcolor>grey</textcolor>
+			<shadowcolor>shadow</shadowcolor>
+			<label>$PARAM[label]</label>
+			<visible>!StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994])</visible>
+		</control>
+	</include>
+	<include name="PanelBack2">
+		<control type="image">
+			<left></left>
+			<centerleft>50%</centerleft>
+			<top>-21</top>
+			<width>1472</width>
+			<height>$PARAM[backHeight]</height>
+			<texture border="40">$VAR[HomeWidgetBackgroundVar]</texture>
+		</control>
+		<control type="label">
+			<top>-33</top>
+			<left></left>
+			<centerleft>50%</centerleft>
+			<width>1440</width>
+			<height>20</height>
+			<align>right</align>
+			<font>font13_title</font>
+			<textcolor>grey</textcolor>
+			<shadowcolor>shadow</shadowcolor>
+			<label>$PARAM[label]</label>
+			<visible>StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + [StringCompare(Skin.String(Widget.VerticalMenu),Low) | StringCompare(Skin.String(Widget.VerticalMenu),High/Low)]</visible>
+		</control>
+		<control type="label">
+			<top>$PARAM[labelBottom]</top>
+			<left></left>
+			<centerleft>50%</centerleft>
+			<width>1440</width>
+			<height>20</height>
+			<align>right</align>
+			<font>font13_title</font>
+			<textcolor>grey</textcolor>
+			<shadowcolor>shadow</shadowcolor>
+			<label>$PARAM[label]</label>
+			<visible>StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + !StringCompare(Skin.String(Widget.VerticalMenu),Low) + !StringCompare(Skin.String(Widget.VerticalMenu),High/Low)</visible>
 		</control>
 		<control type="label">
 			<top>$PARAM[labelBottom]</top>

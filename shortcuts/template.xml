@@ -292,7 +292,7 @@
 			<control type="group">
 				<top>$SKINSHORTCUTS[top]</top>
 				<skinshortcuts>visibility</skinshortcuts>
-				<include name="PanelBack">
+				<include name="PanelBack1">
 					<param name="backHeight">$SKINSHORTCUTS[height]</param>
 					<param name="label">$SKINSHORTCUTS[label]</param>
 					<param name="labelBottom">$SKINSHORTCUTS[labelBottom]</param>
@@ -612,7 +612,7 @@
 			<control type="group">
 				<top>$SKINSHORTCUTS[top]</top>
 				<skinshortcuts>visibility</skinshortcuts>
-				<include name="PanelBack">
+				<include name="PanelBack2">
 					<param name="backHeight">$SKINSHORTCUTS[height]</param>
 					<param name="label">$SKINSHORTCUTS[label]</param>
 					<param name="labelBottom">$SKINSHORTCUTS[labelBottom]</param>
