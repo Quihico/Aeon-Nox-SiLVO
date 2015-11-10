@@ -52,8 +52,9 @@
 					<height>41</height>
 					<align>right</align>
 					<orientation>horizontal</orientation>
-					<onup condition="Control.IsVisible(9003)">9003</onup>
-					<onup condition="!Control.IsVisible(9003)">9000</onup>
+					<onup condition="Skin.HasSetting(lowermainmenu) + Control.IsVisible(90020)">90020</onup>
+					<onup condition="Skin.HasSetting(lowermainmenu) + !Control.IsVisible(90020)">90010</onup>
+					<onup condition="!Skin.HasSetting(lowermainmenu) + Control.IsVisible(90010)">90010</onup>
 					<ondown>9000</ondown>
 					<include condition="System.HasAddon(script.globalsearch) + !Skin.HasSetting(Disable.SearchButton)">HomeSearchButton</include>
 					<control type="button" id="9021">
@@ -177,6 +178,7 @@
 						<width>1500</width>
 						<height>87</height>
 						<onup>9000</onup>
+						<ondown condition="!Skin.HasSetting(lowermainmenu) + Control.IsVisible(90020)">90020</ondown>
 						<ondown>9004</ondown>
 						<pagecontrol>-</pagecontrol>
 						<scrolltime tween="quadratic" easing="out">300</scrolltime>
@@ -458,8 +460,9 @@
 				<align>right</align>
 				<orientation>horizontal</orientation>
 				<onleft>9000</onleft>
-				<ondown condition="Control.IsVisible(9003)">9003</ondown>
-				<ondown condition="!Control.IsVisible(9003)">9000</ondown>
+				<ondown condition="Control.IsVisible(90010)">90010</ondown>
+				<ondown condition="!Control.IsVisible(90010) + Control.IsVisible(90020)">90020</ondown>
+				<ondown condition="!Control.IsVisible(90010) + !Control.IsVisible(90020)">9000</ondown>
 				<include condition="System.HasAddon(script.globalsearch) + !Skin.HasSetting(Disable.SearchButton)">HomeSearchButton</include>
 				<control type="button" id="9021">
 					<label></label>
