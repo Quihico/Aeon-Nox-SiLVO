@@ -137,11 +137,23 @@
 	</include>
 	<!-- ******* NAVIGATION ******** -->
 	<include name="HorizontalNavigation1">
-		<onup>8001</onup>
-		<ondown>9000</ondown>
-		<onleft>8001</onleft>
-		<onright>8001</onright>
-		<onback>9000</onback>
+		<onup condition="!StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994])">8001</onup>
+		<onup condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + ![Control.IsVisible(9027) | System.HasMediaDVD]">8001</onup>
+		<onup condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + [Control.IsVisible(9027) | System.HasMediaDVD]">9020</onup>
+		<ondown condition="!StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + Skin.HasSetting(lowermainmenu) + IsEmpty(Container(9000).ListItem.Property(widget.2)) + ![Control.IsVisible(9027) | System.HasMediaDVD]">9000</ondown>
+		<ondown condition="!StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + Skin.HasSetting(lowermainmenu) + IsEmpty(Container(9000).ListItem.Property(widget.2)) + [Control.IsVisible(9027) | System.HasMediaDVD]">9020</ondown>
+		<ondown condition="!StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + Skin.HasSetting(lowermainmenu) + !IsEmpty(Container(9000).ListItem.Property(widget.2))">8002</ondown>
+		<ondown condition="!StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + !Skin.HasSetting(lowermainmenu) + ![Control.IsVisible(9027) | System.HasMediaDVD]">9000</ondown>
+		<ondown condition="!StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + !Skin.HasSetting(lowermainmenu) + [Control.IsVisible(9027) | System.HasMediaDVD]">9020</ondown>
+		<ondown condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + IsEmpty(Container(9000).ListItem.Property(widget.2))">8001</ondown>
+		<ondown condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + !IsEmpty(Container(9000).ListItem.Property(widget.2))">8002</ondown>
+		<onleft condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994])">9000</onleft>
+		<onback condition="!StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + Skin.HasSetting(lowermainmenu) + IsEmpty(Container(9000).ListItem.Property(widget.2)) + ![Control.IsVisible(9027) | System.HasMediaDVD]">9000</onback>
+		<onback condition="!StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + Skin.HasSetting(lowermainmenu) + IsEmpty(Container(9000).ListItem.Property(widget.2)) + [Control.IsVisible(9027) | System.HasMediaDVD]">9020</onback>
+		<onback condition="!StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + Skin.HasSetting(lowermainmenu) + !IsEmpty(Container(9000).ListItem.Property(widget.2))">8002</onback>
+		<onback condition="!StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + !Skin.HasSetting(lowermainmenu) + ![Control.IsVisible(9027) | System.HasMediaDVD]">9000</onback>
+		<onback condition="!StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + !Skin.HasSetting(lowermainmenu) + [Control.IsVisible(9027) | System.HasMediaDVD]">9020</onback>
+		<onback condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994])">9000</onback>
 	</include>
 	<include name="HorizontalNavigation2">
 		<onup>8002</onup>
