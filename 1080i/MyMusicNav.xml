@@ -225,8 +225,6 @@
 					<textwidth>375</textwidth>
 					<include>ButtonCommonValues</include>
 					<label>$LOCALIZE[31606]</label>
-					<onclick condition="!Skin.String(pathlogosartists)">Notification($LOCALIZE[19098]:,Set path to music collection/artwork,10000,icon.png)</onclick>
-					<onclick condition="!Skin.String(pathlogosartists)">Skin.SetPath(pathlogosartists)</onclick>
 					<onclick>Skin.ToggleSetting(rightlistlogoartist)</onclick>
 					<selected>Skin.HasSetting(rightlistlogoartist)</selected>
 					<visible>Control.IsVisible(700)</visible>
@@ -298,6 +296,13 @@
 					<label2>[COLOR labelheader]$VAR[MyMusicNavRandomButtonLabelVar][/COLOR]</label2>
 					<onclick>PlayerControl(Random)</onclick>
 					<visible>!StringCompare(Playlist.Length(music),0) + !MusicPartyMode.Enabled + Player.HasAudio + Player.Playing</visible>
+				</control>
+				<control type="button" id="6122">
+					<description>Enable fullscreen</description>
+					<include>ButtonCommonValues</include>
+					<label>$LOCALIZE[244]</label>
+					<onclick>fullscreen</onclick>
+					<visible>Player.HasMedia</visible>
 				</control>
 			</control>
 		</control>

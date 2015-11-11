@@ -184,7 +184,7 @@
 				<control type="button">
 					<top>370</top>
 					<width>559</width>
-					<label>$INFO[Window(home).Property(Set.Movies.Genre)][CR]$INFO[Window(home).Property(Set.Movies.Runtime),, $LOCALIZE[12391]]</label>
+					<label>$INFO[Window(home).Property(SkinHelper.MovieSet.Genre)][CR]$INFO[Window(home).Property(SkinHelper.MovieSet.Runtime),, $LOCALIZE[12391]]</label>
 					<include>ShowCaseInfoPanelButtonsValues</include>
 					<visible>ListItem.IsCollection</visible>
 				</control>

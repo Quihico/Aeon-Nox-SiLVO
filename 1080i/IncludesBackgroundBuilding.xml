@@ -140,17 +140,17 @@
 				<top>1030</top>
 				<animation effect="zoom" start="180" end="180" center="auto" time="0" tween="linear" pulse="true" condition="true">Conditional</animation>
 				<animation effect="rotate" center="auto" start="-65" end="-65" time="0" condition="true">Conditional</animation>
-				<visible>!IsEmpty(Window(home).Property(Set.movie.9.Art(poster)))</visible>
+				<visible>!IsEmpty(Window(home).Property(SkinHelper.MovieSet.9.Poster))</visible>
 				<control type="image">
 					<include>PosterDimAndPos</include>
 					<align>center</align>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
-					<texture background="true" diffuse="thumbs/boxes/movieposter_mask.png">$INFO[Window(home).Property(Set.movie.9.Art(poster))]</texture>
+					<texture background="true" diffuse="thumbs/boxes/movieposter_mask.png">$INFO[Window(home).Property(SkinHelper.MovieSet.9.Poster)]</texture>
 				</control>
 				<control type="image">
 					<include>CaseDimAndPosSets</include>
-					<texture background="true" fallback="thumbs/boxes/p.png">$VAR[CaseTypePathVar]$INFO[Window(home).Property(Set.movie.9.VideoResolution)]p.png</texture>
+					<texture background="true" fallback="thumbs/boxes/p.png">$VAR[CaseTypePathVar]$INFO[Window(home).Property(SkinHelper.MovieSet.9.Resolution)]p.png</texture>
 				</control>
 			</control>
 			<control type="group">
@@ -159,17 +159,17 @@
 				<top>0</top>
 				<animation effect="zoom" start="180" end="180" center="auto" time="0" tween="linear" pulse="true" condition="true">Conditional</animation>
 				<animation effect="rotate" center="auto" start="65" end="65" time="0" condition="true">Conditional</animation>
-				<visible>!IsEmpty(Window(home).Property(Set.movie.8.Art(poster)))</visible>
+				<visible>!IsEmpty(Window(home).Property(SkinHelper.MovieSet.8.Poster))</visible>
 				<control type="image">
 					<include>PosterDimAndPos</include>
 					<align>center</align>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
-					<texture background="true" diffuse="thumbs/boxes/movieposter_mask.png">$INFO[Window(home).Property(Set.movie.8.Art(poster))]</texture>
+					<texture background="true" diffuse="thumbs/boxes/movieposter_mask.png">$INFO[Window(home).Property(SkinHelper.MovieSet.8.Poster))]</texture>
 				</control>
 				<control type="image">
 					<include>CaseDimAndPosSets</include>
-					<texture background="true" fallback="thumbs/boxes/p.png">$VAR[CaseTypePathVar]$INFO[Window(home).Property(Set.movie.8.VideoResolution)]p.png</texture>
+					<texture background="true" fallback="thumbs/boxes/p.png">$VAR[CaseTypePathVar]$INFO[Window(home).Property(SkinHelper.MovieSet.8.Resolution)]p.png</texture>
 				</control>
 			</control>
 			<control type="group">
@@ -178,17 +178,17 @@
 				<top>150</top>
 				<animation effect="zoom" start="180" end="180" center="auto" time="0" tween="linear" pulse="true" condition="true">Conditional</animation>
 				<animation effect="rotate" center="auto" start="10" end="10" time="0" condition="true">Conditional</animation>
-				<visible>!IsEmpty(Window(home).Property(Set.movie.5.Art(poster)))</visible>
+				<visible>!IsEmpty(Window(home).Property(SkinHelper.MovieSet.7.Poster))</visible>
 				<control type="image">
 					<include>PosterDimAndPos</include>
 					<align>center</align>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
-					<texture background="true" diffuse="thumbs/boxes/movieposter_mask.png">$INFO[Window(home).Property(Set.movie.5.Art(poster))]</texture>
+					<texture background="true" diffuse="thumbs/boxes/movieposter_mask.png">$INFO[Window(home).Property(SkinHelper.MovieSet.7.Poster)]</texture>
 				</control>
 				<control type="image">
 					<include>CaseDimAndPosSets</include>
-					<texture background="true" fallback="thumbs/boxes/p.png">$VAR[CaseTypePathVar]$INFO[Window(home).Property(Set.movie.5.VideoResolution)]p.png</texture>
+					<texture background="true" fallback="thumbs/boxes/p.png">$VAR[CaseTypePathVar]$INFO[Window(home).Property(SkinHelper.MovieSet.7.Resolution)]p.png</texture>
 				</control>
 			</control>
 			<control type="group">
@@ -197,17 +197,17 @@
 				<top>300</top>
 				<animation effect="zoom" start="180" end="180" center="auto" time="0" tween="linear" pulse="true" condition="true">Conditional</animation>
 				<animation effect="rotate" center="auto" start="-20" end="-20" time="0" condition="true">Conditional</animation>
-				<visible>!IsEmpty(Window(home).Property(Set.movie.6.Art(poster)))</visible>
+				<visible>!IsEmpty(Window(home).Property(SkinHelper.MovieSet.6.Poster))</visible>
 				<control type="image">
 					<include>PosterDimAndPos</include>
 					<align>center</align>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
-					<texture background="true" diffuse="thumbs/boxes/movieposter_mask.png">$INFO[Window(home).Property(Set.movie.6.Art(poster))]</texture>
+					<texture background="true" diffuse="thumbs/boxes/movieposter_mask.png">$INFO[Window(home).Property(SkinHelper.MovieSet.6.Poster)]</texture>
 				</control>
 				<control type="image">
 					<include>CaseDimAndPosSets</include>
-					<texture background="true" fallback="thumbs/boxes/p.png">$VAR[CaseTypePathVar]$INFO[Window(home).Property(Set.movie.6.VideoResolution)]p.png</texture>
+					<texture background="true" fallback="thumbs/boxes/p.png">$VAR[CaseTypePathVar]$INFO[Window(home).Property(SkinHelper.MovieSet.6.Resolution)]p.png</texture>
 				</control>
 			</control>
 			<control type="group">
@@ -216,17 +216,17 @@
 				<top>170</top>
 				<animation effect="zoom" start="180" end="180" center="auto" time="0" tween="linear" pulse="true" condition="true">Conditional</animation>
 				<animation effect="rotate" center="auto" start="25" end="25" time="0" condition="true">Conditional</animation>
-				<visible>!IsEmpty(Window(home).Property(Set.movie.4.Art(poster)))</visible>
+				<visible>!IsEmpty(Window(home).Property(SkinHelper.MovieSet.5.Poster))</visible>
 				<control type="image">
 					<include>PosterDimAndPos</include>
 					<align>center</align>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
-					<texture background="true" diffuse="thumbs/boxes/movieposter_mask.png">$INFO[Window(home).Property(Set.movie.4.Art(poster))]</texture>
+					<texture background="true" diffuse="thumbs/boxes/movieposter_mask.png">$INFO[Window(home).Property(SkinHelper.MovieSet.5.Poster)]</texture>
 				</control>
 				<control type="image">
 					<include>CaseDimAndPosSets</include>
-					<texture background="true" fallback="thumbs/boxes/p.png">$VAR[CaseTypePathVar]$INFO[Window(home).Property(Set.movie.4.VideoResolution)]p.png</texture>
+					<texture background="true" fallback="thumbs/boxes/p.png">$VAR[CaseTypePathVar]$INFO[Window(home).Property(SkinHelper.MovieSet.5.Resolution)]p.png</texture>
 				</control>
 			</control>
 			<control type="group">
@@ -235,17 +235,17 @@
 				<top>-100</top>
 				<animation effect="zoom" start="180" end="180" center="auto" time="0" tween="linear" pulse="true" condition="true">Conditional</animation>
 				<animation effect="rotate" center="auto" start="75" end="75" time="0" condition="true">Conditional</animation>
-				<visible>!IsEmpty(Window(home).Property(Set.movie.7.Art(poster)))</visible>
+				<visible>!IsEmpty(Window(home).Property(SkinHelper.MovieSet.4.Poster))</visible>
 				<control type="image">
 					<include>PosterDimAndPos</include>
 					<align>center</align>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
-					<texture background="true" diffuse="thumbs/boxes/movieposter_mask.png">$INFO[Window(home).Property(Set.movie.7.Art(poster))]</texture>
+					<texture background="true" diffuse="thumbs/boxes/movieposter_mask.png">$INFO[Window(home).Property(SkinHelper.MovieSet.4.Poster)]</texture>
 				</control>
 				<control type="image">
 					<include>CaseDimAndPosSets</include>
-					<texture background="true" fallback="thumbs/boxes/p.png">$VAR[CaseTypePathVar]$INFO[Window(home).Property(Set.movie.7.VideoResolution)]p.png</texture>
+					<texture background="true" fallback="thumbs/boxes/p.png">$VAR[CaseTypePathVar]$INFO[Window(home).Property(SkinHelper.MovieSet.4.Resolution)]p.png</texture>
 				</control>
 			</control>
 			<control type="group">
@@ -254,17 +254,17 @@
 				<top>800</top>
 				<animation effect="zoom" start="180" end="180" center="auto" time="0" tween="linear" pulse="true" condition="true">Conditional</animation>
 				<animation effect="rotate" center="auto" start="45" end="45" time="0" condition="true">Conditional</animation>
-				<visible>!IsEmpty(Window(home).Property(Set.movie.10.Art(poster)))</visible>
+				<visible>!IsEmpty(Window(home).Property(SkinHelper.MovieSet.3.Poster))</visible>
 				<control type="image">
 					<include>PosterDimAndPos</include>
 					<align>center</align>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
-					<texture background="true" diffuse="thumbs/boxes/movieposter_mask.png">$INFO[Window(home).Property(Set.movie.10.Art(poster))]</texture>
+					<texture background="true" diffuse="thumbs/boxes/movieposter_mask.png">$INFO[Window(home).Property(SkinHelper.MovieSet.3.Poster)]</texture>
 				</control>
 				<control type="image">
 					<include>CaseDimAndPosSets</include>
-					<texture background="true" fallback="thumbs/boxes/p.png">$VAR[CaseTypePathVar]$INFO[Window(home).Property(Set.movie.10.VideoResolution)]p.png</texture>
+					<texture background="true" fallback="thumbs/boxes/p.png">$VAR[CaseTypePathVar]$INFO[Window(home).Property(SkinHelper.MovieSet.3.Resolution)]p.png</texture>
 				</control>
 			</control>
 			<control type="group">
@@ -273,17 +273,17 @@
 				<top>650</top>
 				<animation effect="zoom" start="180" end="180" center="auto" time="0" tween="linear" pulse="true" condition="true">Conditional</animation>
 				<animation effect="rotate" center="auto" start="-35" end="-35" time="0" condition="true">Conditional</animation>
-				<visible>!IsEmpty(Window(home).Property(Set.movie.3.Art(poster)))</visible>
+				<visible>!IsEmpty(Window(home).Property(SkinHelper.MovieSet.2.Poster))</visible>
 				<control type="image">
 					<include>PosterDimAndPos</include>
 					<align>center</align>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
-					<texture background="true" diffuse="thumbs/boxes/movieposter_mask.png">$INFO[Window(home).Property(Set.movie.3.Art(poster))]</texture>
+					<texture background="true" diffuse="thumbs/boxes/movieposter_mask.png">$INFO[Window(home).Property(SkinHelper.MovieSet.2.Poster)]</texture>
 				</control>
 				<control type="image">
 					<include>CaseDimAndPosSets</include>
-					<texture background="true" fallback="thumbs/boxes/p.png">$VAR[CaseTypePathVar]$INFO[Window(home).Property(Set.movie.3.VideoResolution)]p.png</texture>
+					<texture background="true" fallback="thumbs/boxes/p.png">$VAR[CaseTypePathVar]$INFO[Window(home).Property(SkinHelper.MovieSet.2.Resolution)]p.png</texture>
 				</control>
 			</control>
 			<control type="group">
@@ -292,17 +292,17 @@
 				<top>400</top>
 				<animation effect="zoom" start="180" end="180" center="auto" time="0" tween="linear" pulse="true" condition="true">Conditional</animation>
 				<animation effect="rotate" center="auto" start="-10" end="-10" time="0" condition="true">Conditional</animation>
-				<visible>!IsEmpty(Window(home).Property(Set.movie.2.Art(poster)))</visible>
+				<visible>!IsEmpty(Window(home).Property(SkinHelper.MovieSet.1.Poster))</visible>
 				<control type="image">
 					<include>PosterDimAndPos</include>
 					<align>center</align>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
-					<texture background="true" diffuse="thumbs/boxes/movieposter_mask.png">$INFO[Window(home).Property(Set.movie.2.Art(poster))]</texture>
+					<texture background="true" diffuse="thumbs/boxes/movieposter_mask.png">$INFO[Window(home).Property(SkinHelper.MovieSet.1.Poster)]</texture>
 				</control>
 				<control type="image">
 					<include>CaseDimAndPosSets</include>
-					<texture background="true" fallback="thumbs/boxes/p.png">$VAR[CaseTypePathVar]$INFO[Window(home).Property(Set.movie.2.VideoResolution)]p.png</texture>
+					<texture background="true" fallback="thumbs/boxes/p.png">$VAR[CaseTypePathVar]$INFO[Window(home).Property(SkinHelper.MovieSet.1.Resolution)]p.png</texture>
 				</control>
 			</control>
 			<control type="group">
@@ -311,17 +311,17 @@
 				<top>400</top>
 				<animation effect="zoom" start="180" end="180" center="auto" time="0" tween="linear" pulse="true" condition="true">Conditional</animation>
 				<animation effect="rotate" center="auto" start="3" end="3" time="0" condition="true">Conditional</animation>
-				<visible>!IsEmpty(Window(home).Property(Set.movie.1.Art(poster)))</visible>
+				<visible>!IsEmpty(Window(home).Property(SkinHelper.MovieSet.0.Poster))</visible>
 				<control type="image">
 					<include>PosterDimAndPos</include>
 					<align>center</align>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
-					<texture background="true" diffuse="thumbs/boxes/movieposter_mask.png">$INFO[Window(home).Property(Set.movie.1.Art(poster))]</texture>
+					<texture background="true" diffuse="thumbs/boxes/movieposter_mask.png">$INFO[Window(home).Property(SkinHelper.MovieSet.0.Poster)]</texture>
 				</control>
 				<control type="image">
 					<include>CaseDimAndPosSets</include>
-					<texture background="true" fallback="thumbs/boxes/p.png">$VAR[CaseTypePathVar]$INFO[Window(home).Property(Set.movie.1.VideoResolution)]p.png</texture>
+					<texture background="true" fallback="thumbs/boxes/p.png">$VAR[CaseTypePathVar]$INFO[Window(home).Property(SkinHelper.MovieSet.0.Resolution)]p.png</texture>
 				</control>
 			</control>
 		</control>

@@ -267,7 +267,7 @@
 								<width>160</width>
 								<height>60</height>
 								<align>center</align>
-								<label>$VAR[ListItemDurationVar]</label>
+								<label>$INFO[Window(Home).Property(SkinHelper.ListItemDuration)]</label>
 								<font>font48_bold</font>
 								<textcolor>grey</textcolor>
 								<visible>Skin.HasSetting(Enable.HourMinuteDuration) + [Container.Content(movies) | Container.Content(episodes)]</visible>

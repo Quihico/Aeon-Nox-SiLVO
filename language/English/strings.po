@@ -790,7 +790,7 @@ msgid "Set default background"
 msgstr ""
 
 msgctxt "#31193"
-msgid "Display extrafanart"
+msgid "Set random library fanart time per image"
 msgstr ""
 
 msgctxt "#31194"

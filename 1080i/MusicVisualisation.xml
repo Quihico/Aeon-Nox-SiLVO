@@ -212,18 +212,17 @@
 				<textcolor>white2</textcolor>
 				<shadowcolor>black</shadowcolor>
 				<label>$INFO[MusicPlayer.Artist]</label>
-				<visible>Substring(Control.GetLabel(9999),empty.png) | IsEmpty(Skin.String(pathlogosartists))</visible>
+				<visible>IsEmpty(Window(Home).Property(SkinHelper.Player.Music.ClearLogo))</visible>
 			</control>
-			<control type="image" id="9999">
+			<control type="image">
 				<left>770</left>
 				<top>-15</top>
 				<description>Artist Logo</description>
 				<width>400</width>
 				<height>155</height>
 				<aspectratio>keep</aspectratio>
-				<texture background="true" fallback="empty.png">$INFO[Skin.String(pathlogosartists)]$INFO[MusicPlayer.Artist,,/logo.png]</texture>
+				<texture>$INFO[Window(Home).Property(SkinHelper.Player.Music.ClearLogo)]</texture>
 				<fadetime>400</fadetime>
-				<visible>!IsEmpty(Skin.String(pathlogosartists))</visible>
 			</control>
 			<control type="group">
 				<left>1170</left>
@@ -306,9 +305,9 @@
 					<label>$INFO[MusicPlayer.Artist]</label>
 					<scroll>true</scroll>
 					<scrollsuffix>  -  </scrollsuffix>
-					<visible>Substring(Control.GetLabel(99999),empty.png) | IsEmpty(Skin.String(pathlogosartists))</visible>
+					<visible>IsEmpty(Window(Home).Property(SkinHelper.Player.Music.ClearLogo))</visible>
 				</control>
-				<control type="image" id="99999">
+				<control type="image">
 					<left>473</left>
 					<top>-120</top>
 					<align>left</align>
@@ -317,9 +316,8 @@
 					<width>400</width>
 					<height>155</height>
 					<aspectratio>keep</aspectratio>
-					<texture background="true" fallback="empty.png">$INFO[Skin.String(pathlogosartists)]$INFO[MusicPlayer.Artist,,/logo.png]</texture>
+					<texture>$INFO[Window(Home).Property(SkinHelper.Player.Music.ClearLogo)]</texture>
 					<fadetime>400</fadetime>
-					<visible>!IsEmpty(Skin.String(pathlogosartists))</visible>
 				</control>
 				<control type="label">
 					<left>475</left>

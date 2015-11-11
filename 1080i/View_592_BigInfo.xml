@@ -44,7 +44,7 @@
 				<height>65</height>
 				<font>font28_title</font>
 				<textcolor>grey</textcolor>
-				<label>$VAR[FloorSubLabelVar]</label>
+				<label>$VAR[FloorSubLabelNoWindowPropVar]</label>
 				<visible>!ListItem.IsCollection + !Container.Content(tvshows)</visible>
 			</control>
 			<control type="label">
@@ -54,7 +54,7 @@
 				<height>65</height>
 				<font>font28_title</font>
 				<textcolor>selected</textcolor>
-				<label>$VAR[FloorSubLabelVar]</label>
+				<label>$VAR[FloorSubLabelNoWindowPropVar]</label>
 				<visible>!ListItem.IsCollection + !Container.Content(movies)</visible>
 			</control>
 			<control type="textbox">

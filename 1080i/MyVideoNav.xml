@@ -738,7 +738,7 @@
 			</control>
 			<!-- Movie Set Title List -->
 			<control type="textbox">
-				<label>[B]$INFO[Window(home).Property(Set.Movies.Title)][/B]</label>
+				<label>[B]$INFO[Window(Home).Property(SkinHelper.MovieSet.Title)][/B]</label>
 				<align>center</align>
 				<left>160</left>
 				<top>950</top>

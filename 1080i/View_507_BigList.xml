@@ -68,7 +68,7 @@
 						<control type="label">
 							<top>42</top>
 							<width>1380</width>
-							<label>$VAR[FloorSubLabelVar]</label>
+							<label>$VAR[FloorSubLabelNoWindowPropVar]</label>
 							<aligny>top</aligny>
 							<font>font15</font>
 							<textcolor>grey</textcolor>
@@ -229,7 +229,7 @@
 							<control type="label">
 								<top>42</top>
 								<width>1380</width>
-								<label>$VAR[FloorSubLabelVar]</label>
+								<label>$VAR[FloorSubLabelNoWindowPropVar]</label>
 								<aligny>top</aligny>
 								<font>font15</font>
 								<textcolor>white</textcolor>

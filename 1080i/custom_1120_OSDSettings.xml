@@ -93,13 +93,13 @@
 				<onclick>Skin.ToggleSetting(launchmusicfullscreen)</onclick>
 				<selected>Skin.HasSetting(launchmusicfullscreen)</selected>
 			</control>
-			<control type="button" id="90911">
+			<!-- <control type="button" id="90911">
 				<width>1138</width>
 				<label>$LOCALIZE[31175]</label>
 				<label2>[COLOR labelheader]$INFO[Skin.String(pathlogosartists)][/COLOR]</label2>
 				<onclick>Skin.Reset(pathlogosartists)</onclick>
 				<onclick>Skin.SetPath(pathlogosartists)</onclick>
-			</control>
+			</control> -->
 			<control type="radiobutton" id="90913">
 				<width>1138</width>
 				<label>$LOCALIZE[31154]</label>

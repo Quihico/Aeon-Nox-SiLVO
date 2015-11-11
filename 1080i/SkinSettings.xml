@@ -563,17 +563,17 @@
 						<font>font15</font>
 						<texturenofocus border="1">separator5.png</texturenofocus>
 					</control>
-					<!-- <control type="radiobutton" id="513">
-						<onclick>Skin.ToggleSetting(Enable.Extrafanart)</onclick>
-						<selected>Skin.HasSetting(Enable.Extrafanart)</selected>
+					<control type="button" id="513">
+						<onclick>Skin.SetNumeric(SkinHelper.RandomFanartDelay)</onclick>
 						<label>$LOCALIZE[31193]</label>
+						<label2>$INFO[Skin.String(SkinHelper.RandomFanartDelay),, $LOCALIZE[31090]]</label2>
 						<width>1316</width>
 						<height>90</height>
 						<textoffsetx>30</textoffsetx>
 						<font>font15</font>
 						<texturenofocus border="1">separator5.png</texturenofocus>
 						<visible>System.HasAddon(script.toolbox)</visible>
-					</control> -->
+					</control>
 					<control type="radiobutton" id="509">
 						<onclick>Skin.ToggleSetting(Enable.Set.LiveBackground)</onclick>
 						<selected>Skin.HasSetting(Enable.Set.LiveBackground)</selected>
@@ -644,7 +644,7 @@
 						<textoffsetx>30</textoffsetx>
 						<texturenofocus border="1">separator5.png</texturenofocus>
 					</control>
-					<control type="button" id="510">
+					<!-- <control type="button" id="510">
 						<onclick>Skin.Reset(pathlogosartists)</onclick>
 						<onclick>Skin.SetPath(pathlogosartists)</onclick>
 						<label>$LOCALIZE[31175]</label>
@@ -654,7 +654,7 @@
 						<font>font15</font>
 						<textoffsetx>30</textoffsetx>
 						<texturenofocus border="1">separator5.png</texturenofocus>
-					</control>
+					</control> -->
 					<control type="button" id="506">
 						<onclick>Skin.ToggleSetting(useclearcases)</onclick>
 						<label>$LOCALIZE[31974]</label>

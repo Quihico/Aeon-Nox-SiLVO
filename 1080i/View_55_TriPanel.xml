@@ -32,6 +32,7 @@
 					<top>92</top>
 					<width>448</width>
 					<height>270</height>
+					<visible>!ListItem.IsCollection</visible>
 					<control type="button">
 						<label>[COLOR labelheader]$LOCALIZE[31000]:[/COLOR][CR]$INFO[ListItem.Director]</label>
 						<width>448</width>
@@ -77,7 +78,13 @@
 						<label>[COLOR labelheader]$LOCALIZE[2050]:[/COLOR][CR]$INFO[ListItem.Duration,, $LOCALIZE[12391]]</label>
 						<width>448</width>
 						<include>ShowCaseInfoPanelButtonsValues</include>
-						<visible>!IsEmpty(ListItem.Duration)</visible>
+						<visible>!IsEmpty(ListItem.Duration) + !Skin.HasSetting(Enable.HourMinuteDuration)</visible>
+					</control>
+					<control type="button">
+						<label>[COLOR labelheader]$LOCALIZE[2050]:[/COLOR][CR]$INFO[Window(Home).Property(SkinHelper.ListItemDuration]</label>
+						<width>448</width>
+						<include>ShowCaseInfoPanelButtonsValues</include>
+						<visible>!IsEmpty(Window(Home).Property(SkinHelper.ListItemDuration)) + Skin.HasSetting(Enable.HourMinuteDuration)</visible>
 					</control>
 				</control>
 				<control type="grouplist">
@@ -87,22 +94,28 @@
 					<height>270</height>
 					<visible>ListItem.IsCollection + [Container.Content(movies) | Container.Content(sets)]</visible>
 					<control type="button">
-						<label>[COLOR labelheader]$LOCALIZE[31000]:[/COLOR][CR]$INFO[Window(home).Property(Set.Movies.Director)]</label>
+						<label>[COLOR labelheader]$LOCALIZE[31000]:[/COLOR][CR]$INFO[Window(home).Property(SkinHelper.MovieSet.Director)]</label>
 						<width>448</width>
 						<include>ShowCaseInfoPanelButtonsValues</include>
-						<visible>!IsEmpty(Window(home).Property(Set.Movies.Director))</visible>
+						<visible>!IsEmpty(Window(home).Property(SkinHelper.MovieSet.Director))</visible>
 					</control>
 					<control type="button">
-						<label>[COLOR labelheader]$LOCALIZE[515]:[/COLOR][CR]$INFO[Window(home).Property(Set.Movies.Genre)]</label>
+						<label>[COLOR labelheader]$LOCALIZE[515]:[/COLOR][CR]$INFO[Window(home).Property(SkinHelper.MovieSet.Genre)]</label>
 						<width>448</width>
 						<include>ShowCaseInfoPanelButtonsValues</include>
-						<visible>!IsEmpty(Window(home).Property(Set.Movies.Genre))</visible>
+						<visible>!IsEmpty(Window(home).Property(SkinHelper.MovieSet.Genre))</visible>
 					</control>
 					<control type="button">
-						<label>[COLOR labelheader]$LOCALIZE[2050]:[/COLOR][CR]$INFO[Window(home).Property(Set.Movies.Runtime),, $LOCALIZE[12391]]</label>
+						<label>[COLOR labelheader]$LOCALIZE[2050]:[/COLOR][CR]$INFO[Window(home).Property(SkinHelper.MovieSet.Runtime),, $LOCALIZE[12391]]</label>
 						<width>448</width>
 						<include>ShowCaseInfoPanelButtonsValues</include>
-						<visible>!IsEmpty(Window(home).Property(Set.Movies.Runtime))</visible>
+						<visible>!Skin.HasSetting(Enable.HourMinuteDuration) + !IsEmpty(Window(home).Property(SkinHelper.MovieSet.Runtime))</visible>
+					</control>
+					<control type="button">
+						<label>[COLOR labelheader]$LOCALIZE[2050]:[/COLOR][CR]$INFO[Window(home).Property(SkinHelper.MovieSet.Duration)]</label>
+						<width>448</width>
+						<include>ShowCaseInfoPanelButtonsValues</include>
+						<visible>Skin.HasSetting(Enable.HourMinuteDuration) + !IsEmpty(Window(home).Property(SkinHelper.MovieSet.Duration))</visible>
 					</control>
 				</control>
 				<control type="textbox" id="70">
