@@ -262,8 +262,18 @@
 								<visible>!Skin.HasSetting(Enable.HourMinuteDuration) | Container.Content(tvshows)</visible>
 							</control>
 							<control type="label">
+								<top>5</top>
+								<width>160</width>
+								<height>30</height>
+								<align>center</align>
+								<label>[LOWERCASE]$LOCALIZE[2050][/LOWERCASE]</label>
+								<font>font12</font>
+								<textcolor>grey</textcolor>
+								<visible>Skin.HasSetting(Enable.HourMinuteDuration) + !Container.Content(tvshows)</visible>
+							</control>
+							<control type="label">
 								<left>0</left>
-								<top>12</top>
+								<top>27</top>
 								<width>160</width>
 								<height>60</height>
 								<align>center</align>
