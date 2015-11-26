@@ -16,7 +16,7 @@
 	<onunload>ClearProperty(Widget.DiscArt,Home)</onunload>
 	<onunload>ClearProperty(Widget.Title,Home)</onunload>
 	<onunload>ClearProperty(Widget.SubTitle,Home)</onunload>
-	<onunload>ClearProperty(Widget.DiscArtFake,Home)</onunload>
+	<onunload>ClearProperty(Widget.DiscArt,Home)</onunload>
 	<onunload>ClearProperty(Widget.Top250,Home)</onunload>
 	<onunload>ClearProperty(Widget.Year,Home)</onunload>
 	<onunload>ClearProperty(Widget.FlagsRating,Home)</onunload>
@@ -26,9 +26,7 @@
 	<onunload>ClearProperty(Widget.FlagsAspect,Home)</onunload>
 	<onunload>ClearProperty(Widget.FlagsAudio,Home)</onunload>
 	<onunload>ClearProperty(Widget.FlagsAudioChannels,Home)</onunload>
-	<onunload>ClearProperty(Widget.FlagsCC,Home)</onunload>
-	<onunload>ClearProperty(Widget.Icon1,Home)</onunload>
-	<onunload>ClearProperty(Widget.Icon2,Home)</onunload>
+	<onunload>ClearProperty(Widget.FlagsCC,Home)</onunload>	
 	<onunload>ClearProperty(Widget.Info1,Home)</onunload>
 	<onunload>ClearProperty(Widget.Info2,Home)</onunload>
 	<onunload>ClearProperty(Widget.Plot,Home)</onunload>
@@ -46,6 +44,18 @@
 			<texture colordiffuse="EEFFFFFF">back.png</texture>
 			<visible>true</visible>
 		</control>
+		
+		<control type="label">
+				<left></left>
+				<top>430</top>
+				<width>1440</width>
+				<height>auto</height>
+				<font>font13_title</font>
+				<textcolor>yellow</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<label>$INFO[Window(Home).Property(Widget.DiscArt)]</label>
+			</control>
+		
 		<!-- Portrait -->
 		<control type="group">
 			<visible>StringCompare(Window(Home).Property(Widget.Type),Portrait)</visible>
@@ -238,7 +248,7 @@
 					<width>30</width>
 					<height>30</height>
 					<colordiffuse>AAFFFFFF</colordiffuse>
-					<texture>$INFO[Window(Home).Property(Widget.Icon1)]</texture>
+					<texture>homewidgets/WidgetInfoPluginIcon.png</texture>
 				</control>
 				<control type="label">
 					<width>10</width>
@@ -268,7 +278,7 @@
 					<width>30</width>
 					<height>30</height>
 					<colordiffuse>AAFFFFFF</colordiffuse>
-					<texture>$INFO[Window(Home).Property(Widget.Icon2)]</texture>
+					<texture>homewidgets/WidgetInfoGenreIcon.png</texture>
 				</control>
 				<control type="label">
 					<width>10</width>
@@ -521,7 +531,7 @@
 					<width>30</width>
 					<height>30</height>
 					<colordiffuse>AAFFFFFF</colordiffuse>
-					<texture>$INFO[Window(Home).Property(Widget.Icon1)]</texture>
+					<texture>homewidgets/WidgetInfoPluginIcon.png</texture>
 				</control>
 				<control type="label">
 					<width>10</width>
@@ -551,7 +561,7 @@
 					<width>30</width>
 					<height>30</height>
 					<colordiffuse>AAFFFFFF</colordiffuse>
-					<texture>$INFO[Window(Home).Property(Widget.Icon2)]</texture>
+					<texture>homewidgets/WidgetInfoGenreIcon.png</texture>
 				</control>
 				<control type="label">
 					<width>5</width>

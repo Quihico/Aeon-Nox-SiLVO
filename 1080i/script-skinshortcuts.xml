@@ -49,15 +49,17 @@
 				<texture>aeon-nox-logo.png</texture>
 			</control>
 		</control>
-		<!-- Dummy Containers for Visibility Conditions -->
-		<control type="panel" id="8001">
+		<!-- Dummy Containers for Artwork -->
+		<control type="list" id="8001">
+			<autoscroll time="10000" delay="10000" repeat="10000">true</autoscroll>
 			<itemlayout height="0" width="0">
 			</itemlayout>
 			<focusedlayout height="0" width="0">
 			</focusedlayout>
 			<content target="$INFO[Container(211).ListItem.Property(widgetTarget)]">$INFO[Container(211).ListItem.Property(widgetPath)]</content>
 		</control>
-		<control type="panel" id="8002">
+		<control type="list" id="8002">
+			<autoscroll time="10000" delay="10000" repeat="10000">true</autoscroll>
 			<itemlayout height="0" width="0">
 			</itemlayout>
 			<focusedlayout height="0" width="0">
@@ -203,6 +205,7 @@
 					<label>$ADDON[script.skinshortcuts 32044] 1</label>
 					<label2>$INFO[Container(211).ListItem.Property(widgetName)]</label2>
 					<onclick>SetProperty(customProperty,widgetArt)</onclick>
+					<onclick>SetProperty(customValue,FanArt)</onclick>
 					<onclick>SendClick(404)</onclick>
 					<visible>StringCompare(Window.Property(groupname),mainmenu)</visible>
 				</control>
@@ -258,6 +261,7 @@
 					<onclick>SetProperty(widgetID,2)</onclick>
 					<onclick>SendClick(312)</onclick>
 					<onclick>SetProperty(customProperty,widgetArt.2)</onclick>
+					<onclick>SetProperty(customValue,FanArt)</onclick>
 					<onclick>SendClick(404)</onclick>
 					<visible>StringCompare(Window.Property(groupname),mainmenu)</visible>
 				</control>
