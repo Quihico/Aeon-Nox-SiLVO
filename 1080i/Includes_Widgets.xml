@@ -15,69 +15,9 @@
 			<animation effect="slide" end="215,259" condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + !IsEmpty(Container(9000).ListItem.Property(widget.2)) + StringCompare(Skin.String(Widget.VerticalMenu),Low)">Conditional</animation>
 			<animation effect="slide" end="215,-24" condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + StringCompare(Skin.String(Widget.VerticalMenu),High/Low)">Conditional</animation>
 			<animation effect="fade" start="100" end="0" time="200" delay="100" condition="Window.IsVisible(1199)">Conditional</animation>
-			<visible>!IsEmpty(Container(9000).ListItem.Property(widget))</visible>
+			<visible>!IsEmpty(Container(9000).ListItem.Property(widgetPath))</visible>
 			<include>VisibleFadeEffect</include>
 			<!-- For Testing -->
-			<control type="label">
-				<left></left>
-				<top>360</top>
-				<width>1440</width>
-				<height>auto</height>
-				<font>font13_title</font>
-				<textcolor>yellow</textcolor>
-				<shadowcolor>black</shadowcolor>
-				<label>T $INFO[Container(8001).ListItem.Title]</label>
-			</control>
-			<control type="label">
-				<left></left>
-				<top>390</top>
-				<width>1440</width>
-				<height>auto</height>
-				<font>font13_title</font>
-				<textcolor>yellow</textcolor>
-				<shadowcolor>black</shadowcolor>
-				<label>A $INFO[Container(8001).ListItem.Artist]</label>
-			</control>
-			<control type="label">
-				<left></left>
-				<top>430</top>
-				<width>1440</width>
-				<height>auto</height>
-				<font>font13_title</font>
-				<textcolor>yellow</textcolor>
-				<shadowcolor>black</shadowcolor>
-				<label>D $INFO[Container(8002).ListItem.ChannelName]</label>
-			</control>
-			<control type="label">
-				<left></left>
-				<top>500</top>
-				<width>1440</width>
-				<height>auto</height>
-				<font>font13_title</font>
-				<textcolor>yellow</textcolor>
-				<shadowcolor>black</shadowcolor>
-				<label>AA $INFO[Container(8001).ListItem.AlbumArtist]</label>
-			</control>
-			<control type="label">
-				<left></left>
-				<top>570</top>
-				<width>1440</width>
-				<height>auto</height>
-				<font>font13_title</font>
-				<textcolor>yellow</textcolor>
-				<shadowcolor>black</shadowcolor>
-				<label>Al $INFO[Container(8001).ListItem.Album]</label>
-			</control>		
-			<control type="label">
-				<left></left>
-				<top>650</top>
-				<width>1440</width>
-				<height>auto</height>
-				<font>font13_title</font>
-				<textcolor>yellow</textcolor>
-				<shadowcolor>black</shadowcolor>
-				<label>DB $INFO[Container(8001).ListItem.DBID]</label>
-			</control>					
 			<control type="image">
 				<top>90</top>
 				<left></left>
@@ -105,7 +45,7 @@
 			<animation effect="slide" end="215,259" condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + StringCompare(Skin.String(Widget.VerticalMenu),Low)">Conditional</animation>
 			<animation effect="slide" end="215,259" condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + StringCompare(Skin.String(Widget.VerticalMenu),High/Low)">Conditional</animation>
 			<animation effect="fade" start="100" end="0" time="200" delay="100" condition="Window.IsVisible(1199)">Conditional</animation>
-			<visible>!IsEmpty(Container(9000).ListItem.Property(widget.2))</visible>
+			<visible>!IsEmpty(Container(9000).ListItem.Property(widgetPath.2))</visible>
 			<include>VisibleFadeEffect</include>
 			<control type="image">
 				<top>449</top>
@@ -125,7 +65,7 @@
 		<onfocus>SetProperty(SkinHelper.WidgetContainer,8001,home)</onfocus>
 		<oninfo>SetProperty(Widget.Type,$VAR[WidgetInfo8001TypeVar],home)</oninfo>
 		<oninfo>SetProperty(Widget.Cover,$VAR[HomeWidget8001PosterVar],home)</oninfo>
-		<oninfo>SetProperty(Widget.DiscArt,$VAR[HomeWidget8001DiscArtVar],home)</oninfo>
+		<oninfo>SetProperty(Widget.DiscArt,$INFO[Container(8001).ListItem.Art(discart)],home)</oninfo>
 		<oninfo>SetProperty(Widget.Title,$VAR[HomeWidget8001TitleVar],home)</oninfo>
 		<oninfo>SetProperty(Widget.SubTitle,$VAR[HomeWidget8001SubTitleVar],home)</oninfo>
 		<oninfo>SetProperty(Widget.Year,$VAR[HomeWidget8001FlagsYear],home)</oninfo>
@@ -138,25 +78,18 @@
 		<oninfo>SetProperty(Widget.FlagsAudioChannels,$VAR[HomeWidget8001FlagsAudioChannels],home)</oninfo>
 		<oninfo>SetProperty(Widget.FlagsCC,$VAR[HomeWidget8001FlagsCC],home)</oninfo>
 		<oninfo>SetProperty(Widget.Info1,$VAR[HomeWidget8001Info1Var],home)</oninfo>
-		<oninfo>SetProperty(Widget.Info2,$VAR[HomeWidget8001Info2Var],home)</oninfo>		
+		<oninfo>SetProperty(Widget.Info2,$VAR[HomeWidget8001Info2Var],home)</oninfo>
 		<oninfo>SetProperty(Widget.Plot,$VAR[HomeWidget8001PlotVar],home)</oninfo>
 		<oninfo>SetProperty(Widget.FilePath,$INFO[Container(8001).ListItem.FileNameAndPath],home)</oninfo>
 		<oninfo>SetProperty(Widget.Resume,$INFO[Container(8001).ListItem.PercentPlayed],home)</oninfo>
 		<oninfo>SetProperty(Widget.Trailer,$INFO[Container(8001).ListItem.Trailer],home)</oninfo>
-		<!--<oninfo>SetProperty(Widget.DiscArtFake,$VAR[HomeWidget8001FakeDiscArtVar]</oninfo>
-		<oninfo>SetProperty(Widget.Top250,$INFO[Container(8001).ListItem.Top250]</oninfo>
-		<oninfo>SetProperty(Widget.Resolution,$INFO[Container(8001).ListItem.VideoResolution]</oninfo>
-		<oninfo>SetProperty(Widget.FolderPath,$INFO[Container(8001).ListItem.FolderPath]</oninfo>
-		<oninfo>SetProperty(Widget.FilePath,$INFO[Container(8001).ListItem.FileNameAndPath]</oninfo>
-		<oninfo>SetProperty(Widget.Resume,$INFO[Container(8001).ListItem.PercentPlayed]</oninfo>
-		<oninfo>SetProperty(Widget.Trailer,$INFO[Container(8001).ListItem.Trailer]</oninfo>-->
 		<oninfo>ActivateWindow(1199)</oninfo>
 	</include>
 	<include name="OnInfo2">
 		<onfocus>SetProperty(SkinHelper.WidgetContainer,8002,home)</onfocus>
 		<oninfo>SetProperty(Widget.Type,$VAR[WidgetInfo8002TypeVar],home)</oninfo>
 		<oninfo>SetProperty(Widget.Cover,$VAR[HomeWidget8002PosterVar],home)</oninfo>
-		<oninfo>SetProperty(Widget.DiscArt,$VAR[HomeWidget8002DiscArtVar],home)</oninfo>
+		<oninfo>SetProperty(Widget.DiscArt,$INFO[Container(8002).ListItem.Art(discart)],home)</oninfo>
 		<oninfo>SetProperty(Widget.Title,$VAR[HomeWidget8002TitleVar],home)</oninfo>
 		<oninfo>SetProperty(Widget.SubTitle,$VAR[HomeWidget8002SubTitleVar],home)</oninfo>
 		<oninfo>SetProperty(Widget.Year,$VAR[HomeWidget8002FlagsYear],home)</oninfo>
@@ -169,42 +102,35 @@
 		<oninfo>SetProperty(Widget.FlagsAudioChannels,$VAR[HomeWidget8002FlagsAudioChannels],home)</oninfo>
 		<oninfo>SetProperty(Widget.FlagsCC,$VAR[HomeWidget8002FlagsCC],home)</oninfo>
 		<oninfo>SetProperty(Widget.Info1,$VAR[HomeWidget8002Info1Var],home)</oninfo>
-		<oninfo>SetProperty(Widget.Info2,$VAR[HomeWidget8002Info2Var],home)</oninfo>		
+		<oninfo>SetProperty(Widget.Info2,$VAR[HomeWidget8002Info2Var],home)</oninfo>
 		<oninfo>SetProperty(Widget.Plot,$VAR[HomeWidget8002PlotVar],home)</oninfo>
 		<oninfo>SetProperty(Widget.FilePath,$INFO[Container(8002).ListItem.FileNameAndPath],home)</oninfo>
 		<oninfo>SetProperty(Widget.Resume,$INFO[Container(8002).ListItem.PercentPlayed],home)</oninfo>
 		<oninfo>SetProperty(Widget.Trailer,$INFO[Container(8002).ListItem.Trailer],home)</oninfo>
-		<!--<oninfo>SetProperty(Widget.DiscArtFake,$VAR[HomeWidget8002FakeDiscArtVar]</oninfo>
-		<oninfo>SetProperty(Widget.Top250,$INFO[Container(8002).ListItem.Top250]</oninfo>
-		<oninfo>SetProperty(Widget.Resolution,$INFO[Container(8002).ListItem.VideoResolution]</oninfo>
-		<oninfo>SetProperty(Widget.FolderPath,$INFO[Container(8002).ListItem.FolderPath]</oninfo>
-		<oninfo>SetProperty(Widget.FilePath,$INFO[Container(8002).ListItem.FileNameAndPath]</oninfo>
-		<oninfo>SetProperty(Widget.Resume,$INFO[Container(8002).ListItem.PercentPlayed]</oninfo>
-		<oninfo>SetProperty(Widget.Trailer,$INFO[Container(8002).ListItem.Trailer]</oninfo>-->
 		<oninfo>ActivateWindow(1199)</oninfo>
 	</include>
 	<!-- ******* NAVIGATION ******** -->
 	<include name="HorizontalNavigation1">
-		<onup condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + !StringCompare(Skin.String(VerticalMenuRSS.Position),$LOCALIZE[419]) + ![Control.IsVisible(9027) | System.HasMediaDVD]">90010</onup>
+		<onup condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + !StringCompare(Skin.String(VerticalMenuRSS.Position),$LOCALIZE[419]) + ![Control.IsVisible(9027) | System.HasMediaDVD]">8001</onup>
 		<onup condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + !StringCompare(Skin.String(VerticalMenuRSS.Position),$LOCALIZE[419]) + [Control.IsVisible(9027) | System.HasMediaDVD]">9020</onup>
-		<ondown condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + Control.IsVisible(90020)">90020</ondown>
-		<ondown condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + !Control.IsVisible(90020) + StringCompare(Skin.String(VerticalMenuRSS.Position),$LOCALIZE[419]) + ![Control.IsVisible(9027) | System.HasMediaDVD]">9000</ondown>
-		<ondown condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + !Control.IsVisible(90020) + StringCompare(Skin.String(VerticalMenuRSS.Position),$LOCALIZE[419]) + [Control.IsVisible(9027) | System.HasMediaDVD]">9020</ondown>
-		<ondown condition="!StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + Skin.HasSetting(lowermainmenu) + !Control.IsVisible(90020) + ![Control.IsVisible(9027) | System.HasMediaDVD]">9000</ondown>
-		<ondown condition="!StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + Skin.HasSetting(lowermainmenu) + !Control.IsVisible(90020) + [Control.IsVisible(9027) | System.HasMediaDVD]">9020</ondown>
-		<ondown condition="!StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + Skin.HasSetting(lowermainmenu) + Control.IsVisible(90020)">90020</ondown>
+		<ondown condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + Control.IsVisible(8002)">8002</ondown>
+		<ondown condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + !Control.IsVisible(8002) + StringCompare(Skin.String(VerticalMenuRSS.Position),$LOCALIZE[419]) + ![Control.IsVisible(9027) | System.HasMediaDVD]">9000</ondown>
+		<ondown condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + !Control.IsVisible(8002) + StringCompare(Skin.String(VerticalMenuRSS.Position),$LOCALIZE[419]) + [Control.IsVisible(9027) | System.HasMediaDVD]">9020</ondown>
+		<ondown condition="!StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + Skin.HasSetting(lowermainmenu) + !Control.IsVisible(8002) + ![Control.IsVisible(9027) | System.HasMediaDVD]">9000</ondown>
+		<ondown condition="!StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + Skin.HasSetting(lowermainmenu) + !Control.IsVisible(8002) + [Control.IsVisible(9027) | System.HasMediaDVD]">9020</ondown>
+		<ondown condition="!StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + Skin.HasSetting(lowermainmenu) + Control.IsVisible(8002)">8002</ondown>
 		<ondown condition="!StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + !Skin.HasSetting(lowermainmenu) + ![Control.IsVisible(9027) | System.HasMediaDVD]">9000</ondown>
 		<ondown condition="!StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + !Skin.HasSetting(lowermainmenu) + [Control.IsVisible(9027) | System.HasMediaDVD]">9020</ondown>
 		<onleft condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994])">9000</onleft>
 	</include>
 	<include name="HorizontalNavigation2">
-		<onup condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + !StringCompare(Skin.String(VerticalMenuRSS.Position),$LOCALIZE[419]) + !Control.IsVisible(90010) + ![Control.IsVisible(9027) | System.HasMediaDVD]">90020</onup>
-		<onup condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + !StringCompare(Skin.String(VerticalMenuRSS.Position),$LOCALIZE[419]) + !Control.IsVisible(90010) +  [Control.IsVisible(9027) | System.HasMediaDVD]">9020</onup>
-		<onup condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + Control.IsVisible(90010)">90010</onup>
-		<onup condition="!StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + Skin.HasSetting(lowermainmenu) + !IsEmpty(Container(9000).ListItem.Property(widget))">90010</onup>
+		<onup condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + !StringCompare(Skin.String(VerticalMenuRSS.Position),$LOCALIZE[419]) + !Control.IsVisible(8001) + ![Control.IsVisible(9027) | System.HasMediaDVD]">8002</onup>
+		<onup condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + !StringCompare(Skin.String(VerticalMenuRSS.Position),$LOCALIZE[419]) + !Control.IsVisible(8001) +  [Control.IsVisible(9027) | System.HasMediaDVD]">9020</onup>
+		<onup condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + Control.IsVisible(8001)">8001</onup>
+		<onup condition="!StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + Skin.HasSetting(lowermainmenu) + !IsEmpty(Container(9000).ListItem.Property(widget))">8001</onup>
 		<onup condition="!StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + !Skin.HasSetting(lowermainmenu) + Skin.HasSetting(Enable.VisibleSubmenu)">9001</onup>
 		<onup condition="!StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + !Skin.HasSetting(lowermainmenu) + !Skin.HasSetting(Enable.VisibleSubmenu)">9000</onup>
-		<ondown condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + StringCompare(Skin.String(VerticalMenuRSS.Position),$LOCALIZE[419]) + ![Control.IsVisible(9027) | System.HasMediaDVD]">90020</ondown>
+		<ondown condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + StringCompare(Skin.String(VerticalMenuRSS.Position),$LOCALIZE[419]) + ![Control.IsVisible(9027) | System.HasMediaDVD]">8002</ondown>
 		<ondown condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + StringCompare(Skin.String(VerticalMenuRSS.Position),$LOCALIZE[419]) + [Control.IsVisible(9027) | System.HasMediaDVD]">9020</ondown>
 		<ondown condition="!StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + Skin.HasSetting(lowermainmenu) + ![Control.IsVisible(9027) | System.HasMediaDVD]">9000</ondown>
 		<ondown condition="!StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + Skin.HasSetting(lowermainmenu) + [Control.IsVisible(9027) | System.HasMediaDVD]">9020</ondown>
@@ -212,33 +138,33 @@
 		<onleft condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994])">9000</onleft>
 	</include>
 	<include name="VerticalNavigation1">
-		<onup condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + !StringCompare(Skin.String(VerticalMenuRSS.Position),$LOCALIZE[419]) + ![Control.IsVisible(9027) | System.HasMediaDVD]">90010</onup>
+		<onup condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + !StringCompare(Skin.String(VerticalMenuRSS.Position),$LOCALIZE[419]) + ![Control.IsVisible(9027) | System.HasMediaDVD]">8001</onup>
 		<onup condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + !StringCompare(Skin.String(VerticalMenuRSS.Position),$LOCALIZE[419]) + [Control.IsVisible(9027) | System.HasMediaDVD]">9020</onup>
-		<ondown condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + Control.IsVisible(90020)">90020</ondown>
-		<ondown condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + !Control.IsVisible(90020) + StringCompare(Skin.String(VerticalMenuRSS.Position),$LOCALIZE[419]) + ![Control.IsVisible(9027) | System.HasMediaDVD]">9000</ondown>
-		<ondown condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + !Control.IsVisible(90020) + StringCompare(Skin.String(VerticalMenuRSS.Position),$LOCALIZE[419]) + [Control.IsVisible(9027) | System.HasMediaDVD]">9020</ondown>
-		<ondown condition="!StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + Skin.HasSetting(lowermainmenu) + !Control.IsVisible(90020) + ![Control.IsVisible(9027) | System.HasMediaDVD]">9000</ondown>
-		<ondown condition="!StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + Skin.HasSetting(lowermainmenu) + !Control.IsVisible(90020) + [Control.IsVisible(9027) | System.HasMediaDVD]">9020</ondown>
-		<ondown condition="!StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + Skin.HasSetting(lowermainmenu) + Control.IsVisible(90020)">90020</ondown>
+		<ondown condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + Control.IsVisible(8002)">8002</ondown>
+		<ondown condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + !Control.IsVisible(8002) + StringCompare(Skin.String(VerticalMenuRSS.Position),$LOCALIZE[419]) + ![Control.IsVisible(9027) | System.HasMediaDVD]">9000</ondown>
+		<ondown condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + !Control.IsVisible(8002) + StringCompare(Skin.String(VerticalMenuRSS.Position),$LOCALIZE[419]) + [Control.IsVisible(9027) | System.HasMediaDVD]">9020</ondown>
+		<ondown condition="!StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + Skin.HasSetting(lowermainmenu) + !Control.IsVisible(8002) + ![Control.IsVisible(9027) | System.HasMediaDVD]">9000</ondown>
+		<ondown condition="!StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + Skin.HasSetting(lowermainmenu) + !Control.IsVisible(8002) + [Control.IsVisible(9027) | System.HasMediaDVD]">9020</ondown>
+		<ondown condition="!StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + Skin.HasSetting(lowermainmenu) + Control.IsVisible(8002)">8002</ondown>
 		<ondown condition="!StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + !Skin.HasSetting(lowermainmenu) + ![Control.IsVisible(9027) | System.HasMediaDVD]">9000</ondown>
 		<ondown condition="!StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + !Skin.HasSetting(lowermainmenu) + [Control.IsVisible(9027) | System.HasMediaDVD]">9020</ondown>
 		<onleft condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994])">9000</onleft>
-		<onright condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + ControlGroup(90010).HasFocus + Control.IsVisible(90020)">90020</onright>
+		<onright condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + Control.HasFocus(8001) + Control.IsVisible(8002)">8002</onright>
 	</include>
 	<include name="VerticalNavigation2">
-		<onup condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + !StringCompare(Skin.String(VerticalMenuRSS.Position),$LOCALIZE[419]) + !Control.IsVisible(90010) + ![Control.IsVisible(9027) | System.HasMediaDVD]">90020</onup>
-		<onup condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + !StringCompare(Skin.String(VerticalMenuRSS.Position),$LOCALIZE[419]) + !Control.IsVisible(90010) +  [Control.IsVisible(9027) | System.HasMediaDVD]">9020</onup>
-		<onup condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + Control.IsVisible(90010)">90010</onup>
-		<onup condition="!StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + Skin.HasSetting(lowermainmenu) + !IsEmpty(Container(9000).ListItem.Property(widget))">90010</onup>
+		<onup condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + !StringCompare(Skin.String(VerticalMenuRSS.Position),$LOCALIZE[419]) + !Control.IsVisible(8001) + ![Control.IsVisible(9027) | System.HasMediaDVD]">8002</onup>
+		<onup condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + !StringCompare(Skin.String(VerticalMenuRSS.Position),$LOCALIZE[419]) + !Control.IsVisible(8001) +  [Control.IsVisible(9027) | System.HasMediaDVD]">9020</onup>
+		<onup condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + Control.IsVisible(8001)">8001</onup>
+		<onup condition="!StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + Skin.HasSetting(lowermainmenu) + !IsEmpty(Container(9000).ListItem.Property(widget))">8001</onup>
 		<onup condition="!StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + !Skin.HasSetting(lowermainmenu) + Skin.HasSetting(Enable.VisibleSubmenu)">9001</onup>
 		<onup condition="!StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + !Skin.HasSetting(lowermainmenu) + !Skin.HasSetting(Enable.VisibleSubmenu)">9000</onup>
-		<ondown condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + StringCompare(Skin.String(VerticalMenuRSS.Position),$LOCALIZE[419]) + ![Control.IsVisible(9027) | System.HasMediaDVD]">90020</ondown>
+		<ondown condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + StringCompare(Skin.String(VerticalMenuRSS.Position),$LOCALIZE[419]) + ![Control.IsVisible(9027) | System.HasMediaDVD]">8002</ondown>
 		<ondown condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + StringCompare(Skin.String(VerticalMenuRSS.Position),$LOCALIZE[419]) + [Control.IsVisible(9027) | System.HasMediaDVD]">9020</ondown>
 		<ondown condition="!StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + Skin.HasSetting(lowermainmenu) + ![Control.IsVisible(9027) | System.HasMediaDVD]">9000</ondown>
 		<ondown condition="!StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + Skin.HasSetting(lowermainmenu) + [Control.IsVisible(9027) | System.HasMediaDVD]">9020</ondown>
 		<ondown condition="!StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + !Skin.HasSetting(lowermainmenu)">8002</ondown>
 		<onleft condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994])">9000</onleft>
-		<onright condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + ControlGroup(90020).HasFocus + Control.IsVisible(90010)">90010</onright>
+		<onright condition="StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994]) + Control.HasFocus(8002) + Control.IsVisible(8001)">8001</onright>
 	</include>
 	<!-- ******* CLASSIC WIDGETS ******** -->
 	<!-- Classic Containers -->
@@ -250,7 +176,7 @@
 		<orientation>vertical</orientation>
 		<preloaditems>2</preloaditems>
 		<scrolltime tween="quadratic" easing="out">300</scrolltime>
-		<autoscroll time="10000" delay="10000" repeat="10000">Control.IsVisible(90010) + !Control.HasFocus(8001)</autoscroll>
+		<autoscroll time="10000" delay="10000" repeat="10000">Control.IsVisible(8001) + !Control.HasFocus(8001)</autoscroll>
 	</include>
 	<include name="ClassicWidget2">
 		<width>300</width>
@@ -260,7 +186,7 @@
 		<orientation>vertical</orientation>
 		<preloaditems>2</preloaditems>
 		<scrolltime tween="quadratic" easing="out">300</scrolltime>
-		<autoscroll time="10000" delay="10000" repeat="10000">Control.IsVisible(90020) + !Control.HasFocus(8002)</autoscroll>
+		<autoscroll time="10000" delay="10000" repeat="10000">Control.IsVisible(8002) + !Control.HasFocus(8002)</autoscroll>
 	</include>
 	<!-- Classic Info -->
 	<include name="ClassicInfo">
@@ -339,7 +265,7 @@
 			<height>200</height>
 			<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
 			<texture>$PARAM[Case]</texture>
-		</control>		
+		</control>
 	</include>
 	<include name="ClassicSquareArt">
 		<control type="image">
@@ -347,13 +273,13 @@
 			<left>50</left>
 			<width>200</width>
 			<height>200</height>
-			<aspectratio>$PARAM[Aspect]</aspectratio>
+			<aspectratio aligny="center" scalediffuse="false">$PARAM[Aspect]</aspectratio>
 			<animation effect="zoom" end="96,96" center="auto" condition="$PARAM[glassVisible]">conditional</animation>
-			<animation effect="zoom" end="98,98" center="250,150" condition="$PARAM[caseVisible]">conditional</animation>
+			<animation effect="zoom" end="90,98" center="250,150" condition="$PARAM[caseVisible]">conditional</animation>
 			<animation effect="zoom" end="90,98" center="250,150" condition="$PARAM[clearVisible]">conditional</animation>
 			<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
 			<texture diffuse="$PARAM[Diffuse]">$PARAM[Texture]</texture>
-		</control>			
+		</control>
 		<control type="image">
 			<top>40</top>
 			<left>50</left>
@@ -361,11 +287,11 @@
 			<height>200</height>
 			<aspectratio>$PARAM[Aspect]</aspectratio>
 			<animation effect="zoom" end="96,96" center="auto" condition="$PARAM[glassVisible]">conditional</animation>
-			<animation effect="zoom" end="98,98" center="250,150" condition="$PARAM[caseVisible]">conditional</animation>
+			<animation effect="zoom" end="90,98" center="250,150" condition="$PARAM[caseVisible]">conditional</animation>
 			<animation effect="zoom" end="90,98" center="250,150" condition="$PARAM[clearVisible]">conditional</animation>
 			<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
 			<texture>$PARAM[fakeDiscArt]</texture>
-			<visible>$PARAM[fallbackTexture] + IsEmpty(Container(8001).ListItem.Art(discart))</visible>
+			<visible>$PARAM[fallbackVisible]</visible>
 		</control>
 		<control type="image">
 			<top>40</top>
@@ -378,25 +304,38 @@
 	</include>
 	<include name="ClassicLandscapeArt">
 		<control type="image">
-			<top>40</top>
+			<top>58</top>
 			<left>0</left>
 			<width>300</width>
-			<height>200</height>
-			<aspectratio align="center" aligny="center">keep</aspectratio>
+			<height>169</height>
+			<aspectratio>$PARAM[Aspect]</aspectratio>
 			<animation effect="zoom" end="98,96" center="auto" condition="$PARAM[glassVisible]">conditional</animation>
 			<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
 			<texture>$PARAM[Texture]</texture>
 		</control>
+		<control type="textbox">
+			<top>78</top>
+			<left>20</left>
+			<width>260</width>
+			<height>129</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>fontCDartist</font>
+			<textcolor>lightgrey</textcolor>
+			<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
+			<label>$PARAM[fallbackText]</label>
+			<visible>$PARAM[fallbackVisible]</visible>
+		</control>
 		<control type="image">
-			<top>40</top>
+			<top>58</top>
 			<left>0</left>
 			<width>300</width>
 			<height>169</height>
-			<aspectratio align="center" aligny="center">stretch</aspectratio>
+			<aspectratio align="center" aligny="center">keep</aspectratio>
 			<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
 			<texture>$PARAM[Case]</texture>
 		</control>
-	</include>	
+	</include>
 	<include name="ClassicList">
 		<itemlayout height="50" width="300">
 			<control type="image">
@@ -430,7 +369,7 @@
 			</control>
 		</focusedlayout>
 		<content target="$PARAM[Target]">$PARAM[Path]</content>
-	</include>	
+	</include>
 	<!-- ******* PANEL WIDGETS ******** -->
 	<!-- Panel Containers -->
 	<include name="PanelWidget1">
@@ -562,11 +501,12 @@
 				<top>0</top>
 				<width>200</width>
 				<height>300</height>
+				<aspectratio aligny="top">scale</aspectratio>
 				<animation effect="zoom" end="96,96" center="auto" condition="$PARAM[glassVisible]">conditional</animation>
 				<animation effect="zoom" end="95,90" center="100,250" condition="$PARAM[caseVisible]">conditional</animation>
 				<animation effect="zoom" end="94,97" center="auto" condition="$PARAM[clearVisible]">conditional</animation>
 				<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
-				<texture background="true" fallback="DefaultMovies.png">$PARAM[Texture]</texture>
+				<texture>$PARAM[Texture]</texture>
 			</control>
 			<control type="image">
 				<left>0</left>
@@ -610,10 +550,11 @@
 					<top>0</top>
 					<width>200</width>
 					<height>300</height>
+					<aspectratio aligny="top">scale</aspectratio>
 					<animation effect="zoom" end="96,96" center="auto" condition="$PARAM[glassVisible]">conditional</animation>
 					<animation effect="zoom" end="95,90" center="100,250" condition="$PARAM[caseVisible]">conditional</animation>
 					<animation effect="zoom" end="94,97" center="auto" condition="$PARAM[clearVisible]">conditional</animation>
-					<texture background="true" fallback="DefaultMovies.png">$PARAM[Texture]</texture>
+					<texture>$PARAM[Texture]</texture>
 				</control>
 				<control type="image">
 					<left>0</left>
@@ -655,13 +596,13 @@
 				<top>0</top>
 				<width>282</width>
 				<height>282</height>
-				<aspectratio>$PARAM[Aspect]</aspectratio>
+				<aspectratio aligny="center" scalediffuse="false">$PARAM[Aspect]</aspectratio>
 				<animation effect="zoom" end="96,96" center="auto" condition="$PARAM[glassVisible]">conditional</animation>
 				<animation effect="zoom" end="90,98" center="250,150" condition="$PARAM[caseVisible]">conditional</animation>
 				<animation effect="zoom" end="90,98" center="250,150" condition="$PARAM[clearVisible]">conditional</animation>
 				<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
 				<texture diffuse="$PARAM[Diffuse]">$PARAM[Texture]</texture>
-			</control>			
+			</control>
 			<control type="image">
 				<left>0</left>
 				<top>0</top>
@@ -672,7 +613,7 @@
 				<animation effect="zoom" end="90,98" center="250,150" condition="$PARAM[clearVisible]">conditional</animation>
 				<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
 				<texture>$VAR[HomeWidgetFakeDiscArtVar]</texture>
-				<visible>$PARAM[fallbackTexture] + IsEmpty(ListItem.Art(discart))</visible>
+				<visible>$PARAM[fallbackVisible]</visible>
 			</control>
 			<control type="image">
 				<left>0</left>
@@ -717,7 +658,7 @@
 					<top>0</top>
 					<width>282</width>
 					<height>282</height>
-					<aspectratio>$PARAM[Aspect]</aspectratio>
+					<aspectratio aligny="center" scalediffuse="false">$PARAM[Aspect]</aspectratio>
 					<animation effect="zoom" end="96,96" center="auto" condition="$PARAM[glassVisible]">conditional</animation>
 					<animation effect="zoom" end="90,98" center="250,150" condition="$PARAM[caseVisible]">conditional</animation>
 					<animation effect="zoom" end="90,98" center="250,150" condition="$PARAM[clearVisible]">conditional</animation>
@@ -733,7 +674,7 @@
 					<animation effect="zoom" end="90,98" center="250,150" condition="$PARAM[clearVisible]">conditional</animation>
 					<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
 					<texture>$VAR[HomeWidgetFakeDiscArtVar]</texture>
-					<visible>$PARAM[fallbackTexture] + IsEmpty(ListItem.Art(discart))</visible>
+					<visible>$PARAM[fallbackVisible]</visible>
 				</control>
 				<control type="image">
 					<left>0</left>
@@ -781,6 +722,19 @@
 				<animation effect="zoom" end="98,96" center="auto" condition="$PARAM[glassVisible]">conditional</animation>
 				<texture>$PARAM[Texture]</texture>
 			</control>
+			<control type="textbox">
+				<left>20</left>
+				<top>20</top>
+				<width>433</width>
+				<height>226</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>fontCDartist</font>
+				<textcolor>lightgrey</textcolor>
+				<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
+				<label>$VAR[HomeWidgetTitle2Var]</label>
+				<visible>$PARAM[fallbackVisible]</visible>
+			</control>
 			<control type="image">
 				<left>0</left>
 				<top>166</top>
@@ -825,6 +779,18 @@
 					<animation effect="zoom" end="98,96" center="auto" condition="$PARAM[glassVisible]">conditional</animation>
 					<texture>$PARAM[Texture]</texture>
 				</control>
+				<control type="textbox">
+					<left>20</left>
+					<top>20</top>
+					<width>433</width>
+					<height>226</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>fontCDartist</font>
+					<textcolor>lightgrey</textcolor>
+					<label>$VAR[HomeWidgetTitle2Var]</label>
+					<visible>$PARAM[fallbackVisible]</visible>
+				</control>
 				<control type="image">
 					<left>0</left>
 					<top>166</top>
@@ -868,7 +834,7 @@
 				<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
 				<animation effect="zoom" end="99,96" center="auto" condition="$PARAM[glassVisible]">conditional</animation>
 				<texture>$PARAM[Texture]</texture>
-			</control>			
+			</control>
 			<control type="image">
 				<left>0</left>
 				<top>0</top>
@@ -877,7 +843,21 @@
 				<aspectratio>keep</aspectratio>
 				<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
 				<texture>$VAR[HomeWidgetClearLogoVar]</texture>
-				<visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(tvshow.banner)) + IsEmpty(ListItem.Album) + IsEmpty(ListItem.AlbumArtist) + IsEmpty(ListItem.Artist)</visible>
+				<visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(tvshow.banner))</visible>
+			</control>
+			<control type="textbox">
+				<left>20</left>
+				<top>20</top>
+				<width>672</width>
+				<height>92</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>fontCDartist</font>
+				<textcolor>lightgrey</textcolor>
+				<shadowcolor>shadow</shadowcolor>
+				<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
+				<label>$VAR[HomeWidgetTitle2Var]</label>
+				<visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(tvshow.banner)) + IsEmpty(ListItem.Art(clearlogo)) + IsEmpty(ListItem.Art(tvshow.clearlogo))</visible>
 			</control>
 			<control type="image">
 				<left>0</left>
@@ -923,7 +903,7 @@
 					<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
 					<animation effect="zoom" end="99,96" center="auto" condition="$PARAM[glassVisible]">conditional</animation>
 					<texture>$PARAM[Texture]</texture>
-				</control>			
+				</control>
 				<control type="image">
 					<left>0</left>
 					<top>0</top>
@@ -932,7 +912,20 @@
 					<aspectratio>keep</aspectratio>
 					<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
 					<texture>$VAR[HomeWidgetClearLogoVar]</texture>
-					<visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(tvshow.banner)) + IsEmpty(ListItem.Album) + IsEmpty(ListItem.AlbumArtist) + IsEmpty(ListItem.Artist)</visible>
+					<visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(tvshow.banner))</visible>
+				</control>
+				<control type="textbox">
+					<left>20</left>
+					<top>20</top>
+					<width>672</width>
+					<height>92</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>fontCDartist</font>
+					<textcolor>lightgrey</textcolor>
+					<shadowcolor>shadow</shadowcolor>
+					<label>$VAR[HomeWidgetTitle2Var]</label>
+					<visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(tvshow.banner)) + IsEmpty(ListItem.Art(clearlogo)) + IsEmpty(ListItem.Art(tvshow.clearlogo))</visible>
 				</control>
 				<control type="image">
 					<left>0</left>

@@ -40,7 +40,9 @@
 		<property name="artwork" tag="property" attribute="name|widgetArt" value="DiscArt">$VAR[HomeWidget8001DiscArtVar]</property>
 		<property name="artwork" tag="property" attribute="name|widgetArt" value="CharacterArt">$VAR[HomeWidget8001CharacterArtVar]</property>
 		<!-- Set Artwork Fallback -->
-		<property name="artworkfb" tag="property" attribute="name|widgetArt" value="DiscArt">true</property>
+		<property name="artworkfb" tag="property" attribute="name|widgetArt" value="DiscArt">IsEmpty(Container(8001).ListItem.Art(discart))</property>
+		<property name="artworkfb" tag="property" attribute="name|widgetArt" value="ClearLogo">IsEmpty(Container(8001).ListItem.Art(clearlogo)) + IsEmpty(Container(8001).ListItem.Art(tvshow.clearlogo))</property>
+		<property name="artworkfb" tag="property" attribute="name|widgetArt" value="ClearArt">IsEmpty(Container(8001).ListItem.Art(clearart)) + IsEmpty(Container(8001).ListItem.Art(tvshow.clearart)) + IsEmpty(Container(8001).ListItem.Art(clearlogo)) + IsEmpty(Container(8001).ListItem.Art(tvshow.clearlogo))</property>
 		<property name="artworkfb">false</property>
 		<!-- Set Artwork Diffuse -->
 		<property name="diffuse" tag="property" attribute="name|widgetArt" value="DiscArt">homewidgets/cdart-mask.png</property>
@@ -49,8 +51,7 @@
 		<property name="aspect" tag="property" attribute="name|widgetArt" value="ClearArt">keep</property>
 		<property name="aspect" tag="property" attribute="name|widgetArt" value="ClearLogo">keep</property>
 		<property name="aspect" tag="property" attribute="name|widgetArt" value="CharacterArt">keep</property>
-		<property name="aspect" tag="property" attribute="name|widgetArt" value="DiscArt">keep</property>
-		<property name="aspect">stretch</property>
+		<property name="aspect">scale</property>
 		<!-- Set Art Content -->
 		<property name="artcontent" tag="property" attribute="name|widgetArt" value="Poster">ClassicPortraitArt</property>
 		<property name="artcontent" tag="property" attribute="name|widgetArt" value="Square Poster">ClassicSquareArt</property>
@@ -193,7 +194,8 @@
 						<include name="$SKINSHORTCUTS[artcontent]">
 							<param name="Texture">$SKINSHORTCUTS[artwork]</param>
 							<param name="fakeDiscArt">$VAR[HomeWidget8001FakeDiscArtVar]</param>
-							<param name="fallbackTexture">$SKINSHORTCUTS[artworkfb]</param>
+							<param name="fallbackVisible">$SKINSHORTCUTS[artworkfb]</param>
+							<param name="fallbackText">$VAR[HomeWidget8001Title2Var]</param>
 							<param name="Aspect">$SKINSHORTCUTS[aspect]</param>
 							<param name="Diffuse">$SKINSHORTCUTS[diffuse]</param>
 							<param name="Case">$SKINSHORTCUTS[casepath]</param>
@@ -242,7 +244,9 @@
 		<property name="artwork" tag="property" attribute="name|widgetArt" value="DiscArt">$VAR[HomeWidgetDiscArtVar]</property>
 		<property name="artwork" tag="property" attribute="name|widgetArt" value="CharacterArt">$VAR[HomeWidgetCharacterArtVar]</property>
 		<!-- Set Artwork Fallback -->
-		<property name="artworkfb" tag="property" attribute="name|widgetArt" value="DiscArt">true</property>
+		<property name="artworkfb" tag="property" attribute="name|widgetArt" value="DiscArt">IsEmpty(ListItem.Art(discart))</property>
+		<property name="artworkfb" tag="property" attribute="name|widgetArt" value="ClearLogo">IsEmpty(ListItem.Art(clearlogo)) + IsEmpty(ListItem.Art(tvshow.clearlogo))</property>
+		<property name="artworkfb" tag="property" attribute="name|widgetArt" value="ClearArt">IsEmpty(ListItem.Art(clearart)) + IsEmpty(ListItem.Art(tvshow.clearart)) + IsEmpty(ListItem.Art(clearlogo)) + IsEmpty(ListItem.Art(tvshow.clearlogo))</property>
 		<property name="artworkfb">false</property>
 		<!-- Set Artwork Diffuse -->
 		<property name="diffuse" tag="property" attribute="name|widgetArt" value="DiscArt">homewidgets/cdart-mask.png</property>
@@ -251,8 +255,7 @@
 		<property name="aspect" tag="property" attribute="name|widgetArt" value="ClearArt">keep</property>
 		<property name="aspect" tag="property" attribute="name|widgetArt" value="ClearLogo">keep</property>
 		<property name="aspect" tag="property" attribute="name|widgetArt" value="CharacterArt">keep</property>
-		<property name="aspect" tag="property" attribute="name|widgetArt" value="DiscArt">scale</property>
-		<property name="aspect">stretch</property>
+		<property name="aspect">scale</property>
 		<!-- Set Art Content -->
 		<property name="artcontent" tag="property" attribute="name|widgetArt" value="Poster">PortraitArt</property>
 		<property name="artcontent" tag="property" attribute="name|widgetArt" value="Square Poster">SquareArt</property>
@@ -345,7 +348,7 @@
 					<include>PanelWidget1</include>
 					<include name="$SKINSHORTCUTS[artcontent]">
 						<param name="Texture">$SKINSHORTCUTS[artwork]</param>
-						<param name="fallbackTexture">$SKINSHORTCUTS[artworkfb]</param>
+						<param name="fallbackVisible">$SKINSHORTCUTS[artworkfb]</param>
 						<param name="Aspect">$SKINSHORTCUTS[aspect]</param>
 						<param name="Diffuse">$SKINSHORTCUTS[diffuse]</param>
 						<param name="Case">$SKINSHORTCUTS[casepath]</param>
@@ -396,19 +399,19 @@
 		<property name="artwork" tag="property" attribute="name|widgetArt.2" value="Landscape">$VAR[HomeWidget8002LandscapeVar]</property>
 		<property name="artwork" tag="property" attribute="name|widgetArt.2" value="ClearArt">$VAR[HomeWidget8002ClearArtVar]</property>
 		<property name="artwork" tag="property" attribute="name|widgetArt.2" value="ClearLogo">$VAR[HomeWidget8002ClearLogoVar]</property>
-		<property name="artwork" tag="property" attribute="name|widgetArt.2" value="Banner">$VAR[HomeWidget8002BannerVar]</property>
 		<property name="artwork" tag="property" attribute="name|widgetArt.2" value="Thumb">$VAR[HomeWidget8002ThumbVar]</property>
 		<property name="artwork" tag="property" attribute="name|widgetArt.2" value="DiscArt">$VAR[HomeWidget8002DiscArtVar]</property>
 		<property name="artwork" tag="property" attribute="name|widgetArt.2" value="CharacterArt">$VAR[HomeWidget8002CharacterArtVar]</property>
 		<!-- Set Artwork Fallback -->
-		<property name="artworkfb" tag="property" attribute="name|widgetArt.2" value="DiscArt">true</property>
+		<property name="artworkfb" tag="property" attribute="name|widgetArt" value="DiscArt">IsEmpty(Container(8002).ListItem.Art(discart))</property>
+		<property name="artworkfb" tag="property" attribute="name|widgetArt" value="ClearLogo">IsEmpty(Container(8002).ListItem.Art(clearlogo)) + IsEmpty(Container(8002).ListItem.Art(tvshow.clearlogo))</property>
+		<property name="artworkfb" tag="property" attribute="name|widgetArt" value="ClearArt">IsEmpty(Container(8002).ListItem.Art(clearart)) + IsEmpty(Container(8002).ListItem.Art(tvshow.clearart)) + IsEmpty(Container(8002).ListItem.Art(clearlogo)) + IsEmpty(Container(8002).ListItem.Art(tvshow.clearlogo))</property>
 		<property name="artworkfb">false</property>
 		<!-- Set Artwork Aspect -->
-		<property name="aspect" tag="property" attribute="name|widgetArt.2" value="ClearArt">keep</property>
-		<property name="aspect" tag="property" attribute="name|widgetArt.2" value="ClearLogo">keep</property>
-		<property name="aspect" tag="property" attribute="name|widgetArt.2" value="CharacterArt">keep</property>
-		<property name="aspect" tag="property" attribute="name|widgetArt.2" value="DiscArt">keep</property>
-		<property name="aspect">stretch</property>
+		<property name="aspect" tag="property" attribute="name|widgetArt" value="ClearArt">keep</property>
+		<property name="aspect" tag="property" attribute="name|widgetArt" value="ClearLogo">keep</property>
+		<property name="aspect" tag="property" attribute="name|widgetArt" value="CharacterArt">keep</property>
+		<property name="aspect">scale</property>
 		<!-- Set Artwork Diffuse -->
 		<property name="diffuse" tag="property" attribute="name|widgetArt.2" value="DiscArt">thumbs/sets/cdart_mask.png</property>
 		<property name="diffuse"></property>
@@ -554,7 +557,9 @@
 					<control type="group">
 						<include name="$SKINSHORTCUTS[artcontent]">
 							<param name="Texture">$SKINSHORTCUTS[artwork]</param>
-							<param name="fallbackTexture">$SKINSHORTCUTS[artworkfb]</param>
+							<param name="fakeDiscArt">$VAR[HomeWidget8002FakeDiscArtVar]</param>
+							<param name="fallbackVisible">$SKINSHORTCUTS[artworkfb]</param>
+							<param name="fallbackText">$VAR[HomeWidget8002Title2Var]</param>
 							<param name="Aspect">$SKINSHORTCUTS[aspect]</param>
 							<param name="Diffuse">$SKINSHORTCUTS[diffuse]</param>
 							<param name="Case">$SKINSHORTCUTS[casepath]</param>
@@ -601,14 +606,15 @@
 		<property name="artwork" tag="property" attribute="name|widgetArt.2" value="DiscArt">$VAR[HomeWidgetDiscArtVar]</property>
 		<property name="artwork" tag="property" attribute="name|widgetArt.2" value="CharacterArt">$VAR[HomeWidgetCharacterArtVar]</property>
 		<!-- Set Artwork Fallback -->
-		<property name="artworkfb" tag="property" attribute="name|widgetArt.2" value="DiscArt">true</property>
+		<property name="artworkfb" tag="property" attribute="name|widgetArt.2" value="DiscArt">IsEmpty(ListItem.Art(discart))</property>
+		<property name="artworkfb" tag="property" attribute="name|widgetArt.2" value="ClearLogo">IsEmpty(ListItem.Art(clearlogo)) + IsEmpty(ListItem.Art(tvshow.clearlogo))</property>
+		<property name="artworkfb" tag="property" attribute="name|widgetArt.2" value="ClearArt">IsEmpty(ListItem.Art(clearart)) + IsEmpty(ListItem.Art(tvshow.clearart)) + IsEmpty(ListItem.Art(clearlogo)) + IsEmpty(ListItem.Art(tvshow.clearlogo))</property>
 		<property name="artworkfb">false</property>
 		<!-- Set Artwork Aspect -->
 		<property name="aspect" tag="property" attribute="name|widgetArt.2" value="ClearArt">keep</property>
 		<property name="aspect" tag="property" attribute="name|widgetArt.2" value="ClearLogo">keep</property>
 		<property name="aspect" tag="property" attribute="name|widgetArt.2" value="CharacterArt">keep</property>
-		<property name="aspect" tag="property" attribute="name|widgetArt.2" value="DiscArt">keep</property>
-		<property name="aspect">stretch</property>
+		<property name="aspect">scale</property>
 		<!-- Set Artwork Diffuse -->
 		<property name="diffuse" tag="property" attribute="name|widgetArt.2" value="DiscArt">thumbs/sets/cdart_mask.png</property>
 		<property name="diffuse"></property>
@@ -704,7 +710,7 @@
 					<include>PanelWidget2</include>
 					<include name="$SKINSHORTCUTS[artcontent]">
 						<param name="Texture">$SKINSHORTCUTS[artwork]</param>
-						<param name="fallbackTexture">$SKINSHORTCUTS[artworkfb]</param>
+						<param name="fallbackVisible">$SKINSHORTCUTS[artworkfb]</param>
 						<param name="Aspect">$SKINSHORTCUTS[aspect]</param>
 						<param name="Diffuse">$SKINSHORTCUTS[diffuse]</param>
 						<param name="Case">$SKINSHORTCUTS[casepath]</param>

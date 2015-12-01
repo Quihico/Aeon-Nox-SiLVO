@@ -4,17 +4,17 @@
 	<onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000)</onunload>
 	<controls>
 		<control type="label">
-				<top>0</top>
-				<font>font13_title</font>
-				<textcolor>yellow</textcolor>
-				<label>type: $INFO[Container(211).ListItem.Property(widgetType)]</label>
-			</control>
-			<control type="label">
-				<top>50</top>
-				<font>font13_title</font>
-				<textcolor>yellow</textcolor>
-				<label>widget: $INFO[Container(211).ListItem.Property(widget)]</label>
-			</control>
+			<top>0</top>
+			<font>font13_title</font>
+			<textcolor>yellow</textcolor>
+			<label>type: $INFO[Container(211).ListItem.Property(widgetType)]</label>
+		</control>
+		<control type="label">
+			<top>50</top>
+			<font>font13_title</font>
+			<textcolor>yellow</textcolor>
+			<label>widget: $INFO[Container(211).ListItem.Property(widget)]</label>
+		</control>
 		<!-- Home Settings Backgrounds -->
 		<control type="group">
 			<visible>Window.IsActive(home)</visible>
@@ -204,8 +204,7 @@
 					<font>font15</font>
 					<label>$ADDON[script.skinshortcuts 32044] 1</label>
 					<label2>$INFO[Container(211).ListItem.Property(widgetName)]</label2>
-					<onclick>SetProperty(customProperty,widgetArt)</onclick>
-					<onclick>SetProperty(customValue,FanArt)</onclick>
+					<onclick>SetProperty(customProperty,widgetArt)</onclick>					
 					<onclick>SendClick(404)</onclick>
 					<visible>StringCompare(Window.Property(groupname),mainmenu)</visible>
 				</control>
@@ -259,9 +258,8 @@
 					<label>$ADDON[script.skinshortcuts 32044] 2</label>
 					<label2>$INFO[Container(211).ListItem.Property(widgetName.2)]</label2>
 					<onclick>SetProperty(widgetID,2)</onclick>
-					<onclick>SendClick(312)</onclick>
-					<onclick>SetProperty(customProperty,widgetArt.2)</onclick>
-					<onclick>SetProperty(customValue,FanArt)</onclick>
+					<onclick>SendClick(312)</onclick>					
+					<onclick>SetProperty(customProperty,widgetArt.2)</onclick>					
 					<onclick>SendClick(404)</onclick>
 					<visible>StringCompare(Window.Property(groupname),mainmenu)</visible>
 				</control>
@@ -365,6 +363,6 @@
 			<width>1</width>
 			<height>1</height>
 			<onclick>noop</onclick>
-		</control>
+		</control>					
 	</controls>
 </window>

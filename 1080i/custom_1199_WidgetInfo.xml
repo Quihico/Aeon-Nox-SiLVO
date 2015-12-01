@@ -26,7 +26,7 @@
 	<onunload>ClearProperty(Widget.FlagsAspect,Home)</onunload>
 	<onunload>ClearProperty(Widget.FlagsAudio,Home)</onunload>
 	<onunload>ClearProperty(Widget.FlagsAudioChannels,Home)</onunload>
-	<onunload>ClearProperty(Widget.FlagsCC,Home)</onunload>	
+	<onunload>ClearProperty(Widget.FlagsCC,Home)</onunload>
 	<onunload>ClearProperty(Widget.Info1,Home)</onunload>
 	<onunload>ClearProperty(Widget.Info2,Home)</onunload>
 	<onunload>ClearProperty(Widget.Plot,Home)</onunload>
@@ -44,18 +44,6 @@
 			<texture colordiffuse="EEFFFFFF">back.png</texture>
 			<visible>true</visible>
 		</control>
-		
-		<control type="label">
-				<left></left>
-				<top>430</top>
-				<width>1440</width>
-				<height>auto</height>
-				<font>font13_title</font>
-				<textcolor>yellow</textcolor>
-				<shadowcolor>black</shadowcolor>
-				<label>$INFO[Window(Home).Property(Widget.DiscArt)]</label>
-			</control>
-		
 		<!-- Portrait -->
 		<control type="group">
 			<visible>StringCompare(Window(Home).Property(Widget.Type),Portrait)</visible>
@@ -74,36 +62,6 @@
 				<height>649</height>
 				<texture>$INFO[Window(Home).Property(Widget.Cover)]</texture>
 			</control>
-			<!--<control type="image">
-				<left>400</left>
-				<top>71</top>
-				<width>120</width>
-				<height>120</height>
-				<fadetime>0</fadetime>
-				<bordersize>20</bordersize>
-				<texture>overlays/addons/inlibrary.png</texture>
-				<visible>SubString(Window(Home).Property(Widget.FilePath),DBID)</visible>
-			</control>
-			<control type="image">
-				<left>60</left>
-				<top>101</top>
-				<width>200</width>
-				<height>49</height>
-				<fadetime>0</fadetime>
-				<texture>homewidgets/imdb2.png</texture>
-				<visible>IntegerGreaterThan(Window(Home).Property(Widget.Top250),0)</visible>
-			</control>
-			<control type="label">
-				<left>80</left>
-				<top>120</top>
-				<width>60</width>
-				<align>center</align>
-				<height>10</height>
-				<font>font14_title</font>
-				<textcolor>white</textcolor>
-				<label>$INFO[Window(Home).Property(Widget.Top250)]</label>
-				<visible>IntegerGreaterThan(Window(Home).Property(Widget.Top250),0)</visible>
-			</control>-->
 			<control type="image" id="8020">
 				<left>1427</left>
 				<top>357</top>
@@ -112,23 +70,6 @@
 				<texture>$INFO[Window(Home).Property(Widget.DiscArt)]</texture>
 				<visible>!IsEmpty(Control.GetLabel(8020))</visible>
 			</control>
-			<!--<control type="image">
-				<left>1480</left>
-				<top>368</top>
-				<width>381</width>
-				<height>381</height>
-				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
-				<texture diffuse="discart/cdart.png">$INFO[Window(Home).Property(Widget.Cover)]</texture>
-				<visible>IsEmpty(Control.GetLabel(8020))</visible>
-			</control>
-			<control type="image">
-				<left>1480</left>
-				<top>368</top>
-				<width>381</width>
-				<height>381</height>
-				<texture>discart/$INFO[Window(Home).Property(Widget.DiscArtFake)]</texture>
-				<visible>IsEmpty(Control.GetLabel(8020)) + [StringCompare(Window(Home).Property(Widget.Type),1) | StringCompare(Window(Home).Property(Widget.Type),20)]</visible>
-			</control>-->
 			<!-- Header -->
 			<control type="grouplist">
 				<top>99</top>
