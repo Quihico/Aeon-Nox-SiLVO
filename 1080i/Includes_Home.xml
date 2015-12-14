@@ -220,10 +220,9 @@
 			<ondown>9000</ondown>
 			<onleft>90001</onleft>
 			<onright condition="Control.IsVisible(9003)">9003</onright>
-			<onright condition="!Control.IsVisible(9003) + System.HasMediaDVD | System.HasAddon(script.globalsearch)">9020</onright>
 			<onright condition="Control.IsVisible(90010)">8001</onright>
 			<onright condition="!Control.IsVisible(90010) + Control.IsVisible(90020)">8002</onright>
-			<onright condition="!Control.IsVisible(90010) + !Control.IsVisible(90020) + [System.HasMediaDVD | Control.IsVisible(9027)]">9020</onright>
+			<onright condition="!Control.IsVisible(9003) + !Control.IsVisible(90010) + !Control.IsVisible(90020) + [System.HasMediaDVD | Control.IsVisible(9027)]">9020</onright>
 			<pagecontrol>-</pagecontrol>
 			<focusposition>3</focusposition>
 			<scrolltime tween="quadratic" easing="out">200</scrolltime>

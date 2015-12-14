@@ -52,7 +52,6 @@
 					<align>right</align>
 					<orientation>horizontal</orientation>
 					<onup condition="Control.IsVisible(9003)">9003</onup>
-					<onup condition="!Control.IsVisible(9003)">9000</onup>
 					<onup condition="Skin.HasSetting(lowermainmenu) + !Control.IsVisible(90010) + Control.IsVisible(90020)">8002</onup>
 					<onup condition="Skin.HasSetting(lowermainmenu) + Control.IsVisible(90010)">8001</onup>
 					<onup condition="!Skin.HasSetting(lowermainmenu) + Control.IsVisible(90010)">8001</onup>

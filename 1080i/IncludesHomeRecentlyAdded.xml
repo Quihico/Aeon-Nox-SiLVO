@@ -1205,7 +1205,7 @@
 			<animation effect="slide" end="0,-90" time="300" tween="cubic" easing="inout" condition="ControlGroup(9001).HasFocus() + StringCompare(Skin.String(RSS.Position),$LOCALIZE[571])">conditional</animation>
 			<animation effect="fade" start="100" end="0" time="300" condition="ControlGroup(9001).HasFocus() + StringCompare(Skin.String(RSS.Position),$LOCALIZE[571])">conditional</animation>
 			<animation effect="slide" end="0,340" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(lowermainmenu) | [!Skin.HasSetting(lowermainmenu) + StringCompare(Skin.String(RSS.Position),$LOCALIZE[418])]">Conditional</animation>
-			<animation effect="slide" end="0,90" time="320" tween="cubic" easing="inout" condition="StringCompare(Skin.String(RSS.Position),$LOCALIZE[418])">Conditional</animation>
+			<animation effect="slide" end="0,84" time="320" tween="cubic" easing="inout" condition="StringCompare(Skin.String(RSS.Position),$LOCALIZE[418])">Conditional</animation>
 			<top>612</top>
 			<control type="group">
 				<visible>!StringCompare(Skin.String(RSS.Position),$LOCALIZE[418])</visible>
@@ -1297,7 +1297,7 @@
 			<animation effect="slide" start="1870,0" end="0,0" delay="300" time="240" condition="!window.previous(startup)">WindowOpen</animation>
 			<animation effect="slide" start="1870" end="0" time="240">VisibleChange</animation>
 			<animation effect="slide" start="1870,0" end="0,0" delay="800" time="480" condition="window.previous(startup)">WindowOpen</animation>
-			<animation effect="slide" end="0,-950" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(lowermainmenu) | [!Skin.HasSetting(lowermainmenu) + StringCompare(Skin.String(RSS.Position),$LOCALIZE[419])]">Conditional</animation>
+			<animation effect="slide" end="0,-946" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(lowermainmenu) | [!Skin.HasSetting(lowermainmenu) + StringCompare(Skin.String(RSS.Position),$LOCALIZE[419])]">Conditional</animation>
 			<top>993</top>
 			<control type="group">
 				<animation effect="rotatex" end="180" time="320" center="20" tween="cubic" easing="inout" condition="true">Conditional</animation>
@@ -1328,7 +1328,7 @@
 				<control type="rss">
 					<description>RSS feed</description>
 					<left>140</left>
-					<top>44</top>
+					<top>43</top>
 					<height>30</height>
 					<width>1730</width>
 					<font>font13</font>
@@ -1346,7 +1346,7 @@
 			<animation effect="slide" end="1460,0" time="240">WindowClose</animation>
 			<animation effect="slide" start="1400,0" end="0,0" delay="300" time="240" condition="!window.previous(startup)">WindowOpen</animation>
 			<animation effect="slide" start="1400,0" end="0,0" delay="800" time="480" condition="window.previous(startup)">WindowOpen</animation>
-			<animation effect="slide" end="0,-1000" time="320" tween="cubic" easing="inout" condition="[system.getbool(lookandfeel.enablerssfeeds) + StringCompare(Skin.String(VerticalMenuRSS.Position),$LOCALIZE[419])] | [!system.getbool(lookandfeel.enablerssfeeds) + StringCompare(Skin.String(VerticalMenuSystemBar.Position),$LOCALIZE[418])]">Conditional</animation>
+			<animation effect="slide" end="0,-993" time="320" tween="cubic" easing="inout" condition="[system.getbool(lookandfeel.enablerssfeeds) + StringCompare(Skin.String(VerticalMenuRSS.Position),$LOCALIZE[419])] | [!system.getbool(lookandfeel.enablerssfeeds) + StringCompare(Skin.String(VerticalMenuSystemBar.Position),$LOCALIZE[418])]">Conditional</animation>
 			<animation effect="slide" end="1250,0" time="320" tween="cubic" easing="inout" condition="!system.getbool(lookandfeel.enablerssfeeds)">Conditional</animation>
 			<animation effect="slide" end="100,0" time="320" tween="cubic" easing="inout" condition="!system.getbool(lookandfeel.enablerssfeeds) + !Skin.HasSetting(Disable.SearchButton) + !System.HasMediaDVD">Conditional</animation>
 			<animation effect="slide" end="50,0" time="320" tween="cubic" easing="inout" condition="!system.getbool(lookandfeel.enablerssfeeds) + Skin.HasSetting(Disable.SearchButton) + System.HasMediaDVD">Conditional</animation>
@@ -1387,7 +1387,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<animation effect="slide" end="0,-45" time="320" tween="cubic" easing="inout" condition="[system.getbool(lookandfeel.enablerssfeeds) + StringCompare(Skin.String(VerticalMenuRSS.Position),$LOCALIZE[419])] | [!system.getbool(lookandfeel.enablerssfeeds) + StringCompare(Skin.String(VerticalMenuSystemBar.Position),$LOCALIZE[418])]">Conditional</animation>
+				<animation effect="slide" end="0,-46" time="320" tween="cubic" easing="inout" condition="[system.getbool(lookandfeel.enablerssfeeds) + StringCompare(Skin.String(VerticalMenuRSS.Position),$LOCALIZE[419])] | [!system.getbool(lookandfeel.enablerssfeeds) + StringCompare(Skin.String(VerticalMenuSystemBar.Position),$LOCALIZE[418])]">Conditional</animation>
 				<control type="grouplist" id="9020">
 					<left>503</left>
 					<width>1360</width>
@@ -1397,6 +1397,12 @@
 					<onleft>9000</onleft>
 					<ondown condition="Control.IsVisible(9003)">9003</ondown>
 					<ondown condition="!Control.IsVisible(9003)">9000</ondown>
+					<ondown condition="StringCompare(Skin.String(VerticalMenuRSS.Position),$LOCALIZE[419]) + Control.IsVisible(90010)">8001</ondown>
+					<ondown condition="StringCompare(Skin.String(VerticalMenuRSS.Position),$LOCALIZE[419]) + !Control.IsVisible(90010) + Control.IsVisible(90020)">8002</ondown>
+					<ondown condition="StringCompare(Skin.String(VerticalMenuRSS.Position),$LOCALIZE[419]) + !Control.IsVisible(90010) + !Control.IsVisible(90020)">9000</ondown>
+					<onup condition="!StringCompare(Skin.String(VerticalMenuRSS.Position),$LOCALIZE[419]) + Control.IsVisible(90020)">8002</onup>
+					<onup condition="!StringCompare(Skin.String(VerticalMenuRSS.Position),$LOCALIZE[419]) + Control.IsVisible(90010) + !Control.IsVisible(90020)">8001</onup>
+					<onup condition="!StringCompare(Skin.String(VerticalMenuRSS.Position),$LOCALIZE[419]) + !Control.IsVisible(90010) + !Control.IsVisible(90020)">9000</onup>
 					<control type="button" id="9027">
 					<label></label>
 					<textoffsetx>0</textoffsetx>
@@ -1690,7 +1696,7 @@
 			<animation effect="slide" tween="cubic" time="720" start="0,-1080" end="0,0">WindowOpen</animation>
 			<animation effect="slide" tween="cubic" time="720" end="0,-1080" start="0,0">WindowClose</animation>
 			<include>VisibleFadeEffect</include>
-			<visible>StringCompare(Container(9000).ListItem.Property(widget),weather) + StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994])</visible>
+			<visible>!Skin.HasSetting(Enable.AdvancedWidgets) + StringCompare(Container(9000).ListItem.Property(widget),weather) + StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[31994])</visible>
 			<left>485</left>
 			<top>-110</top>
 			<control type="image">
