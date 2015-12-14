@@ -1447,6 +1447,18 @@
 		<value condition="!IsEmpty(ListItem.Art(extrafanart1))">$INFO[ListItem.Art(extrafanart1)]</value>
 		<value condition="IsEmpty(ListItem.Art(extrafanart1))">$INFO[ListItem.Art(fanart)]</value>
 	</variable>
+	<!-- Classic Widget VARS -->
+	<variable name="WidgetListIconVar">
+		<value condition="!IsEmpty(Container(8000).ListItem.Art(tvshow.landscape))">$INFO[Container(8000).ListItem.Art(tvshow.landscape)]</value>
+		<value condition="!IsEmpty(Container(8000).ListItem.Art(fanart)) + [StringCompare(Container(9000).ListItem.Property(widgetTarget),video) | SubString(Container(9000).ListItem.Property(widgetPath),extendedinfo)]">$INFO[Container(8000).ListItem.Art(fanart)]</value>
+		<value>$INFO[Container(8000).ListItem.Icon]</value>
+	</variable>
+	<variable name="WidgetPosterVar">
+		<value condition="!IsEmpty(Container(8000).ListItem.Art(poster))">$INFO[Container(8000).ListItem.Art(poster)]</value>
+		<value condition="!IsEmpty(Container(8000).ListItem.Art(tvshow.poster))">$INFO[Container(8000).ListItem.Art(tvshow.poster)]</value>
+		<value>$INFO[Container(8000).ListItem.Icon]</value>
+	</variable>	
+	<!-- Advanced Widget VARS -->
 	<!-- Widget Settings -->
 	<variable name="WidgetInfo8001TypeVar">
 		<value condition="!IsEmpty(Container(8001).ListItem.Property(HighTemp)) | !IsEmpty(Container(8001).ListItem.ChannelName) | !IsEmpty(Container(8001).ListItem.Album) | !IsEmpty(Container(8001).ListItem.Artist) | !IsEmpty(Container(8001).ListItem.AlbumArtist) | !IsEmpty(Container(8001).ListItem.Property(Addon.Name))">Square</value>

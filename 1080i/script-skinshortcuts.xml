@@ -187,24 +187,14 @@
 					<label2>-</label2>
 					<texturenofocus border="1">separator5.png</texturenofocus>
 					<visible>StringCompare(Skin.String(MainMenu.Layout),$LOCALIZE[536])</visible>
-				</control>
-				<control type="button" id="312">
-					<description>Change widget</description>
-					<width>1316</width>
-					<height>90</height>
-					<textoffsetx>30</textoffsetx>
-					<font>font15</font>
-					<label>$ADDON[script.skinshortcuts 32044]</label>
-					<label2>$INFO[Container(211).ListItem.Property(widgetName)]</label2>
-					<visible>StringCompare(Window.Property(groupname),mainmenu)</visible>
-				</control>
+				</control>				
 				<control type="button" id="312">
 					<description>Change widget 1</description>
 					<width>1316</width>
 					<height>90</height>
 					<textoffsetx>30</textoffsetx>
 					<font>font15</font>
-					<label>$ADDON[script.skinshortcuts 32044] 1</label>
+					<label>$ADDON[script.skinshortcuts 32044]</label>
 					<label2>$INFO[Container(211).ListItem.Property(widgetName)]</label2>
 					<onclick>SetProperty(customProperty,widgetArt)</onclick>
 					<onclick>SendClick(404)</onclick>
@@ -220,6 +210,7 @@
 					<label2>$VAR[WidgetArtLabelVar]</label2>
 					<visible>StringCompare(Window.Property(groupname),mainmenu)</visible>
 					<visible>!IsEmpty(Container(211).ListItem.Property(widgetName)) + !StringCompare(Container(211).ListItem.Property(widget),$LOCALIZE[31502])</visible>
+					<visible>Skin.HasSetting(Enable.AdvancedWidgets)</visible>
 				</control>
 				<control type="button" id="517">
 					<description>Change widget case 1</description>
@@ -230,6 +221,7 @@
 					<label>Case</label>
 					<label2>$VAR[WidgetCaseLabelVar]</label2>
 					<visible>!IsEmpty(Container(211).ListItem.Property(widgetName)) + !StringCompare(Container(211).ListItem.Property(widget),$LOCALIZE[31502])</visible>
+					<visible>Skin.HasSetting(Enable.AdvancedWidgets)</visible>
 				</control>
 				<control type="button" id="509">
 					<description>Change widget style 1</description>
@@ -240,6 +232,7 @@
 					<label>Style</label>
 					<label2>$VAR[WidgetStyleLabelVar]</label2>
 					<visible>!IsEmpty(Container(211).ListItem.Property(widgetName)) + !StringCompare(Container(211).ListItem.Property(widget),$LOCALIZE[31502])</visible>
+					<visible>Skin.HasSetting(Enable.AdvancedWidgets)</visible>
 				</control>
 				<control type="button" id="515">
 					<description>Change widget title 1</description>
@@ -250,6 +243,7 @@
 					<label>Label</label>
 					<label2>$VAR[WidgetTitleLabelVar]</label2>
 					<visible>!IsEmpty(Container(211).ListItem.Property(widgetName)) + !StringCompare(Container(211).ListItem.Property(widget),weather) + !StringCompare(Container(211).ListItem.Property(widget),$LOCALIZE[31502]) + !SubString(Container(211).ListItem.Property(widgetStyle),Classic)</visible>
+					<visible>Skin.HasSetting(Enable.AdvancedWidgets)</visible>
 				</control>
 				<control type="button" id="512">
 					<description>Change widget 2</description>
@@ -264,6 +258,7 @@
 					<onclick>SetProperty(customProperty,widgetArt.2)</onclick>
 					<onclick>SendClick(404)</onclick>
 					<visible>StringCompare(Window.Property(groupname),mainmenu)</visible>
+					<visible>Skin.HasSetting(Enable.AdvancedWidgets)</visible>
 				</control>
 				<control type="button" id="513">
 					<description>Change widget art 2</description>
@@ -275,6 +270,7 @@
 					<label2>$VAR[WidgetArt2LabelVar]</label2>
 					<visible>StringCompare(Window.Property(groupname),mainmenu)</visible>
 					<visible>!IsEmpty(Container(211).ListItem.Property(widgetName.2)) + !StringCompare(Container(211).ListItem.Property(widget.2),$LOCALIZE[31502])</visible>
+					<visible>Skin.HasSetting(Enable.AdvancedWidgets)</visible>
 				</control>
 				<control type="button" id="518">
 					<description>Change widget case 2</description>
@@ -285,6 +281,7 @@
 					<label>Case</label>
 					<label2>$VAR[WidgetCase2LabelVar]</label2>
 					<visible>!IsEmpty(Container(211).ListItem.Property(widgetName.2)) + !StringCompare(Container(211).ListItem.Property(widget.2),$LOCALIZE[31502])</visible>
+					<visible>Skin.HasSetting(Enable.AdvancedWidgets)</visible>
 				</control>
 				<control type="button" id="514">
 					<description>Change widget style 2</description>
@@ -295,6 +292,7 @@
 					<label>Style</label>
 					<label2>$VAR[WidgetStyle2LabelVar]</label2>
 					<visible>!IsEmpty(Container(211).ListItem.Property(widgetName.2)) + !StringCompare(Container(211).ListItem.Property(widget.2),$LOCALIZE[31502])</visible>
+					<visible>Skin.HasSetting(Enable.AdvancedWidgets)</visible>
 				</control>
 				<control type="button" id="516">
 					<description>Change widget title 2</description>
@@ -305,6 +303,7 @@
 					<label>Label</label>
 					<label2>$VAR[WidgetTitle2LabelVar]</label2>
 					<visible>!IsEmpty(Container(211).ListItem.Property(widgetName.2)) + !StringCompare(Container(211).ListItem.Property(widget.2),weather) + !StringCompare(Container(211).ListItem.Property(widget.2),$LOCALIZE[31502]) + !SubString(Container(211).ListItem.Property(widgetStyle.2),Classic)</visible>
+					<visible>Skin.HasSetting(Enable.AdvancedWidgets)</visible>
 				</control>
 				<control type="radiobutton" id="519">
 					<description>Show Live TV Widget</description>

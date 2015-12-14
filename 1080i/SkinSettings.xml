@@ -787,7 +787,17 @@
 					<onup>9007</onup>
 					<ondown>9007</ondown>
 					<visible>Container(9000).HasFocus(8)</visible>
-					<control type="button" id="800">
+					<control type="radiobutton" id="800">
+						<width>1316</width>
+						<height>90</height>
+						<textoffsetx>30</textoffsetx>
+						<font>font15</font>
+						<label>Enable Advanced Widgets</label>
+						<onclick>Skin.ToggleSetting(Enable.AdvancedWidgets)</onclick>
+						<selected>Skin.HasSetting(Enable.AdvancedWidgets)</selected>
+						<texturenofocus border="1">separator5.png</texturenofocus>
+					</control>
+					<control type="button" id="801">
 						<label>Background</label>
 						<label2>[COLOR labelheader]$VAR[WidgetBackLabelVar][/COLOR]</label2>
 						<onclick>$VAR[WidgetBackVar]</onclick>
@@ -796,8 +806,9 @@
 						<textoffsetx>30</textoffsetx>
 						<font>font15</font>
 						<texturenofocus border="1">separator5.png</texturenofocus>
+						<visible>Skin.HasSetting(Enable.AdvancedWidgets)</visible>
 					</control>
-					<control type="button" id="801">
+					<control type="button" id="802">
 						<label>Transparency</label>
 						<label2>[COLOR labelheader]$VAR[WidgetTransLabelVar]%[/COLOR]</label2>
 						<onclick>$VAR[WidgetTransVar]</onclick>
@@ -806,8 +817,9 @@
 						<textoffsetx>30</textoffsetx>
 						<font>font15</font>
 						<texturenofocus border="1">separator5.png</texturenofocus>
+						<visible>Skin.HasSetting(Enable.AdvancedWidgets)</visible>
 					</control>
-					<control type="button" id="802">
+					<control type="button" id="803">
 						<label>Show list widget information</label>
 						<label2>[COLOR labelheader]$VAR[WidgetListInfoLabelVar][/COLOR]</label2>
 						<onclick>$VAR[WidgetListInfoVar]</onclick>
@@ -816,8 +828,9 @@
 						<textoffsetx>30</textoffsetx>
 						<font>font15</font>
 						<texturenofocus border="1">separator5.png</texturenofocus>
+						<visible>Skin.HasSetting(Enable.AdvancedWidgets)</visible>
 					</control>
-					<control type="radiobutton" id="803">
+					<control type="radiobutton" id="804">
 						<width>1316</width>
 						<height>90</height>
 						<textoffsetx>30</textoffsetx>
@@ -826,6 +839,7 @@
 						<onclick>Skin.ToggleSetting(Enable.WidgetHide)</onclick>
 						<selected>Skin.HasSetting(Enable.WidgetHide)</selected>
 						<texturenofocus border="1">separator5.png</texturenofocus>
+						<visible>Skin.HasSetting(Enable.AdvancedWidgets)</visible>
 					</control>
 				</control>
 			</control>
