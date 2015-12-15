@@ -1884,7 +1884,7 @@
 	<include name="LiveTVWidget">
 		<control type="group">
 			<left>490r</left>
-			<top>40</top>
+			<top>45</top>
 			<visible>!IsEmpty(Container(9000).ListItem.Property(widgetLiveTV))</visible>
 			<include>VisibleFadeEffect</include>
 			<include>Window_OpenClose_Animation</include>
