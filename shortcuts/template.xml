@@ -317,7 +317,7 @@
 				<skinshortcuts>visibility</skinshortcuts>
 				<include name="PanelBack1">
 					<param name="backHeight">$SKINSHORTCUTS[height]</param>
-					<param name="label">$SKINSHORTCUTS[label] one</param>
+					<param name="label">$SKINSHORTCUTS[label]</param>
 					<param name="labelBottom">$SKINSHORTCUTS[labelBottom]</param>
 				</include>
 			</control>
@@ -660,7 +660,7 @@
 				<skinshortcuts>visibility</skinshortcuts>
 				<include name="PanelBack2">
 					<param name="backHeight">$SKINSHORTCUTS[height]</param>
-					<param name="label">$SKINSHORTCUTS[label] TWO</param>
+					<param name="label">$SKINSHORTCUTS[label]</param>
 					<param name="labelBottom">$SKINSHORTCUTS[labelBottom]</param>
 				</include>
 			</control>

@@ -288,7 +288,7 @@
 				<width>1266</width>
 				<top>285</top>
 				<height>60</height>
-				<onup>-</onup>
+				<onup>noop</onup>
 				<ondown>8001</ondown>
 				<orientation>horizontal</orientation>
 				<control type="button" id="8053">
@@ -572,7 +572,7 @@
 				<width>1063</width>
 				<top>285</top>
 				<height>60</height>
-				<onup>-</onup>
+				<onup>noop</onup>
 				<ondown>8001</ondown>
 				<orientation>horizontal</orientation>
 				<control type="button" id="8053">
