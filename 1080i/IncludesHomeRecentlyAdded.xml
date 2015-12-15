@@ -1351,7 +1351,7 @@
 			<animation effect="slide" end="100,0" time="320" tween="cubic" easing="inout" condition="!system.getbool(lookandfeel.enablerssfeeds) + !Skin.HasSetting(Disable.SearchButton) + !System.HasMediaDVD">Conditional</animation>
 			<animation effect="slide" end="50,0" time="320" tween="cubic" easing="inout" condition="!system.getbool(lookandfeel.enablerssfeeds) + Skin.HasSetting(Disable.SearchButton) + System.HasMediaDVD">Conditional</animation>
 			<visible>system.getbool(lookandfeel.enablerssfeeds) | [!system.getbool(lookandfeel.enablerssfeeds) + [!Skin.HasSetting(Disable.SearchButton) | System.HasMediaDVD]]</visible>
-			<top>1040</top>
+			<top>1036</top>
 			<control type="group">
 				<control type="image" id="90101">
 					<left>420</left>
@@ -1389,6 +1389,7 @@
 			<control type="group">
 				<animation effect="slide" end="0,-46" time="320" tween="cubic" easing="inout" condition="[system.getbool(lookandfeel.enablerssfeeds) + StringCompare(Skin.String(VerticalMenuRSS.Position),$LOCALIZE[419])] | [!system.getbool(lookandfeel.enablerssfeeds) + StringCompare(Skin.String(VerticalMenuSystemBar.Position),$LOCALIZE[418])]">Conditional</animation>
 				<control type="grouplist" id="9020">
+					<top>3</top>
 					<left>503</left>
 					<width>1360</width>
 					<height>41</height>
